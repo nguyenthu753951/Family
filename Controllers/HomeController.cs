@@ -10,7 +10,7 @@ namespace controller.Controllers
     {
         public ActionResult Index()
         {
-            ViewBag.WelcomeString = "Chào mừng bạn đến với Online Shop Rider"
+            ViewBag.WelcomeString = "Chào mừng bạn đến với Online Shop Rider";
             return View();
         }
 
