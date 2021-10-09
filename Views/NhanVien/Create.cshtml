@@ -52,7 +52,7 @@
     <div class="form-group">
     @Html.LabelFor(model => model.NGAY_SINH, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
-            @Html.TextBoxFor(model => model.NGAY_SINH, new { htmlAttributes = "date", @class = "form-control datepicker" })
+            @Html.TextBoxFor(model => model.NGAY_SINH, new { @Type = "date", @class = "form-control datepicker",  })
             @Html.ValidationMessageFor(model => model.NGAY_SINH, "", new { @class = "text-danger" })
         </div>
 </div>

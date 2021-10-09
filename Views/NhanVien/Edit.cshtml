@@ -6,11 +6,10 @@
 
 <h2>Edit</h2>
 
-
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>NHAN_VIEN</h4>
         <hr />
@@ -52,7 +51,8 @@
         <div class="form-group">
             @Html.LabelFor(model => model.NGAY_SINH, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.NGAY_SINH, new { htmlAttributes = "date", @class = "form-control datepicker" , @Value = Model.NGAY_SINH.ToString("yyyy-MM-dd") })
+                @Html.TextBoxFor(model => model.NGAY_SINH, "{0:yyyy-MM-dd}", new { @Type = "date", @class = "form-control datepicker" })
+
                 @Html.ValidationMessageFor(model => model.NGAY_SINH, "", new { @class = "text-danger" })
             </div>
         </div>
