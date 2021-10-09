@@ -49,7 +49,7 @@ namespace controller.Controllers
             {
                 // TODO: Add insert logic here
                 var context = new DBContext();
-                context.NHAN_VIEN.Add(model);
+                context.NHAN_VIEN.Add(model);                
                 context.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -80,6 +80,7 @@ namespace controller.Controllers
                 oldItem.PHAI = model.PHAI;
                 oldItem.CHUC_VU = model.CHUC_VU;
                 oldItem.SDT = model.SDT;
+                oldItem.NGAY_SINH = model.NGAY_SINH;
                 context.SaveChanges();
                 return RedirectToAction("Index");
             }

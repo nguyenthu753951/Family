@@ -36,6 +36,10 @@
         [Display(Name = "Số Điện thoại")]
         public string SDT { get; set; }
 
+        [Display(Name = "Ngày sinh")]
+        [DisplayFormat(DataFormatString = "{0:d}")]
+        public DateTime NGAY_SINH { get; set; }
+
         public virtual ICollection<HOA_DON> HOA_DON { get; set; }
 
         public virtual ICollection<PHIEU_GIAO_HANG> PHIEU_GIAO_HANG { get; set; }

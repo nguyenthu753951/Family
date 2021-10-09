@@ -1,0 +1,49 @@
+﻿@model controller.Models.PHIEU_GIAM_GIA
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PHIEU_GIAM_GIA</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.SO_PGG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SO_PGG)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.LOAI_PGG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOAI_PGG)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HSD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HSD)
+        </dd>
+
+    </dl>
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
+@*<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.SO_PGG }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>*@
