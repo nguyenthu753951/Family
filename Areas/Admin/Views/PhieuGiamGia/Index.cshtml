@@ -1,0 +1,46 @@
+﻿@model IEnumerable<controller.Models.PHIEU_GIAM_GIA>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.SO_PGG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOAI_PGG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HSD)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.SO_PGG)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.LOAI_PGG)
+    </td>
+    <td>
+        @Html.DisplayFor(modelItem => item.HSD)
+    </td>
+    <td>
+        @Html.ActionLink("Edit", "Edit", new { id = item.SO_PGG }) |
+        @Html.ActionLink("Details", "Details", new { id = item.SO_PGG }) |
+        @Html.ActionLink("Delete", "Delete", new { id = item.SO_PGG })
+    </td>
+</tr>
+}
+
+</table>

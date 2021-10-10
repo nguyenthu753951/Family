@@ -1,4 +1,4 @@
-﻿@model controller.Models.PHIEU_GIAM_GIA
+﻿@model controller.Models.NHAN_VIEN
 
 @{
     ViewBag.Title = "Create";
@@ -7,35 +7,53 @@
 <h2>Create</h2>
 
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
-        <h4>PHIEU_GIAM_GIA</h4>
+        <h4>NHAN_VIEN</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         <div class="form-group">
-            @Html.LabelFor(model => model.SO_PGG, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.HO_TEN_NV, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.SO_PGG, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.SO_PGG, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.HO_TEN_NV, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.HO_TEN_NV, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.PHAI, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.PHAI, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.PHAI, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.LOAI_PGG, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.CHUC_VU, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.EditorFor(model => model.LOAI_PGG, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.LOAI_PGG, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.CHUC_VU, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.CHUC_VU, "", new { @class = "text-danger" })
             </div>
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.HSD, htmlAttributes: new { @class = "control-label col-md-2" })
+            @Html.LabelFor(model => model.SDT, htmlAttributes: new { @class = "control-label col-md-2" })
             <div class="col-md-10">
-                @Html.TextBoxFor(model => model.HSD, new { @Type = "date", @class = "form-control datepicker" })
-                @Html.ValidationMessageFor(model => model.HSD, "", new { @class = "text-danger" })
+                @Html.EditorFor(model => model.SDT, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.SDT, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.NGAY_SINH, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.NGAY_SINH, new { @Type = "date", @class = "form-control datepicker", })
+                @Html.ValidationMessageFor(model => model.NGAY_SINH, "", new { @class = "text-danger" })
             </div>
         </div>
 
@@ -51,6 +69,7 @@
     @Html.ActionLink("Back to List", "Index")
 </div>
 
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
+@*@section Scripts {
+        @Scripts.Render("~/bundles/jqueryval")
+    }
+*@

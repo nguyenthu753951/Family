@@ -49,6 +49,8 @@ namespace controller.Controllers
             {
                 // TODO: Add insert logic here
                 var context = new DBContext();
+                long MaNV = DateTimeOffset.Now.ToUnixTimeMilliseconds();
+                model.MA_NV = MaNV;
                 context.NHAN_VIEN.Add(model);                
                 context.SaveChanges();
                 return RedirectToAction("Index");
