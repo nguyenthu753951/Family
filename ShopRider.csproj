@@ -132,9 +132,6 @@
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\NhanVienController.cs" />
     <Compile Include="Areas\Admin\Controllers\PhieuGiamGiaController.cs" />
-    <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\NhanVienController.cs" />
-    <Compile Include="Controllers\PhieuGiamGiaController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2056,21 +2053,10 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\NhanVien\Index.cshtml" />
-    <Content Include="Views\NhanVien\Create.cshtml" />
-    <Content Include="Views\NhanVien\Delete.cshtml" />
-    <Content Include="Views\NhanVien\Details.cshtml" />
-    <Content Include="Views\PhieuGiamGia\Index.cshtml" />
-    <Content Include="Views\PhieuGiamGia\Create.cshtml" />
-    <Content Include="Views\PhieuGiamGia\Details.cshtml" />
-    <Content Include="Views\PhieuGiamGia\Edit.cshtml" />
-    <Content Include="Views\PhieuGiamGia\Delete.cshtml" />
-    <Content Include="Views\NhanVien\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
-    <Folder Include="Views\Admin\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
