@@ -36,6 +36,7 @@
         @Html.LabelFor(model => model.HSD, htmlAttributes: new { @class = "control-label col-md-2" })
         <div class="col-md-10">
             @Html.TextBoxFor(model => model.HSD, "{0:yyyy-MM-dd}", new { @Type = "date", @class = "form-control datepicker" })
+
             @Html.ValidationMessageFor(model => model.HSD, "", new { @class = "text-danger" })
         </div>
     </div>
