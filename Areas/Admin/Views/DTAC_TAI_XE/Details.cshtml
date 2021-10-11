@@ -1,0 +1,43 @@
+﻿@model controller.Models.DTAC_TAI_XE
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>DTAC_TAI_XE</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TEN_TX)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TEN_TX)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIA_CHI_TX)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIA_CHI_TX)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BIEN_SO_XE)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BIEN_SO_XE)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MA_TX }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

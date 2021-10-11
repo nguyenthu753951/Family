@@ -1,0 +1,46 @@
+﻿@model IEnumerable<controller.Models.DTAC_TAI_XE>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TEN_TX)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DIA_CHI_TX)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BIEN_SO_XE)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TEN_TX)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DIA_CHI_TX)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.BIEN_SO_XE)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MA_TX }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MA_TX }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MA_TX })
+        </td>
+    </tr>
+}
+
+</table>
