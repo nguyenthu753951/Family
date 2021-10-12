@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\Areas",
+    "\\Areas\\Admin",
+    "\\Areas\\Admin\\Views",
+    "\\Areas\\Admin\\Views\\PhieuGiamGia"
   ],
-  "SelectedNode": "\\controller.sln",
+  "SelectedNode": "\\Areas\\Admin\\Views\\PhieuGiamGia\\Delete.cshtml",
   "PreviewInSolutionExplorer": false
 }
