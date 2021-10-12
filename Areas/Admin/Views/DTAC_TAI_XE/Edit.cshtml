@@ -12,13 +12,13 @@
     @Html.AntiForgeryToken()
     
     <div class="form-horizontal">
-        <h4>DTAC_TAI_XE</h4>
+        <h4>Đối Tác Tài Xế</h4>
         <hr />
         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
         @Html.HiddenFor(model => model.MA_TX)
 
         <div class="form-group">
-            @Html.LabelFor(model => model.TEN_TX, htmlAttributes: new { @class = "control-label col-md-2" })
+                Tên Tài Xế
             <div class="col-md-10">
                 @Html.EditorFor(model => model.TEN_TX, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.TEN_TX, "", new { @class = "text-danger" })
@@ -26,7 +26,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.DIA_CHI_TX, htmlAttributes: new { @class = "control-label col-md-2" })
+                Địa Chỉ Tài Xế
             <div class="col-md-10">
                 @Html.EditorFor(model => model.DIA_CHI_TX, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.DIA_CHI_TX, "", new { @class = "text-danger" })
@@ -34,7 +34,7 @@
         </div>
 
         <div class="form-group">
-            @Html.LabelFor(model => model.BIEN_SO_XE, htmlAttributes: new { @class = "control-label col-md-2" })
+                Biển Số Xe
             <div class="col-md-10">
                 @Html.EditorFor(model => model.BIEN_SO_XE, new { htmlAttributes = new { @class = "form-control" } })
                 @Html.ValidationMessageFor(model => model.BIEN_SO_XE, "", new { @class = "text-danger" })
