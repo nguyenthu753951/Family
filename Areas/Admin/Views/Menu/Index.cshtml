@@ -1,0 +1,40 @@
+﻿@model IEnumerable<controller.Models.MENU>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Quản lý thông tin sản phẩm</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TEN_MON)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.GIA_MON)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TEN_MON)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.GIA_MON)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MA_MON_AN }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MA_MON_AN }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MA_MON_AN })
+        </td>
+    </tr>
+}
+
+</table>

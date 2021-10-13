@@ -3,9 +3,10 @@
     "",
     "\\Areas",
     "\\Areas\\Admin",
+    "\\Areas\\Admin\\Controllers",
     "\\Areas\\Admin\\Views",
-    "\\Areas\\Admin\\Views\\PhieuGiamGia"
+    "\\Controllers",
+    "\\fonts"
   ],
-  "SelectedNode": "\\Areas\\Admin\\Views\\PhieuGiamGia\\Delete.cshtml",
   "PreviewInSolutionExplorer": false
 }
