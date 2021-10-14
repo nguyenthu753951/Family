@@ -1,31 +1,781 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿
+@{
+    ViewBag.Title = "Trang chủ";
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
+<!DOCTYPE html>
+
+<div class="container banner mt_20">
+    <div class="main-banner owl-carousel">
+        
+        <div class="item"><a href="#"><img src="~/Assets/Customer/images/50%.jpg" alt="Main Banner" class="main_banner1.jpg" /></a></div>
+        <div class="item"><a href="#"><img src="~/Assets/Customer/images/gg.jpg" alt="Main Banner" class="main_banner2.jpg" /></a></div>
+    </div>
+</div>
+<div class="container">
+    <!-- =====  SUB BANNER  STRAT ===== -->
+    <div class="row">
+        <div class="cms_banner mt_10">
+            <div class="col-xs-4 mt_10">
+                <div id="subbanner1" class="sub-hover">
+                    <div class="sub-img"><a href="#"><img src="~/Assets/Customer/images/comtam.jpg" alt="Sub Banner1" class="img-responsive"></a></div>
+                    <div class="bannertext text-center">
+                        <button class="btn mb_10 cms_btn">Xem Món Ăn</button>
+                        <h2>Cơm Tấm</h2>
+                        <!--<p class="mt_10">Wide veriety of sizes,colors</p>-->
+                    </div>
+                </div>
+                <div id="subbanner2" class="sub-hover mt_20">
+                    <div class="sub-img"><a href="#"><img src="~/Assets/Customer/images/phobo.jpg" alt="Sub Banner2" class="img-responsive"></a></div>
+                    <div class="bannertext text-center">
+                        <button class="btn mb_10 cms_btn">Xem Món Ăn</button>
+                        <h2>Phở Bò</h2>
+                        <!--<p class="mt_10">Shop collection of designer</p>-->
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4 mt_10">
+                <div id="subbanner3" class="sub-hover">
+                    <div class="sub-img"> <a href="#"><img src="~/Assets/Customer/images/lauchuacay.jpg" alt="Sub Banner3" class="img-responsive"></a></div>
+                    <div class="bannertext text-center">
+                        <button class="btn mb_10 cms_btn">Xem Món Ăn</button>
+                        <h2>Lẩu Thái Hải Sản</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-4 mt_10">
+                <div id="subbanner4" class="sub-hover">
+                    <div class="sub-img"><a href="#"><img src="~/Assets/Customer/images/duiga.jpg" alt="Sub Banner4" class="img-responsive"></a></div>
+                    <div class="bannertext text-center">
+                        <button class="btn mb_10 cms_btn">Xem Món Ăn</button>
+                        <h2>Đùi Gà</h2>
+                        <!--<p class="mt_10">Bags for men & women only</p>-->
+                    </div>
+                </div>
+                <div id="subbanner5" class="sub-hover mt_20">
+                    <div class="sub-img"><a href="#"><img src="~/Assets/Customer/images/bunbo.jpg" alt="Sub Banner5" class="img-responsive"></a></div>
+                    <div class="bannertext text-center">
+                        <button class="btn mb_10 cms_btn">Xem Món Ăn</button>
+                        <h2>Bún Bò</h2>
+                        <!--<p class="mt_10">Over 400 luxury designers</p>-->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- =====  SUB BANNER END  ===== -->
+    <div class="row ">
+        <div class="col-sm-12 mtb_10">
+            <!-- =====  PRODUCT TAB  ===== -->
+            <div id="product-tab" class="mt_50">
+                <div class="heading-part mb_10 ">
+                    <h2 class="main_title">Món Ăn</h2>
+                </div>
+                @*<ul class="nav text-right">
+                    <li class="active"> <a href="#nArrivals" data-toggle="tab">New Arrivals</a> </li>
+                    <li><a href="#Bestsellers" data-toggle="tab">Bestsellers</a> </li>
+                    <li><a href="#Featured" data-toggle="tab">Featured</a> </li>
+                </ul>*@
+                <div class="tab-content clearfix box">
+                    <div class="tab-pane active" id="nArrivals">
+                        <div class="nArrivals owl-carousel">
+                            <div class="product-grid">
+                                <div class="item">
+                                    <div class="product-thumb">
+                                        <div class="image product-imageblock">
+                                            <a href="product_detail_page.html"> <img data-name="product_image" src="~/Assets/Customer/images/product/bunbo.jpg" class="img-responsive"> <img src="~/Assets/Customer/images/product/bunbo.jpg" class="img-responsive"> </a>
+                                            <div class="button-group text-center">
+                                                <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
+                                                <div class="quickview"><a href="#"><span>Quick View</span></a></div>
+                                                <div class="compare"><a href="#"><span>Compare</span></a></div>
+                                                <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="caption product-detail text-center">
+                                            <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                                            <h6 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">Bún Bò</a></h6>
+                                            <span class="price">
+                                                <span class="amount"><span class="currencySymbol"></span>30.000VNĐ</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-grid">
+                                <div class="item">
+                                    <div class="product-thumb">
+                                        <div class="image product-imageblock">
+                                            <a href="product_detail_page.html"> <img data-name="product_image" src="~/Assets/Customer/images/product/comtam2.jpg" class="img-responsive"> <img src="~/Assets/Customer/images/product/comtam2.jpg" class="img-responsive"> </a>
+                                            <div class="button-group text-center">
+                                                <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
+                                                <div class="quickview"><a href="#"><span>Quick View</span></a></div>
+                                                <div class="compare"><a href="#"><span>Compare</span></a></div>
+                                                <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="caption product-detail text-center">
+                                            <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                                            <h6 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">Cơm Tấm</a></h6>
+                                            <span class="price">
+                                                <span class="amount"><span class="currencySymbol"></span>30.000VNĐ</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-grid">
+                                <div class="item">
+                                    <div class="product-thumb">
+                                        <div class="image product-imageblock">
+                                            <a href="product_detail_page.html"> <img data-name="product_image" src="~/Assets/Customer/images/product/hamberger.jpg" class="img-responsive"> <img src="~/Assets/Customer/images/product/hamberger.jpg" class="img-responsive"> </a>
+                                            <div class="button-group text-center">
+                                                <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
+                                                <div class="quickview"><a href="#"><span>Quick View</span></a></div>
+                                                <div class="compare"><a href="#"><span>Compare</span></a></div>
+                                                <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="caption product-detail text-center">
+                                            <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                                            <h6 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">Hamberger Bò</a></h6>
+                                            <span class="price">
+                                                <span class="amount"><span class="currencySymbol"></span>40.000VNĐ</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-grid">
+                                <div class="item">
+                                    <div class="product-thumb">
+                                        <div class="image product-imageblock">
+                                            <a href="product_detail_page.html"> <img data-name="product_image" src="~/Assets/Customer/images/product/phobo.jpg" class="img-responsive"> <img src="~/Assets/Customer/images/product/phobo.jpg" class="img-responsive"> </a>
+                                            <div class="button-group text-center">
+                                                <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
+                                                <div class="quickview"><a href="#"><span>Quick View</span></a></div>
+                                                <div class="compare"><a href="#"><span>Compare</span></a></div>
+                                                <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="caption product-detail text-center">
+                                            <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                                            <h6 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">Phở Bò</a></h6>
+                                            <span class="price">
+                                                <span class="amount"><span class="currencySymbol"></span>30.000VNĐ</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-grid">
+                                <div class="item">
+                                    <div class="product-thumb">
+                                        <div class="image product-imageblock">
+                                            <a href="product_detail_page.html"> <img data-name="product_image" src="~/Assets/Customer/images/product/lauchuacay.jpg" class="img-responsive"> <img src="~/Assets/Customer/images/product/lauchuacay.jpg" class="img-responsive"> </a>
+                                            <div class="button-group text-center">
+                                                <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
+                                                <div class="quickview"><a href="#"><span>Quick View</span></a></div>
+                                                <div class="compare"><a href="#"><span>Compare</span></a></div>
+                                                <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="caption product-detail text-center">
+                                            <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                                            <h6 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">Lẩu Thái Hải Sản</a></h6>
+                                            <span class="price">
+                                                <span class="amount"><span class="currencySymbol"></span>150.000VNĐ</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-grid">
+                                <div class="item">
+                                    <div class="product-thumb">
+                                        <div class="image product-imageblock">
+                                            <a href="product_detail_page.html"> <img data-name="product_image" src="~/Assets/Customer/images/product/duiga.jpg" class="img-responsive"> <img src="~/Assets/Customer/images/product/duiga.jpg" class="img-responsive"> </a>
+                                            <div class="button-group text-center">
+                                                <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
+                                                <div class="quickview"><a href="#"><span>Quick View</span></a></div>
+                                                <div class="compare"><a href="#"><span>Compare</span></a></div>
+                                                <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="caption product-detail text-center">
+                                            <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                                            <h6 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">Đùi Gà</a></h6>
+                                            <span class="price">
+                                                <span class="amount"><span class="currencySymbol"></span>50.000VNĐ/Phần</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="Bestsellers">
+                        <div class="Bestsellers owl-carousel">
+                            <div class="product-grid">
+                                <div class="item">
+                                    <div class="product-thumb  mb_30">
+                                        <div class="image product-imageblock">
+                                            <a href="product_detail_page.html"> <img data-name="product_image" src="~/Assets/Customer/images/product/duahau.jpg" class="img-responsive"> <img src="~/Assets/Customer/images/product/duahau.jpg" class="img-responsive"> </a>
+                                            <div class="button-group text-center">
+                                                <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
+                                                <div class="quickview"><a href="#"><span>Quick View</span></a></div>
+                                                <div class="compare"><a href="#"><span>Compare</span></a></div>
+                                                <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="caption product-detail text-center">
+                                            <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                                            <h6 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">Dưa Hấu</a></h6>
+                                            <span class="price">
+                                                <span class="amount"><span class="currencySymbol"></span>20.000VNĐ/Phần</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-grid">
+                                <div class="item">
+                                    <div class="product-thumb  mb_30">
+                                        <div class="image product-imageblock">
+                                            <a href="product_detail_page.html"> <img data-name="product_image" src="~/Assets/Customer/images/product/product3.jpg" class="img-responsive"> <img src="~/Assets/Customer/images/product/product3-1.jpg" class="img-responsive"> </a>
+                                            <div class="button-group text-center">
+                                                <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
+                                                <div class="quickview"><a href="#"><span>Quick View</span></a></div>
+                                                <div class="compare"><a href="#"><span>Compare</span></a></div>
+                                                <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="caption product-detail text-center">
+                                            <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                                            <h6 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen and HD Vide..</a></h6>
+                                            <span class="price">
+                                                <span class="amount"><span class="currencySymbol">$</span>70.00</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-grid">
+                                <div class="item">
+                                    <div class="product-thumb  mb_30">
+                                        <div class="image product-imageblock">
+                                            <a href="product_detail_page.html"> <img data-name="product_image" src="~/Assets/Customer/images/product/product5.jpg" class="img-responsive"> <img src="~/Assets/Customer/images/product/product5-1.jpg" class="img-responsive"> </a>
+                                            <div class="button-group text-center">
+                                                <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
+                                                <div class="quickview"><a href="#"><span>Quick View</span></a></div>
+                                                <div class="compare"><a href="#"><span>Compare</span></a></div>
+                                                <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="caption product-detail text-center">
+                                            <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                                            <h6 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen and HD Vide..</a></h6>
+                                            <span class="price">
+                                                <span class="amount"><span class="currencySymbol">$</span>70.00</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-grid">
+                                <div class="item">
+                                    <div class="product-thumb  mb_30">
+                                        <div class="image product-imageblock">
+                                            <a href="product_detail_page.html"> <img data-name="product_image" src="~/Assets/Customer/images/product/product6.jpg" class="img-responsive"> <img src="~/Assets/Customer/images/product/product6-1.jpg" class="img-responsive"> </a>
+                                            <div class="button-group text-center">
+                                                <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
+                                                <div class="quickview"><a href="#"><span>Quick View</span></a></div>
+                                                <div class="compare"><a href="#"><span>Compare</span></a></div>
+                                                <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="caption product-detail text-center">
+                                            <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                                            <h6 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen and HD Vide..</a></h6>
+                                            <span class="price">
+                                                <span class="amount"><span class="currencySymbol">$</span>70.00</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-grid">
+                                <div class="item">
+                                    <div class="product-thumb  mb_30">
+                                        <div class="image product-imageblock">
+                                            <a href="product_detail_page.html"> <img data-name="product_image" src="~/Assets/Customer/images/product/product8.jpg" class="img-responsive"> <img src="~/Assets/Customer/images/product/product8-1.jpg" class="img-responsive"> </a>
+                                            <div class="button-group text-center">
+                                                <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
+                                                <div class="quickview"><a href="#"><span>Quick View</span></a></div>
+                                                <div class="compare"><a href="#"><span>Compare</span></a></div>
+                                                <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="caption product-detail text-center">
+                                            <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                                            <h6 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen and HD Vide..</a></h6>
+                                            <span class="price">
+                                                <span class="amount"><span class="currencySymbol">$</span>70.00</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-grid">
+                                <div class="item">
+                                    <div class="product-thumb  mb_30">
+                                        <div class="image product-imageblock">
+                                            <a href="product_detail_page.html"> <img data-name="product_image" src="~/Assets/Customer/images/product/product10.jpg" class="img-responsive"> <img src="~/Assets/Customer/images/product/product10-1.jpg" class="img-responsive"> </a>
+                                            <div class="button-group text-center">
+                                                <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
+                                                <div class="quickview"><a href="#"><span>Quick View</span></a></div>
+                                                <div class="compare"><a href="#"><span>Compare</span></a></div>
+                                                <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="caption product-detail text-center">
+                                            <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                                            <h6 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen and HD Vide..</a></h6>
+                                            <span class="price">
+                                                <span class="amount"><span class="currencySymbol">$</span>70.00</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane" id="Featured">
+                        <div class="Featured owl-carousel">
+                            <div class="product-grid">
+                                <div class="item">
+                                    <div class="product-thumb  mb_30">
+                                        <div class="image product-imageblock">
+                                            <a href="product_detail_page.html"> <img data-name="product_image" src="~/Assets/Customer/images/product/duahau.jpg" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="~/Assets/Customer/images/product/duahau.jpg" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                                            <div class="button-group text-center">
+                                                <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
+                                                <div class="quickview"><a href="#"><span>Quick View</span></a></div>
+                                                <div class="compare"><a href="#"><span>Compare</span></a></div>
+                                                <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="caption product-detail text-center">
+                                            <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                                            <h6 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">Nước Ép Dưa Hấu</a></h6>
+                                            <span class="price">
+                                                <span class="amount"><span class="currencySymbol"></span>20.000VNĐ</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-grid">
+                                <div class="item">
+                                    <div class="product-thumb  mb_30">
+                                        <div class="image product-imageblock">
+                                            <a href="product_detail_page.html"> <img data-name="product_image" src="~/Assets/Customer/images/product/product4.jpg" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="~/Assets/Customer/images/product/product4-1.jpg" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                                            <div class="button-group text-center">
+                                                <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
+                                                <div class="quickview"><a href="#"><span>Quick View</span></a></div>
+                                                <div class="compare"><a href="#"><span>Compare</span></a></div>
+                                                <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="caption product-detail text-center">
+                                            <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                                            <h6 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen and HD Vide..</a></h6>
+                                            <span class="price">
+                                                <span class="amount"><span class="currencySymbol">$</span>70.00</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-grid">
+                                <div class="item">
+                                    <div class="product-thumb  mb_30">
+                                        <div class="image product-imageblock">
+                                            <a href="product_detail_page.html"> <img data-name="product_image" src="~/Assets/Customer/images/product/product6.jpg" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="~/Assets/Customer/images/product/product6-1.jpg" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                                            <div class="button-group text-center">
+                                                <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
+                                                <div class="quickview"><a href="#"><span>Quick View</span></a></div>
+                                                <div class="compare"><a href="#"><span>Compare</span></a></div>
+                                                <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="caption product-detail text-center">
+                                            <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                                            <h6 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen and HD Vide..</a></h6>
+                                            <span class="price">
+                                                <span class="amount"><span class="currencySymbol">$</span>70.00</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-grid">
+                                <div class="item">
+                                    <div class="product-thumb  mb_30">
+                                        <div class="image product-imageblock">
+                                            <a href="product_detail_page.html"> <img data-name="product_image" src="~/Assets/Customer/images/product/product8.jpg" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="~/Assets/Customer/images/product/product8-1.jpg" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                                            <div class="button-group text-center">
+                                                <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
+                                                <div class="quickview"><a href="#"><span>Quick View</span></a></div>
+                                                <div class="compare"><a href="#"><span>Compare</span></a></div>
+                                                <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="caption product-detail text-center">
+                                            <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                                            <h6 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen and HD Vide..</a></h6>
+                                            <span class="price">
+                                                <span class="amount"><span class="currencySymbol">$</span>70.00</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-grid">
+                                <div class="item">
+                                    <div class="product-thumb  mb_30">
+                                        <div class="image product-imageblock">
+                                            <a href="product_detail_page.html"> <img data-name="product_image" src="~/Assets/Customer/images/product/product10.jpg" alt="iPod Classic" title="iPod Classic" class="img-responsive"> <img src="~/Assets/Customer/images/product/product10-1.jpg" alt="iPod Classic" title="iPod Classic" class="img-responsive"> </a>
+                                            <div class="button-group text-center">
+                                                <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
+                                                <div class="quickview"><a href="#"><span>Quick View</span></a></div>
+                                                <div class="compare"><a href="#"><span>Compare</span></a></div>
+                                                <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="caption product-detail text-center">
+                                            <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                                            <h6 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen and HD Vide..</a></h6>
+                                            <span class="price">
+                                                <span class="amount"><span class="currencySymbol">$</span>70.00</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="product-grid">
+                                <div class="item">
+                                    <div class="product-thumb  mb_30">
+                                        <div class="image product-imageblock">
+                                            <a href="product_detail_page.html"> <img data-name="product_image" src="~/Assets/Customer/images/product/product2.jpg" class="img-responsive"> <img src="~/Assets/Customer/images/product/product2-1.jpg" class="img-responsive"> </a>
+                                            <div class="button-group text-center">
+                                                <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
+                                                <div class="quickview"><a href="#"><span>Quick View</span></a></div>
+                                                <div class="compare"><a href="#"><span>Compare</span></a></div>
+                                                <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
+                                            </div>
+                                        </div>
+                                        <div class="caption product-detail text-center">
+                                            <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                                            <h6 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">New LCDScreen and HD Vide..</a></h6>
+                                            <span class="price">
+                                                <span class="amount"><span class="currencySymbol">$</span>70.00</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- =====  PRODUCT TAB  END ===== -->
+            <!-- =====  SUB BANNER  STRAT ===== -->
+            <div class="row">
+                <div class="cms_banner mt_50">
+                    <div class="col-sm-12 mt_10">
+                        <!--<div id="subbanner3" class="sub-hover">
+                            <div class="sub-img"> <a href="#"><img src="images/sub6.jpg" alt="Sub Banner3" class="img-responsive"></a></div>
+                        </div>-->
+                    </div>
+                </div>
+            </div>
+            <!-- =====  SUB BANNER END  ===== -->
+            <!-- =====  PRODUCT TAB  ===== -->
+            <div id="product-tab" class="mt_50">
+                <div class="heading-part mb_10 ">
+                    <h2 class="main_title">Nước Uống</h2>
+                </div>
+                <div class="tab-content clearfix box">
+                    <div class="tab-pane active" id="nArrivals">
+                        <div class="tab-pane" id="Featured">
+                            <div class="Featured owl-carousel">
+                                <div class="product-grid">
+                                    <div class="item">
+                                        <div class="product-thumb  mb_30">
+                                            <div class="image product-imageblock">
+                                                <a href="product_detail_page.html"> <img data-name="product_image" src="~/Assets/Customer/images/product/duahau.jpg" class="img-responsive"> <img src="~/Assets/Customer/images/product/duahau.jpg" class="img-responsive"> </a>
+                                                <div class="button-group text-center">
+                                                    <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
+                                                    <div class="quickview"><a href="#"><span>Quick View</span></a></div>
+                                                    <div class="compare"><a href="#"><span>Compare</span></a></div>
+                                                    <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
+                                                </div>
+                                            </div>
+                                            <div class="caption product-detail text-center">
+                                                <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                                                <h6 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">Dưa Hấu</a></h6>
+                                                <span class="price">
+                                                    <span class="amount"><span class="currencySymbol"></span>20.000VNĐ</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-grid">
+                                    <div class="item">
+                                        <div class="product-thumb  mb_30">
+                                            <div class="image product-imageblock">
+                                                <a href="product_detail_page.html"> <img data-name="product_image" src="~/Assets/Customer/images/product/dua.jpg" class="img-responsive"> <img src="~/Assets/Customer/images/product/dua.jpg" class="img-responsive"> </a>
+                                                <div class="button-group text-center">
+                                                    <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
+                                                    <div class="quickview"><a href="#"><span>Quick View</span></a></div>
+                                                    <div class="compare"><a href="#"><span>Compare</span></a></div>
+                                                    <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
+                                                </div>
+                                            </div>
+                                            <div class="caption product-detail text-center">
+                                                <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                                                <h6 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">Nước Ép Dứa</a></h6>
+                                                <span class="price">
+                                                    <span class="amount"><span class="currencySymbol"></span>20.000VNĐ</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-grid">
+                                    <div class="item">
+                                        <div class="product-thumb  mb_30">
+                                            <div class="image product-imageblock">
+                                                <a href="product_detail_page.html"> <img data-name="product_image" src="~/Assets/Customer/images/product/loc.jpg" class="img-responsive"> <img src="~/Assets/Customer/images/product/loc.jpg" class="img-responsive"> </a>
+                                                <div class="button-group text-center">
+                                                    <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
+                                                    <div class="quickview"><a href="#"><span>Quick View</span></a></div>
+                                                    <div class="compare"><a href="#"><span>Compare</span></a></div>
+                                                    <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
+                                                </div>
+                                            </div>
+                                            <div class="caption product-detail text-center">
+                                                <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                                                <h6 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">Nước Suối</a></h6>
+                                                <span class="price">
+                                                    <span class="amount"><span class="currencySymbol"></span>7.000VNĐ</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-grid">
+                                    <div class="item">
+                                        <div class="product-thumb  mb_30">
+                                            <div class="image product-imageblock">
+                                                <a href="product_detail_page.html"> <img data-name="product_image" src="~/Assets/Customer/images/product/coca.jpg" class="img-responsive"> <img src="~/Assets/Customer/images/product/coca.jpg" class="img-responsive"> </a>
+                                                <div class="button-group text-center">
+                                                    <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
+                                                    <div class="quickview"><a href="#"><span>Quick View</span></a></div>
+                                                    <div class="compare"><a href="#"><span>Compare</span></a></div>
+                                                    <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
+                                                </div>
+                                            </div>
+                                            <div class="caption product-detail text-center">
+                                                <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                                                <h6 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">CocaCola</a></h6>
+                                                <span class="price">
+                                                    <span class="amount"><span class="currencySymbol"></span>10.000VNĐ</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-grid">
+                                    <div class="item">
+                                        <div class="product-thumb  mb_30">
+                                            <div class="image product-imageblock">
+                                                <a href="product_detail_page.html"> <img data-name="product_image" src="~/Assets/Customer/images/product/7up.jpg" class="img-responsive"> <img src="~/Assets/Customer/images/product/7up.jpg" class="img-responsive"> </a>
+                                                <div class="button-group text-center">
+                                                    <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
+                                                    <div class="quickview"><a href="#"><span>Quick View</span></a></div>
+                                                    <div class="compare"><a href="#"><span>Compare</span></a></div>
+                                                    <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
+                                                </div>
+                                            </div>
+                                            <div class="caption product-detail text-center">
+                                                <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                                                <h6 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">7up</a></h6>
+                                                <span class="price">
+                                                    <span class="amount"><span class="currencySymbol"></span>10.000VNĐ</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="product-grid">
+                                    <div class="item">
+                                        <div class="product-thumb  mb_30">
+                                            <div class="image product-imageblock">
+                                                <a href="product_detail_page.html"> <img data-name="product_image" src="~/Assets/Customer/images/product/monster.jpg" class="img-responsive"> <img src="~/Assets/Customer/images/product/monster.jpg" class="img-responsive"> </a>
+                                                <div class="button-group text-center">
+                                                    <div class="wishlist"><a href="#"><span>wishlist</span></a></div>
+                                                    <div class="quickview"><a href="#"><span>Quick View</span></a></div>
+                                                    <div class="compare"><a href="#"><span>Compare</span></a></div>
+                                                    <div class="add-to-cart"><a href="#"><span>Add to cart</span></a></div>
+                                                </div>
+                                            </div>
+                                            <div class="caption product-detail text-center">
+                                                <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
+                                                <h6 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">Monster</a></h6>
+                                                <span class="price">
+                                                    <span class="amount"><span class="currencySymbol"></span>10.000VNĐ</span>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- =====  PRODUCT TAB  END ===== -->
+            <!-- =====  Blog ===== -->
+            <div id="Blog" class="mt_50">
+                <div class="heading-part mb_10 ">
+                    <h2 class="main_title">Latest News</h2>
+                </div>
+                <div class="blog-contain box">
+                    <div class="blog owl-carousel ">
+                        <div class="item">
+                            <div class="box-holder">
+                                <div class="thumb post-img">
+                                    <a href="#"> <img src="~/Assets/Customer/images/blog/freeship.jpg" alt="Online Shop Rider"> </a>
+                                    <div class="date-time text-center">
+                                        <div class="day"> 11</div>
+                                        <div class="month">Aug</div>
+                                    </div>
+                                    <div class="post-image-hover"> </div>
+                                    <div class="post-info">
+                                        <h6 class="mb_10 text-uppercase"> <a href="single_blog.html">Fashions fade, style is eternal</a> </h6>
+                                        <div class="view-blog">
+                                            <div class="write-comment pull-left"> <a href="single_blog.html"> 0 Comments</a> </div>
+                                            <div class="read-more pull-right"> <a href="single_blog.html"> <i class="fa fa-link"></i> read more</a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="box-holder">
+                                <div class="thumb post-img">
+                                    <a href="#"> <img src="~/Assets/Customer/images/blog/30%.jpg" alt="Online Shop Rider"> </a>
+                                    <div class="date-time text-center">
+                                        <div class="day"> 11</div>
+                                        <div class="month">Aug</div>
+                                    </div>
+                                    <div class="post-image-hover"> </div>
+                                    <div class="post-info">
+                                        <h6 class="mb_10 text-uppercase"> <a href="single_blog.html">Fashions fade, style is eternal</a> </h6>
+                                        <div class="view-blog">
+                                            <div class="write-comment pull-left"> <a href="single_blog.html"> 0 Comments</a> </div>
+                                            <div class="read-more pull-right"> <a href="single_blog.html"> <i class="fa fa-link"></i> read more</a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="box-holder">
+                                <div class="thumb post-img">
+                                    <a href="#"> <img src="~/Assets/Customer/images/blog/50.jpg" alt="Online Shop Rider"> </a>
+                                    <div class="date-time text-center">
+                                        <div class="day"> 11</div>
+                                        <div class="month">Aug</div>
+                                    </div>
+                                    <div class="post-image-hover"> </div>
+                                    <div class="post-info">
+                                        <h6 class="mb_10 text-uppercase"> <a href="single_blog.html">Fashions fade, style is eternal</a> </h6>
+                                        <div class="view-blog">
+                                            <div class="write-comment pull-left"> <a href="single_blog.html"> 0 Comments</a> </div>
+                                            <div class="read-more pull-right"> <a href="single_blog.html"> <i class="fa fa-link"></i> read more</a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="box-holder">
+                                <div class="thumb post-img">
+                                    <a href="#"> <img src="~/Assets/Customer/images/blog/20%.jpg" alt="Online Shop Rider"> </a>
+                                    <div class="date-time text-center">
+                                        <div class="day"> 11</div>
+                                        <div class="month">Aug</div>
+                                    </div>
+                                    <div class="post-image-hover"> </div>
+                                    <div class="post-info">
+                                        <h6 class="mb_10 text-uppercase"> <a href="single_blog.html">Fashions fade, style is eternal</a> </h6>
+                                        <div class="view-blog">
+                                            <div class="write-comment pull-left"> <a href="single_blog.html"> 0 Comments</a> </div>
+                                            <div class="read-more pull-right"> <a href="single_blog.html"> <i class="fa fa-link"></i> read more</a> </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- =====  Blog end ===== -->
+            </div>
+        </div>
+    </div>
+    <div id="brand_carouse" class="ptb_50 text-center">
+        <div class="type-01">
+            <div class="row">
+                <div class="col-sm-12">
+                    <div class="brand owl-carousel ptb_20">
+                        <div class="item text-center"> <a href="#"><img src="~/Assets/Customer/images/brand/brand1.png" alt="Disney" class="img-responsive" /></a> </div>
+                        <div class="item text-center"> <a href="#"><img src="~/Assets/Customer/images/brand/brand2.png" alt="Dell" class="img-responsive" /></a> </div>
+                        <div class="item text-center"> <a href="#"><img src="~/Assets/Customer/images/brand/brand3.png" alt="Harley" class="img-responsive" /></a> </div>
+                        <div class="item text-center"> <a href="#"><img src="~/Assets/Customer/images/brand/brand4.png" alt="Canon" class="img-responsive" /></a> </div>
+                        <div class="item text-center"> <a href="#"><img src="~/Assets/Customer/images/brand/brand5.png" alt="Canon" class="img-responsive" /></a> </div>
+                        <div class="item text-center"> <a href="#"><img src="~/Assets/Customer/images/brand/brand6.png" alt="Canon" class="img-responsive" /></a> </div>
+                        <div class="item text-center"> <a href="#"><img src="~/Assets/Customer/images/brand/brand7.png" alt="Canon" class="img-responsive" /></a> </div>
+                        <div class="item text-center"> <a href="#"><img src="~/Assets/Customer/images/brand/brand8.png" alt="Canon" class="img-responsive" /></a> </div>
+                        <div class="item text-center"> <a href="#"><img src="~/Assets/Customer/images/brand/brand9.png" alt="Canon" class="img-responsive" /></a> </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="newsletters mb_50">
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="news-head pull-left">
+                    <h2>Đăng Ký Để Nhận Thông Báo</h2>
+                    <div class="new-desc">Hãy Là Người Đầu Tiên Biết Thêm Nhiều Thông Tin Mới Về Nhà Hàng Của Chúng tôi!</div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="news-form pull-right">
+                    <form onsubmit="return validatemail();" method="post">
+                        <div class="form-group required">
+                            <input name="email" id="email" placeholder="Nhập Email Của Bạn" class="form-control input-lg" required="" type="email">
+                            <button type="submit" class="btn btn-default btn-lg">Đăng Ký</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-@*<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>*@
+
+
