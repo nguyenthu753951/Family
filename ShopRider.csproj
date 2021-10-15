@@ -138,6 +138,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\checkdonhangController.cs" />
     <Compile Include="Areas\Admin\Controllers\DTAC_TAI_XEController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\MenuController.cs" />
@@ -2164,6 +2165,10 @@
     <Content Include="Assets\Customer\fonts\ionicons.woff" />
     <Content Include="Assets\Customer\images\brand\Thumbs.db" />
     <Content Include="Assets\Customer\images\product\Thumbs.db" />
+    <Content Include="Areas\Admin\Views\checkdonhang\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\checkdonhang\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\checkdonhang\DeleteConfirmed.cshtml" />
+    <Content Include="Areas\Admin\Views\checkdonhang\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

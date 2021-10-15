@@ -20,6 +20,8 @@
         public string MA_TX { get; set; }
 
         [StringLength(50)]
+        [Display(Name = "Tên Tài Xế")]
+
         public string TEN_TX { get; set; }
 
         [StringLength(50)]

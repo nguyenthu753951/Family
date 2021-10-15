@@ -1,4 +1,4 @@
-namespace controller.Models
+﻿namespace controller.Models
 {
     using System;
     using System.Collections.Generic;
@@ -20,18 +20,26 @@ namespace controller.Models
         public string MA_DH { get; set; }
 
         [Column(TypeName = "money")]
+        [Display(Name = "Phí Giao Hàng")]
         public decimal? PHI_GIAO_HANG { get; set; }
+
+        [Display(Name = "Ngày lập hóa đơn")]
 
         public DateTime? NGAY_LAP_HD { get; set; }
 
+        [Display(Name = "Ngày giao")]
         public DateTime? NGAY_HEN_GIAO { get; set; }
 
         [Required]
         [StringLength(10)]
+        [Display(Name = "Mã khách hàng")]
+
         public string MA_KH { get; set; }
 
         [Required]
         [StringLength(10)]
+        [Display(Name = "Mã Tài xế")]
+
         public string MA_TX { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

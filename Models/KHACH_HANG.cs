@@ -19,6 +19,7 @@ namespace controller.Models
         public string MA_KH { get; set; }
 
         [StringLength(20)]
+        [Display(Name = "Tên Khách hàng")]
         public string TEN_KH { get; set; }
 
         [StringLength(50)]
