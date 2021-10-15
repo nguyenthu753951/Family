@@ -681,6 +681,5 @@ C:\doangit\bin\Antlr3.Runtime.pdb
 C:\doangit\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\doangit\obj\Debug\ShopRider.csproj.AssemblyReference.cache
 C:\doangit\obj\Debug\ShopRider.csproj.CoreCompileInputs.cache
-C:\doangit\obj\Debug\ShopRider.csproj.CopyComplete
 C:\doangit\obj\Debug\controller.dll
 C:\doangit\obj\Debug\controller.pdb
