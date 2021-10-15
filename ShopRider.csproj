@@ -1903,6 +1903,7 @@
     <Content Include="Assets\Customer\images\product\bunbo.jpg" />
     <Content Include="Assets\Customer\images\product\coca.jpg" />
     <Content Include="Assets\Customer\images\product\comtam2.jpg" />
+    <Content Include="Assets\Customer\images\product\dua.jpg" />
     <Content Include="Assets\Customer\images\product\duahau.jpg" />
     <Content Include="Assets\Customer\images\product\duiga.jpg" />
     <Content Include="Assets\Customer\images\product\hamberger.jpg" />
@@ -2188,10 +2189,12 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\MainMenu.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Admin\Data\" />
+    <Folder Include="NewFolder1\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
