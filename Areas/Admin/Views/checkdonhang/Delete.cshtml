@@ -1,0 +1,66 @@
+﻿@model controller.Models.DON_HANG
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Từ chối</h2>
+
+<h3>Bạn có chắc chắn từ chối đơn hàng này?</h3>
+<div>
+    <h4>Đơn hàng</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.DTAC_TAI_XE.TEN_TX)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DTAC_TAI_XE.TEN_TX)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KHACH_HANG.TEN_KH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KHACH_HANG.TEN_KH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PHI_GIAO_HANG)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PHI_GIAO_HANG) VND
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NGAY_LAP_HD)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NGAY_LAP_HD)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NGAY_HEN_GIAO)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NGAY_HEN_GIAO)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

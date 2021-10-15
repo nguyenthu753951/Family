@@ -1,0 +1,104 @@
+﻿@model IEnumerable<controller.Models.DON_HANG>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .click__check {
+        background: #1bcb61;
+        color: #333;
+        font-weight: bold;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    .click__check1 {
+        background: #c85a5a;
+        color: #333;
+        font-weight: bold;
+        border-radius: 4px;
+        text-align: center;
+    }
+
+    .click__check2 {
+        color: #333;
+        font-weight: bold;
+        border-radius: 4px;
+        text-align: center;
+        background: #dddddd;
+    }
+
+    .mr5 {
+        margin-right: 5px;
+    }
+
+    .click__check2 a,
+    .click__check1 a,
+    .click__check a {
+        color: #000;
+        text-decoration: none;
+    }
+</style>
+
+<h2>Quản lý đơn hàng</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DTAC_TAI_XE.TEN_TX)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KHACH_HANG.TEN_KH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PHI_GIAO_HANG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NGAY_LAP_HD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NGAY_HEN_GIAO)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DTAC_TAI_XE.TEN_TX)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.KHACH_HANG.TEN_KH)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PHI_GIAO_HANG) VND
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NGAY_LAP_HD)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NGAY_HEN_GIAO)
+            </td>
+            <td class="click__check">
+                <a class="checkxn" href="#">xác nhận</a>
+            </td>
+            <td class="mr5"></td>
+            <td class="click__check1">
+                @Html.ActionLink("Từ chối", "Delete", new { id = item.MA_DH })
+            </td>
+            <td class="mr5"></td>
+            <td class="click__check2">
+                @Html.ActionLink("Chi tiết", "Details", new { id = item.MA_DH })
+            </td>
+        </tr>
+    }
+
+</table>
+<script>
+    const clickxacnhan = document.querySelector('.checkxn');
+    clickxacnhan.onclick = function () {
+        alert("xác nhận đơn hàng thành công!!!");
+    }
+</script>
