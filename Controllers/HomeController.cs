@@ -17,6 +17,15 @@ namespace controller.Controllers
             return View(db.MENUs.ToList());
         }
 
-        
+        public ActionResult ChiTietMonAn(string id)
+        {
+            MENU menu = db.MENUs.Find(id);
+            if (menu == null)
+            {
+                return HttpNotFound();
+            }
+            return View(menu);
+        }
+
     }
 }
