@@ -39,6 +39,9 @@
         color: #000;
         text-decoration: none;
     }
+    .remove{
+        display:none;
+    }
 </style>
 
 <h2>Quản lý đơn hàng</h2>
@@ -81,11 +84,11 @@
             <td>
                 @Html.DisplayFor(modelItem => item.NGAY_HEN_GIAO)
             </td>
-            <td class="click__check">
+            <td class="click__check ">
                 <a class="checkxn" href="#">xác nhận</a>
             </td>
             <td class="mr5"></td>
-            <td class="click__check1">
+            <td class="click__check1 ">
                 @Html.ActionLink("Từ chối", "Delete", new { id = item.MA_DH })
             </td>
             <td class="mr5"></td>
@@ -98,7 +101,13 @@
 </table>
 <script>
     const clickxacnhan = document.querySelector('.checkxn');
+    const agree = document.querySelector('.table');
+    const check = document.querySelector('.click__check');
+    const check1 = document.querySelector('.click__check1');
     clickxacnhan.onclick = function () {
         alert("xác nhận đơn hàng thành công!!!");
+        check.classList.add("remove");
+        check1.classList.add("remove");
+
     }
 </script>
