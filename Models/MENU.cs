@@ -25,10 +25,12 @@
         public string TEN_MON { get; set; }
         [Display(Name = "Giá món")]
         public double GIA_MON { get; set; }
-
+        [Display(Name = "Loại")]
         public string LOAI { get; set; }
-
+        [Display(Name = "Hình ảnh")]
         public string HINH_ANH { get; set; }
+        [NotMapped]
+        public System.Web.HttpPostedFileBase ImgUpload { get; set; }
 
         /*public string XemMon { get; set; }*/
 

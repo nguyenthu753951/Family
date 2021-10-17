@@ -1,0 +1,57 @@
+﻿@model controller.Models.MENU
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Xóa</h2>
+
+<h3>Bạn có chắc muốn xóa món ăn này?</h3>
+<div>
+    <h4>MENU</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TEN_MON)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TEN_MON)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GIA_MON)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GIA_MON)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LOAI)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LOAI)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HINH_ANH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HINH_ANH)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm("Delete","Product",FormMethod.Post,new { enctype = "multipart/form-data" })) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

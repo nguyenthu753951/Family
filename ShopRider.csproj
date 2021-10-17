@@ -141,9 +141,9 @@
     <Compile Include="Areas\Admin\Controllers\checkdonhangController.cs" />
     <Compile Include="Areas\Admin\Controllers\DTAC_TAI_XEController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
-    <Compile Include="Areas\Admin\Controllers\MenuController.cs" />
     <Compile Include="Areas\Admin\Controllers\NhanVienController.cs" />
     <Compile Include="Areas\Admin\Controllers\PhieuGiamGiaController.cs" />
+    <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -2150,11 +2150,6 @@
     <Content Include="Areas\Admin\Views\DTAC_TAI_XE\Details.cshtml" />
     <Content Include="Areas\Admin\Views\DTAC_TAI_XE\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\DTAC_TAI_XE\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Menu\Index.cshtml" />
-    <Content Include="Areas\Admin\Views\Menu\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\Menu\Create.cshtml" />
-    <Content Include="Areas\Admin\Views\Menu\Edit.cshtml" />
-    <Content Include="Areas\Admin\Views\Menu\Delete.cshtml" />
     <Content Include="Assets\Customer\fonts\fontawesome-webfont.eot" />
     <Content Include="Assets\Customer\fonts\fontawesome-webfont.ttf" />
     <Content Include="Assets\Customer\fonts\fontawesome-webfont.woff" />
@@ -2169,6 +2164,12 @@
     <Content Include="Areas\Admin\Views\checkdonhang\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\checkdonhang\DeleteConfirmed.cshtml" />
     <Content Include="Areas\Admin\Views\checkdonhang\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\DeleteConfirmed.cshtml" />
+    <Content Include="Areas\Admin\Views\Product\Edit.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
