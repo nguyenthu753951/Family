@@ -4,7 +4,14 @@
     ViewBag.Title = "Index";
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
-
+<style>
+    .img__food {
+        width: 50px;
+        margin-left: 8%;
+        height: 50px;
+    }
+    
+</style>
 <h2>Quản lý sản phẩm</h2>
 
 <p>
@@ -39,7 +46,8 @@
             @Html.DisplayFor(modelItem => item.LOAI)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.HINH_ANH)
+            <img src="@Html.DisplayFor(modelItem => item.HINH_ANH)" class="img__food" alt="Alternate Text" />
+            
         </td>
         <td>
             @Html.ActionLink("Edit", "Edit", new { id=item.MA_MON_AN }) |
