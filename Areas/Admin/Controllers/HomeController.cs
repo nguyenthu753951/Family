@@ -13,5 +13,7 @@ namespace controller.Areas.Admin.Controllers
         {
             return View();
         }
+
+
     }
 }

@@ -138,9 +138,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Code\SessionHelper.cs" />
+    <Compile Include="Areas\Admin\Code\UserSessions.cs" />
     <Compile Include="Areas\Admin\Controllers\checkdonhangController.cs" />
     <Compile Include="Areas\Admin\Controllers\DTAC_TAI_XEController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\Admin\Controllers\NhanVienController.cs" />
     <Compile Include="Areas\Admin\Controllers\PhieuGiamGiaController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
@@ -156,6 +159,7 @@
     <Compile Include="Models\DTAC_TAI_XE.cs" />
     <Compile Include="Models\HOA_DON.cs" />
     <Compile Include="Models\KHACH_HANG.cs" />
+    <Compile Include="Models\LoginModel.cs" />
     <Compile Include="Models\MENU.cs" />
     <Compile Include="Models\NHAN_VIEN.cs" />
     <Compile Include="Models\PHIEU_GIAM_GIA.cs" />
@@ -2170,6 +2174,7 @@
     <Content Include="Areas\Admin\Views\Product\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\Product\DeleteConfirmed.cshtml" />
     <Content Include="Areas\Admin\Views\Product\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\Login\Index.cshtml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

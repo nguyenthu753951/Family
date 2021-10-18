@@ -17,7 +17,7 @@ namespace controller.Areas.Admin
             context.MapRoute(
                 "Admin_default",
                 "Admin/{controller}/{action}/{id}",
-                new { action = "Index",Controller = "Home", id = UrlParameter.Optional }
+                new { action = "Index",Controller = "Login", id = UrlParameter.Optional }
             );
         }
     }
