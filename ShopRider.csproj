@@ -148,6 +148,7 @@
     <Compile Include="Areas\Admin\Controllers\PhieuGiamGiaController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KHACH_HANGController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2201,6 +2202,11 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\ChiTietMonAn.cshtml" />
+    <Content Include="Views\KHACH_HANG\Create.cshtml" />
+    <Content Include="Views\KHACH_HANG\Delete.cshtml" />
+    <Content Include="Views\KHACH_HANG\Edit.cshtml" />
+    <Content Include="Views\KHACH_HANG\Index.cshtml" />
+    <Content Include="Views\KHACH_HANG\Details.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

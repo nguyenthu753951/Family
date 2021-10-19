@@ -1,4 +1,4 @@
-namespace controller.Models
+﻿namespace controller.Models
 {
     using System;
     using System.Collections.Generic;
@@ -16,16 +16,18 @@ namespace controller.Models
 
         [Key]
         [StringLength(10)]
+        [Display(Name = "Tên tài khoản")]
         public string MA_KH { get; set; }
 
         [StringLength(20)]
-        [Display(Name = "T�n Kh�ch h�ng")]
+        [Display(Name = "Tên Khách hàng")]
         public string TEN_KH { get; set; }
-
+        [Display(Name = "Địa chỉ")]
         [StringLength(50)]
         public string DIA_CHI_KH { get; set; }
 
         [StringLength(10)]
+        [Display(Name = "Số điện thoại")]
         public string SDT_KH { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

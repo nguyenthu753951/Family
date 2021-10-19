@@ -1,0 +1,72 @@
+﻿@model controller.Models.KHACH_HANG
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Thông tin cá nhân</h2>
+
+<div>
+    <hr />
+    <div class="dl-horizontal">
+        <ul>
+            <li>
+                <b>
+                    @Html.DisplayNameFor(model => model.TEN_KH)<label>:</label>
+                </b>
+                @Html.DisplayFor(model => model.TEN_KH)
+            </li>
+            <li>
+                <b>
+                    @Html.DisplayNameFor(model => model.DIA_CHI_KH)<label>:</label>
+                </b>
+                @Html.DisplayFor(model => model.DIA_CHI_KH)
+            </li>
+            <li>
+                <b>
+                @Html.DisplayNameFor(model => model.SDT_KH)<label>:</label>
+                </b>
+                @Html.DisplayFor(model => model.SDT_KH)
+            </li>
+        </ul>
+    </div>
+</div>
+<div class="btnfunction">
+     @Html.ActionLink("Sửa thông tin", "Edit", new { id = Model.MA_KH }, new { htmlAttributes = new { @class = "btn-edit" } }) 
+    <button class="btn-edit" style="background: rgb(0, 80, 98) !important; ">
+        Xác nhận
+    </button>
+</div>
+<style>
+    .btnfunction{
+        text-align:center;
+    }
+    .btn-edit {
+        background: #486EFF;
+        font-size: 13px;
+        color: #fff;
+        min-width:90.4px;
+    }
+        .btn-edit a {
+            color: #fff;
+        }
+    ul{
+        padding:0;
+        margin:0;
+    }
+    li{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        font-size:15px;
+        padding:4px 0;
+    }
+    h2{
+        text-align:center;
+        margin:15px 0 0 0;
+    }
+    li:first-child{
+        margin-top:15px;
+    }
+</style>

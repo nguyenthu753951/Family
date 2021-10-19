@@ -770,3 +770,4 @@ C:\git\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\git\obj\Debug\ShopRider.csproj.CoreCompileInputs.cache
 C:\git\obj\Debug\controller.dll
 C:\git\obj\Debug\controller.pdb
+C:\git\obj\Debug\ShopRider.csproj.AssemblyReference.cache
