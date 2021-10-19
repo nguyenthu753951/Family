@@ -771,3 +771,8 @@ C:\git\obj\Debug\ShopRider.csproj.CoreCompileInputs.cache
 C:\git\obj\Debug\controller.dll
 C:\git\obj\Debug\controller.pdb
 C:\git\obj\Debug\ShopRider.csproj.AssemblyReference.cache
+C:\git\bin\BoldReports.AspNet.Core.dll
+C:\git\bin\BoldReports.AspNet.Core.xml
+C:\git\obj\Debug\ShopRider.csproj.CopyComplete
+C:\git\bin\System.Data.SqlClient.dll
+C:\git\bin\System.Data.SqlClient.xml

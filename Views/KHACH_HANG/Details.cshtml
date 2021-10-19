@@ -33,24 +33,34 @@
     </div>
 </div>
 <div class="btnfunction">
-     @Html.ActionLink("Sửa thông tin", "Edit", new { id = Model.MA_KH }, new { htmlAttributes = new { @class = "btn-edit" } }) 
-    <button class="btn-edit" style="background: rgb(0, 80, 98) !important; ">
+     @Html.ActionLink("Sửa thông tin", "Edit", new { id = Model.MA_KH }) 
+    <button class="btn-edit" style="margin-left: 10px;">
         Xác nhận
     </button>
 </div>
 <style>
-    .btnfunction{
-        text-align:center;
+    .btnfunction {
+        text-align: center;
+        margin: 15px 0;
+        display: flex;
+        justify-content: center;
+    }
+        .btnfunction a {
+            padding: 7px;
+            background: #486EFF;
+            font-size: 13px;
+            color: #fff;
+            min-width: 90.4px;
+            border-radius: 2px;
+        }
     }
     .btn-edit {
         background: #486EFF;
         font-size: 13px;
         color: #fff;
-        min-width:90.4px;
+        min-width: 90.4px;
+        margin-left: 10px;
     }
-        .btn-edit a {
-            color: #fff;
-        }
     ul{
         padding:0;
         margin:0;
@@ -60,7 +70,7 @@
         justify-content:center;
         align-items:center;
         font-size:15px;
-        padding:4px 0;
+        padding:15px 0;
     }
     h2{
         text-align:center;
