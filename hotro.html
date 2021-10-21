@@ -1,0 +1,404 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="./Assets/Customer/images/logowhite.jpg" type="image/gif" sizes="30*30">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Hỗ trợ</title>
+</head>
+<style>
+    * {
+        box-sizing: inherit;
+        /* ke thua cho tat ca */
+    }
+
+    html {
+        /* hack 1rem=10px */
+        font-size: 62.5%;
+        line-height: 1.6rem;
+        box-sizing: border-box;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .grid {
+        width: 1200px;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    .header {
+        background-color: #4bbc90;
+        padding: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-text {
+        text-align: center;
+    }
+
+    .header-search {
+        height: 50px;
+        display: flex;
+    }
+
+    .header-search-input {
+        border-top-left-radius: 25px;
+        border-bottom-left-radius: 25px;
+        height: 100%;
+        text-align: center;
+        border-style: none;
+        list-style: none;
+    }
+
+    .btnsearch {
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
+        height: 100%;
+        background-color: aliceblue;
+        width: 50px;
+        text-align: center;
+    }
+
+    .header-search-link {
+        font-size: 15px;
+        position: relative;
+        top: 35%;
+    }
+
+    .grid__full-width {
+        width: 100%;
+    }
+
+    .grid__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-left: -5px;
+        margin-right: -5px;
+    }
+    /*Test*/
+    .gird-column-2 {
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 16.6667%;
+    }
+
+    .gird-column-10 {
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 83.3334%;
+    }
+
+    .gird-column-2-4 {
+        display: inline-flex;
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 25%;
+    }
+
+    .header-flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .list-support {
+        padding: 40px 0;
+    }
+
+    .category-text {
+    }
+
+    .category-title {
+        font-size: 18px;
+        font-weight: 700;
+        margin: 0;
+        padding: 0 0 30px 0;
+    }
+
+    .line {
+        border-right: 2px solid rgba(238,238,238,1);
+    }
+
+    .category-list {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .category-item {
+        font-size: 15px;
+        margin: 25px 0;
+    }
+
+    .category-item-link {
+        text-decoration: none;
+        color: #000;
+    }
+
+        .category-item-link:hover {
+            color: #f64f24;
+        }
+
+    .answers-support {
+        padding: 0 50px;
+    }
+
+    .title-answers {
+        font-size: 4rem;
+        font-weight: bold;
+        margin: 0;
+        padding-bottom: 30px;
+    }
+
+    .list-answers {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .item-answers {
+        padding: 25px 0;
+        position: relative;
+        display: block;
+        border-bottom: 2px dotted rgba(238,238,238,1);
+    }
+
+        .item-answers:last-child {
+            border-bottom: none;
+        }
+
+    .item-answers-link {
+        text-decoration: none;
+        color: #000;
+        font-size: 20px;
+        font-weight:500;
+        cursor: pointer;
+        line-height:1.4;
+    }
+
+    .img-sup {
+        text-align: center;
+        background-color: #4bbc90;
+        height: 335px;
+    }
+
+    .answers-question {
+        display: none;
+    }
+
+        .answers-question.open {
+            display: block;
+        }
+
+    .answers-list {
+        padding: 0;
+        list-style: none;
+        font-size: 14px;
+    }
+
+    .answers-list-item {
+    }
+
+    .answers-title {
+        padding-top: 20px;
+        line-height:1.4;
+    }
+
+    .answers-text {
+        padding: 10px 0;
+        display: block;
+    }
+</style>
+<body>
+    <header class="header">
+        <div class="grid">
+            <div class="header-flex">
+                <h1 class="header-text">
+                    Hỗ trợ khách hàng
+                </h1>
+                <div class="header-search">
+                    <input type="text" placeholder="Thông tin cần hỗ trợ" class="header-search-input">
+                    <div class="btnsearch">
+                        <a href="" class="header-search-link">
+                            <i class="fas fa-search"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="img-sup">
+        <img src="./Assets/Customer/images/1.1.png" alt="" style="width: 700px;height: 100%;">
+    </div>
+    <div class="list-support">
+        <div class="grid">
+            <div class="grid__row">
+                <div class="gird-column-2 line">
+                    <div class="category-text">
+                        <h3 class="category-title">Danh mục</h3>
+                        <ul class="category-list">
+                            <li class="category-item">
+                                <a href="" class="category-item-link">Tài khoản</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="" class="category-item-link">Đơn hàng</a>
+                            </li>
+                            <li class="category-item">
+                                <a href="" class="category-item-link">Vận chuyển</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="gird-column-10">
+                    <div class="answers-support">
+                        <h1 class="title-answers">Câu hỏi thường gặp</h1>
+                        <ul class="list-answers">
+                            <li class="item-answers">
+                                <p href="" class="item-answers-link">[Tài khoản] Tôi muốn lấy lại mật khẩu tài khoản bị mất!</p>
+                                <div class="answers-question">
+                                    <ul class="answers-list">
+                                        <li class="answers-list-item">
+                                            <p class="answers-title">Quý khách có thể thay đổi mật khẩu cho tài khoản bằng cách đăng nhập vào trang quản lý tài khoản và thực hiện theo các bước sau: </p>
+                                            <span class="answers-text">1. Vào phần thông tin tài khoản</span><br>
+                                            <span class="answers-text">2. Quên mật khẩu</span><br>
+                                            <span class="answers-text">3. Nhập Email/Sdt đăng ký</span><br>
+                                            <span class="answers-text">4. Đổi mật khẩu</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="item-answers">
+                                <p href="" class="item-answers-link">[Tài khoản] Tôi muốn thêm/bớt sản phẩm, thay đổi địa chỉ giao hàng?</p>
+                                <div class="answers-question">
+                                    <ul class="answers-list">
+                                        <li class="answers-list-item">
+                                            <p class="answers-title">Chúng tôi quá là đáng tiếc chưa hỗ trợ thêm/ bớt sản phẩm hoặc thay đổi địa chỉ sau khi đặt đơn hàng thành công, quý khách vui lòng cân nhắc lựa chọn địa chỉ phù hợp khi đặt hàng. Trường hợp nếu quý khách chưa nhận được hàng ở địa chỉ cũ, quý khách vui lòng hủy đơn hàng cũ và đặt lại đơn hàng mới.</p>
+
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="item-answers">
+                                <p href="" class="item-answers-link">[Đơn hàng] Tôi có thể yêu cầu giao theo thời gian cụ thể, giao vào chủ nhật hoặc trên lầu/phòng chung cư không?</p>
+                                <div class="answers-question">
+                                    <ul class="answers-list">
+                                        <li class="answers-list-item">
+                                            <p class="answers-title">
+                                                Chúng tôi giao hàng trong giờ hành chính: từ 8h30 sáng đến 17h30 chiều và trong các ngày từ thứ 2 đến thứ 7. Do nhân viên vận chuyển giao hàng theo tuyến nên rất tiếc chúng tôi chưa thể hỗ trợ thời gian giao hàng cụ thể hoặc giao trên tận phòng/lầu theo yêu cầu. Sau khi đặt hàng thành công, chúng tôi sẽ thông báo thời gian giao hàng dự kiến cho đơn hàng, quý khách vui lòng sắp xếp thời gian và giữ liên lạc để nhận hàng trong thời gian chúng tôi đã hẹn.
+                                            </p>
+                                            <p class="answers-title">
+                                                Trong trường hợp nhân viên vận chuyển liên hệ vào thời gian chưa phù hợp, quý khách có thể giữ liên lạc qua điện thoại và hẹn lại thời gian giao hàng khác, nhân viên vận chuyển sẽ cố gắng hỗ trợ trong mức có thể.
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="item-answers4">
+                                <p href="" class="item-answers-link">[Covid] Cẩm nang mua sắm Mùa dịch</p>
+                            </li>
+                            <li class="item-answers">
+                                <p href="" class="item-answers-link">[Thành viên mới] Tôi không sử dụng được mã khuyến mãi</p>
+                                <div class="answers-question">
+                                    <ul class="answers-list">
+                                        <li class="answers-list-item">
+                                            <p class="answers-title">
+                                                Nếu mã khuyến mãi bạn đã nhập không hợp lệ, bạn giúp chúng tôi vào mục Bộ Sưu Tập Khuyến Mãi để kiểm tra lại các điều kiện sử dụng của mã như sau:
+                                            </p>
+                                            <span class="answers-text">
+                                                Thời hạn sử dụng;
+                                                Giờ áp dụng trong ngày (ví dụ từ 17h-22h);
+                                                Giá trị tối thiểu của đơn hàng (ví dụ yêu cầu đơn hàng có giá trị từ 80k VNĐ);
+                                            </span><br>
+                                            <span class="answers-text">Số lượt sử dụng cho mỗi khách hàng theo ngày hoặc toàn bộ chương trình (ví dụ, mỗi khách hàng được sử dụng 1 lượt / ngày và 3 lượt trong toàn bộ chương trình);</span><br>
+                                            <span class="answers-text">
+                                                Có giới hạn số lượt sử dụng trong ngày cho toàn bộ khách hàng hay không?
+                                                Áp dụng cho một hoặc một vài nhà hàng/quán ăn cụ thể.
+                                            </span><br>
+                                            <span class="answers-text">Lưu ý một số mã khuyến mãi chỉ áp dụng cho tài khoản nhận được thông báo ở mục Hộp Thư trong ứng dụng.</span><br>
+                                            <span class="answers-text">Sau khi đã kiểm tra điều kiện sử dụng mã khuyến mãi là hợp lệ mà vẫn không nhập được mã khi đặt đơn hàng hoặc đã nhập mã thành công nhưng không được giảm khuyến mãi, vui lòng thông báo cho chúng tôi qua email với các thông tin: mã khuyến mãi, vấn đề gặp phải, số điện thoại đăng ký ứng dụng cùng với hình ảnh báo lỗi để được hỗ trợ kịp thời.</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="item-answers">
+                                <p href="" class="item-answers-link">Tôi muốn khiếu nại về tài xế giao hàng</p>
+                                <div class="answers-question">
+                                    <ul class="answers-list">
+                                        <li class="answers-list-item">
+                                            <p class="answers-title">
+                                                Bạn có thể đánh giá tài xế trong ứng dụng ngay sau khi đơn hàng của bạn đã được hoàn tất. Đánh giá của bạn rất quan trọng đối với chúng tôi vì qua đó chúng tôi có thể nâng cao chất lượng đội ngũ tài xế nói riêng và dịch vụ nói chung.
+                                            </p>
+                                            <p class="answers-title">
+                                                Nếu bạn muốn thông báo thêm cho chúng tôi về vấn đề gặp phải đối với tài xế sau khi đã đánh giá trên ứng dụng, vui lòng chia sẻ thêm chi tiết sự cố.
+                                            </p>
+                                            <p class="answers-title" style="font-style: italic;">*Đối với các phản hồi về cư xử không đúng mực của tài xế như hành vi thô lỗ hoặc làm phiền khách hàng qua tin nhắn/điện thoại với ngôn từ không phù hợp… rất mong bạn có thể gửi kèm bằng chứng về hình ảnh/video để chúng tôi có thể hỗ trợ xử lý nhanh chóng hơn.</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="grid">
+            <div class="grid__row">
+                <div class="gird-column-2-4" style="display: block">
+                </div>
+
+                <div class="gird-column-2-4" style="display: block">
+                </div>
+                <div class="gird-column-2-4" style="display: block">
+                    
+                </div>
+                <div class="gird-column-2-4" style="display: block">
+                    <h3 class="footer-heading">Theo dõi</h3>
+                    <ul class="footer-list" style="list-style:none;padding:0;">
+                        <li class="footer-item" style="margin:10px 0">
+                            <a href="" class="footer-item__link" style="color:#000;font-size:14px;text-decoration:none;">
+                                <i class="footer-item__link-icon fab fa-facebook" style="color:blue;font-size:14px; margin-right:10px"></i>Facebook
+                            </a>
+                        </li>
+                        <li class="footer-item" style="margin:10px 0">
+                            <a href="" class="footer-item__link" style="color: #000; font-size: 14px; text-decoration: none;" >
+                                <i class="footer-item__link-icon fab fa-instagram" style="color:pink;font-size:14px; margin-right:10px"></i>instagram
+                            </a>
+                        </li>
+                        <li class="footer-item" style="margin:10px 0">
+                            <a href="" class="footer-item__link" style="color: #000; font-size: 14px; text-decoration: none;">
+                                <i class="footer-item__link-icon fab fa-linkedin-in" style="color:blue;font-size:14px; margin-right:10px"></i>LinkedIn
+                            </a>
+                        </li>
+                    </ul>
+
+
+                </div>
+                
+            </div>
+                    <p class="footer__text" style="text-align:center;color:#333">© 2021 - Bản quyền thuộc về THỨC ĂN RIDER</p>
+    </footer>
+</body>
+<script>
+    const listquestions=document.querySelectorAll('.item-answers');
+    const listanswers=document.querySelectorAll('.answers-question');
+
+    for( const listquestion of listquestions){
+        listquestion.addEventListener('click',function(){
+            for(const listanswer of listanswers){
+                listanswer.classList.add("open");
+            }
+        })
+
+    }
+</script>
+</html>
