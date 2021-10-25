@@ -42,6 +42,9 @@
 
         public string MA_TX { get; set; }
 
+        public string LOAI { get; set; }
+        public string HINH_ANH { get; set; }
+
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CT_DONHANG> CT_DONHANG { get; set; }
 

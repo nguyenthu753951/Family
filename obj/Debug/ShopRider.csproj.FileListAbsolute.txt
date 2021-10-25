@@ -777,3 +777,9 @@ C:\git\bin\System.Data.SqlClient.dll
 C:\git\bin\System.Data.SqlClient.xml
 C:\git\obj\Debug\RdlCompile.cache
 C:\git\obj\Debug\RdlCompile.compiled
+D:\tài liệu kì 1a\công nghệ phần mềm\ShopRider\bin\BoldReports.AspNet.Core.dll
+D:\tài liệu kì 1a\công nghệ phần mềm\ShopRider\bin\System.Data.SqlClient.dll
+D:\tài liệu kì 1a\công nghệ phần mềm\ShopRider\bin\BoldReports.AspNet.Core.xml
+D:\tài liệu kì 1a\công nghệ phần mềm\ShopRider\bin\System.Data.SqlClient.xml
+D:\tài liệu kì 1a\công nghệ phần mềm\ShopRider\obj\Debug\RdlCompile.cache
+D:\tài liệu kì 1a\công nghệ phần mềm\ShopRider\obj\Debug\RdlCompile.compiled

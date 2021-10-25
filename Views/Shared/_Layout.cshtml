@@ -21,7 +21,7 @@
     <!-- =====  CSS  ===== -->
 
     <link rel="icon" href="./Assets/Customer/images/logowhite.jpg" type="image/gif" sizes="30*30">
-  <link rel="stylesheet" type="text/css" href="~/Assets/Customer/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css" href="~/Assets/Customer/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="~/Assets/Customer/css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="~/Assets/Customer/css/style.css">
     <link rel="stylesheet" type="text/css" href="~/Assets/Customer/css/magnific-popup.css">
@@ -69,13 +69,7 @@
                                         <li><a href="#">German</a></li>
                                     </ul>
                                 </li>
-                                <li class="currency dropdown">
-                                    <span class="dropdown-toggle" id="dropdownMenu12" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">Currency <span class="caret"></span> </span>
-                                    @*<ul class="dropdown-menu" aria-labelledby="dropdownMenu12">
-              <li><a href="#">€ Euro</a></li>
-              <li><a href="#">£ Pound Sterling</a></li>
-              <li><a href="#">$ US Dollar</a></li>
-            </ul>*@
+                                <li class="currency dropdown">                                    
                                 </li>
                             </ul>
                         </div>
@@ -93,32 +87,25 @@
                                 </span>
                             </div>
                         </div>
-                        <div class="navbar-header col-xs-6 col-sm-4"> <a class="navbar-brand" href="index.html"> <img alt="Online Shop Rider" src="~/Assets/Customer/images/logo.jpg"> </a> </div>
+                        <div class="navbar-header col-xs-6 col-sm-4"> <a class="navbar-brand" href="/" ref="nofolow"> <img alt="Online Shop Rider" src="~/Assets/Customer/images/logo.jpg"> </a> </div>
                         <div class="col-xs-6 col-sm-4 shopcart">
-                            <div id="cart" class="btn-group btn-block mtb_40">
-                                <button type="button" class="btn" data-target="#cart-dropdown" data-toggle="collapse" aria-expanded="true"><span id="shippingcart">Giỏ Hàng</span><span id="cart-total">Số Lượng (0)</span> </button>
-                            </div>
+                            @{ Html.RenderAction("HeaderCart", "Home");}
+
                             <div id="cart-dropdown" class="cart-menu collapse">
                                 <ul>
                                     <li>
                                         <table class="table table-striped">
                                             <tbody>
+
                                                 <tr>
-                                                    <td class="text-center"><a href="#"><img src="~/Assets/Customer/images/product/70x84.jpg" alt="iPod Classic" title="iPod Classic"></a></td>
+                                                    <td class="text-center"><a href="#"><img src=""></a></td>
                                                     <td class="text-left product-name">
-                                                        <a href="#">MacBook Pro</a> <span class="text-left price">$20.00</span>
+                                                        <a href="#"></a> <span class="text-left price"></span>
                                                         <input class="cart-qty" name="product_quantity" min="1" value="1" type="number">
                                                     </td>
                                                     <td class="text-center"><a class="close-cart"><i class="fa fa-times-circle"></i></a></td>
                                                 </tr>
-                                                <tr>
-                                                     <td class="text-center"><a href="#"><img src="~/Assets/Customer/images/product/70x84.jpg" ></a></td> 
-                                                    <td class="text-left product-name">
-                                                        <a href="#">MacBook Pro</a> <span class="text-left price">$20.00</span>
-                                                        <input class="cart-qty" name="product_quantity" min="1" value="1" type="number">
-                                                    </td>
-                                                    <td class="text-center"><a class="close-cart"><i class="fa fa-times-circle"></i></a></td>
-                                                </tr>
+
                                             </tbody>
                                         </table>
                                     </li>
@@ -127,26 +114,23 @@
                                             <tbody>
                                                 <tr>
                                                     <td class="text-right"><strong>Tổng Tiền Hàng</strong></td>
-                                                    <td class="text-right">210.000</td>
+                                                    <td class="text-right"></td>
                                                 </tr>
-                                                <tr>
-                                                    <td class="text-right"><strong>Giảm Giá (15.000VNĐ)</strong></td>
-                                                    <td class="text-right">15.000VNĐ</td>
-                                                </tr>
-                                                <tr>
-                                                    <td class="text-right"><strong>Thuế (15%)</strong></td>
-                                                    <td class="text-right">3.000VNĐ</td>
-                                                </tr>
+
+                                                <!---->@*<tr>
+                                <td class="text-right"><strong>Thuế (15%)</strong></td>
+                                <td class="text-right">3.000VNĐ</td>
+                            </tr>*@-->
                                                 <tr>
                                                     <td class="text-right"><strong>Tổng Thanh Toán</strong></td>
-                                                    <td class="text-right">VNĐ</td>
+                                                    <td class="text-right"></td>
                                                 </tr>
                                             </tbody>
                                         </table>
                                     </li>
                                     <li>
                                         <form action="cart_page.html">
-                                            <input class="btn pull-left mt_9" value="Xem Giỏ" type="submit">
+                                            <input class="btn pull-left mt_10" value="Xem Giỏ" type="submit">
                                         </form>
                                         <form action="checkout_page.html">
                                             <input class="btn pull-right mt_10" value="Thanh Toán" type="submit">
@@ -154,6 +138,7 @@
                                     </li>
                                 </ul>
                             </div>
+
                         </div>
                     </div>
                     <nav class="navbar">
@@ -306,15 +291,14 @@
             </div>
         </div>
         <!-- =====  FOOTER END  ===== -->
-    </div>
-    <a id="scrollup"></a>
+    <a id="scrollup"></a>    
     <script src="~/Assets/Customer/js/jQuery_v3.1.1.min.js"></script>
     <script src="~/Assets/Customer/js/owl.carousel.min.js"></script>
     <script src="~/Assets/Customer/js/bootstrap.min.js"></script>
     <script src="~/Assets/Customer/js/jquery.magnific-popup.js"></script>
     <script src="~/Assets/Customer/js/jquery.firstVisitPopup.js"></script>
     <script src="~/Assets/Customer/js/custom.js"></script>
-@*    @Scripts.Render("~/bundles/jquery")
+@*   @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")*@
     @RenderSection("scripts", required: false)
 </body>

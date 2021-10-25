@@ -28,7 +28,8 @@ namespace controller.Models
 
         [Column(TypeName = "money")]
         public decimal? GIABAN { get; set; }
-
+        public string TEN_MON { get; set; }
+        public string HINH_ANH { get; set; }
         public virtual DON_HANG DON_HANG { get; set; }
 
         public virtual MENU MENU { get; set; }

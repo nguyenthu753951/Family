@@ -9,5 +9,6 @@ namespace controller.Areas.Admin.Code
     public class UserSessions
     {
         public string email { get; set; }
+        public string UserSessionsPassword { get; set; }
     }
 }

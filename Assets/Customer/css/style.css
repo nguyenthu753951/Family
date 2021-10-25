@@ -1231,6 +1231,11 @@ label.checkme {
     top: 3px;
     width: 40px;
 }
+
+.card-image {
+    height: 60px;
+    width:50px;
+}
 @media only screen and (max-width: 776px) {
     .search-overlay form button {
         height: 60px;
@@ -1338,10 +1343,13 @@ label.checkme {
     padding: 10px 0;
 }
 
+.card-image {
+    width: 50px;
+    height: 60px;
+}
 /* ----------------------------------------------
 	2.6 Header bottom
 ----------------------------------------------- */
-
 .header-bottom-left {
     background: #f2f2f2 none repeat scroll 0 0;
     padding: 15px 25px;
@@ -1947,7 +1955,7 @@ blockquote {
 }
 .product-list .product-thumb .caption {
     float: left;
-    margin: 0 0 0 15 px;
+    margin: 0 0 0 15px;
     padding: 0;
     text-align: left;
     width: 65%;
@@ -2682,6 +2690,9 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     .copyright-part{
         margin: 10px 0;
     }
+    .card-image{
+        width:50px;
+    }
 }
 
 /*-----------------------------------*/
@@ -2791,4 +2802,6 @@ a.thumbnail:hover, a.thumbnail:focus, a.thumbnail.active {
     width: 150px;
     }
 }
+
+
     /* =====  END RESPONSIVE CSS  =====*/

@@ -10,7 +10,10 @@ namespace controller.Controllers
     public class HomeController : Controller
 
     {
+        private const string gioHangSession = "gioHang";
         private DBContext db = new DBContext();
+     
+
         public ActionResult Index()
         {
             
@@ -26,6 +29,15 @@ namespace controller.Controllers
             }
             return View(menu);
         }
-
+        public PartialViewResult  HeaderCart()
+        {
+            var GioHang = Session[gioHangSession];
+            var list = new List<GioHangItem>();
+            if (GioHang != null)
+            {
+                list = (List<GioHangItem>)GioHang;
+            }            
+            return PartialView(list);
+        }
     }
 }

@@ -153,6 +153,8 @@
     <Compile Include="Areas\Admin\Controllers\NhanVienController.cs" />
     <Compile Include="Areas\Admin\Controllers\PhieuGiamGiaController.cs" />
     <Compile Include="Areas\Admin\Controllers\ProductController.cs" />
+    <Compile Include="Areas\Admin\Controllers\UserController.cs" />
+    <Compile Include="Controllers\GioHangController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KHACH_HANGController.cs" />
     <Compile Include="Global.asax.cs">
@@ -164,6 +166,7 @@
     <Compile Include="Models\DBContext.cs" />
     <Compile Include="Models\DON_HANG.cs" />
     <Compile Include="Models\DTAC_TAI_XE.cs" />
+    <Compile Include="Models\GioHangItem.cs" />
     <Compile Include="Models\HOA_DON.cs" />
     <Compile Include="Models\KHACH_HANG.cs" />
     <Compile Include="Models\LoginModel.cs" />
@@ -1953,6 +1956,7 @@
     <Content Include="Assets\Customer\images\user2.jpg" />
     <Content Include="Assets\Customer\images\user3.jpg" />
     <Content Include="Assets\Customer\js\bootstrap.min.js" />
+    <Content Include="Assets\Customer\js\controller\cartController.js" />
     <Content Include="Assets\Customer\js\custom.js" />
     <Content Include="Assets\Customer\js\jquery-ui.js" />
     <Content Include="Assets\Customer\js\jquery.firstVisitPopup.js" />
@@ -2214,6 +2218,8 @@
     <Content Include="Views\KHACH_HANG\Edit.cshtml" />
     <Content Include="Views\KHACH_HANG\Index.cshtml" />
     <Content Include="Views\KHACH_HANG\Details.cshtml" />
+    <Content Include="Views\GioHang\Index.cshtml" />
+    <Content Include="Views\Shared\HeaderCart.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

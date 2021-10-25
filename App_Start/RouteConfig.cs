@@ -19,6 +19,12 @@ namespace controller
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },
                 namespaces: new[] { "controller.Controllers" }
             );
+            routes.MapRoute(
+                name: "Cart",
+                url: "Gio-hang",
+                defaults: new { controller = "Cart", action = "Index", id = UrlParameter.Optional },
+                namespaces: new[] { "controller.Controllers" }
+            );
         }
     }
 }
