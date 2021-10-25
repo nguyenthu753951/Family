@@ -52,7 +52,6 @@
 
         public virtual DTAC_TAI_XE DTAC_TAI_XE { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PHIEU_GIAO_HANG> PHIEU_GIAO_HANG { get; set; }
     }
 }
