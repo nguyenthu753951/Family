@@ -546,7 +546,6 @@
     <Compile Include="Models\NHAN_VIEN.cs" />
     <Compile Include="Models\PHIEU_GIAM_GIA.cs" />
     <Compile Include="Models\PHIEU_GIAO_HANG.cs" />
-    <Compile Include="Models\report.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="WebForm1.aspx.cs">
