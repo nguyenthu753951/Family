@@ -2336,6 +2336,7 @@
     <Content Include="Assets\Customer\images\user2.jpg" />
     <Content Include="Assets\Customer\images\user3.jpg" />
     <Content Include="Assets\Customer\js\bootstrap.min.js" />
+    <Content Include="Assets\Customer\js\controller\Cart.js" />
     <Content Include="Assets\Customer\js\controller\cartController.js" />
     <Content Include="Assets\Customer\js\custom.js" />
     <Content Include="Assets\Customer\js\jquery-ui.js" />

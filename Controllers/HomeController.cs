@@ -12,11 +12,10 @@ namespace controller.Controllers
     {
         private const string gioHangSession = "gioHang";
         private DBContext db = new DBContext();
-     
+
 
         public ActionResult Index()
         {
-            
             return View(db.MENUs.ToList());
         }
 

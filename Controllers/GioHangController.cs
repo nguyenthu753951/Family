@@ -75,10 +75,14 @@ namespace controller.Controllers
                 {
                     foreach(var item in list)
                     {
-                        if(item.monAn.MA_MON_AN == maMonAn)
+                        
+                        if (item.monAn.MA_MON_AN == maMonAn)
                         {
                             item.sO_LUONG = item.sO_LUONG + soLuong;
-                        }    
+                            
+                           
+                        }   
+                        
                     }    
                 }else
                 {
