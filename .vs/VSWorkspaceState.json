@@ -1,9 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Controllers",
-    "\\Models"
+    ""
   ],
-  "SelectedNode": "\\Controllers\\GioHangController.cs",
+  "SelectedNode": "\\controller.sln",
   "PreviewInSolutionExplorer": false
 }
