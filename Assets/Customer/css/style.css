@@ -1843,8 +1843,13 @@ blockquote {
 .product-thumb .image a {
     display: block;
 }
+.product-grid{
+    padding:5px;
+}
+
 .product-grid .product-thumb .image {
     float: none;
+    
 }
 .product-thumb .button-group .wishlist, .product-thumb .button-group .quickview, .product-thumb .button-group .compare, .product-thumb .button-group .add-to-cart {
     background: transparent url("../images/sprite.png") no-repeat scroll -13px -246px;

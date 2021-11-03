@@ -5,15 +5,12 @@
 }
 
 <!DOCTYPE html>
-
-<div class="container banner mt_20">
-    <div class="main-banner owl-carousel">
-
-@*        <div class="item"><a href="#"><img src="~/Assets/Customer/images/50%.jpg" alt="Main Banner" class="main_banner1.jpg" /></a></div>
-*@        <div class="item"><a href="#"><img src="~/Assets/Customer/images/gg.jpg" alt="Main Banner" class="main_banner2.jpg" /></a></div>
+<div class="container banner pd0">
+    <div class="main-banner owl-carousel" style="width:100%">
+       <div class="item"><a href="#"><img  src="~/Assets/Customer/images/gg.jpg" alt="Main Banner" class="main_banner2.jpg" /></a></div>
     </div>
 </div>
-<div class="container">
+<div class="container pd0">
     <!-- =====  SUB BANNER  STRAT ===== -->        
     <div class="row">
         @foreach (var item in Model)
@@ -62,7 +59,7 @@
                                                                     <div class="quickview"><a href="#"><span>Xem Nhanh</span></a></div>
                                                                     <div class="compare"><a href="#"><span>So Sánh</span></a></div>
                                                                 </div>
-                                                                <div class="btn btn-default"><a href="/GioHang/ThemVaoGioHang?maMonAn=@item.MA_MON_AN&soLuong=1"><span>Thêm Vào Giỏ Hàng</span></a></div>
+                                                                <div class=" mt10 btn btn-default"><a href="/GioHang/ThemVaoGioHang?maMonAn=@item.MA_MON_AN&soLuong=1"><span>Thêm Vào Giỏ Hàng</span></a></div>
 
                                                             </div>
                                                             <div class="caption product-detail text-center">
@@ -108,7 +105,7 @@
                                                                         <div class="quickview"><a href="#"><span>Xem Nhanh</span></a></div>
                                                                         <div class="compare"><a href="#"><span>So Sánh</span></a></div>
                                                                     </div>
-                                                                    <div class="btn btn-default"><a href="/GioHang/ThemVaoGioHang?maMonAn=@item.MA_MON_AN&soLuong=1"><span>Thêm Vào Giỏ Hàng</span></a></div>
+                                                                    <div class="mt10 btn btn-default"><a href="/GioHang/ThemVaoGioHang?maMonAn=@item.MA_MON_AN&soLuong=1"><span>Thêm Vào Giỏ Hàng</span></a></div>
 
                                                                 </div>
                                                                 <div class="caption product-detail text-center">
@@ -163,6 +160,18 @@
                     </div>
                 </div>
             </div>
+<style>
+    .mt10{
+        margin:10px 0;
+        border-radius:5px;
+    }
+    .img-responsive{
+        min-height:300px;
+    }
+    .pd0{
+        padding:0;
+    }
+</style>
 
 
 

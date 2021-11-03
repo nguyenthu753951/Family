@@ -20,7 +20,7 @@ namespace controller {
     [global::System.ComponentModel.DesignerCategoryAttribute("code")]
     [global::System.ComponentModel.ToolboxItem(true)]
     [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedDataSetSchema")]
-    [global::System.Xml.Serialization.XmlRootAttribute("DOANONLINEDataSet")]
+    [global::System.Xml.Serialization.XmlRootAttribute("DBContextconnettion")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.DataSet")]
     public partial class DOANONLINEDataSet : global::System.Data.DataSet {
         

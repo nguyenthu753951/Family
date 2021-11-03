@@ -2627,9 +2627,8 @@
     <Content Include="Views\KHACH_HANG\Details.cshtml" />
     <Content Include="Views\GioHang\Index.cshtml" />
     <Content Include="Views\Shared\HeaderCart.cshtml" />
-    <Content Include="Views\NguoiDung\DangKy.cshtml" />
     <Content Include="Views\NguoiDung\DangNhap.cshtml" />
-    <Content Include="Views\NguoiDung\Create.cshtml" />
+    <Content Include="Views\NguoiDung\dangky.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
