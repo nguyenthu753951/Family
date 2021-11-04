@@ -13,97 +13,138 @@ namespace controller.Controllers
     {
         private DBContext db = new DBContext();
 
-        private const string gioHangSession = "gioHang";
-        // GET: GioHang
-        public ActionResult Index()
+        public List<GioHangItem> Laygiohang()
         {
-            var GioHang = Session[gioHangSession];
-            var list = new List<GioHangItem>();
-            if (GioHang != null)
+            List<GioHangItem> lstgiohang = Session["GioHang"] as List<GioHangItem>;
+            if (lstgiohang == null)
             {
-                list = (List<GioHangItem>)GioHang;
+                lstgiohang = new List<GioHangItem>();
+                Session["GioHang"] = lstgiohang;
             }
+            return lstgiohang;
+        }
+        public ActionResult  Themgiohang(string MA_MON_AN, string strURL)
+        {
+            List<GioHangItem> lstgiohang = Laygiohang();
+            GioHangItem product = lstgiohang.Find(n => n.MA_MON_AN == MA_MON_AN);
+            if (product == null)
+            {
+                product = new GioHangItem(MA_MON_AN);
+                lstgiohang.Add(product);
+                return Redirect(strURL);
 
-            return View(list);
-        }
-        public JsonResult DeleteAll()
-        {
-            Session[gioHangSession] = null;
-            return Json(new
-            {
-                status = true
-            });
-        }
-        public JsonResult Delete(string id)
-        {
-            var sessionCart = (List<GioHangItem>)Session[gioHangSession];
-            sessionCart.RemoveAll(x => x.monAn.MA_MON_AN == id);
-            Session[gioHangSession] = sessionCart;
-            return Json(new
-            {
-                status = true
-            });
-        }
-        public JsonResult Update(string cartModel)
-        {
-            JavaScriptSerializer json_serializer = new JavaScriptSerializer();
-
-            var jsonCart = new JavaScriptSerializer().Deserialize<List<GioHangItem>>(cartModel);
-            var sessionCart =(List<GioHangItem>) Session[gioHangSession];
-            foreach(var item in sessionCart)
-            {
-                var jsonItem = jsonCart.SingleOrDefault(x => x.monAn.MA_MON_AN == item.monAn.MA_MON_AN);
-                if (jsonItem!=null)
-                {
-                    item.sO_LUONG = jsonItem.sO_LUONG;
-                }    
             }
-            Session[cartModel] = sessionCart;
-            return Json(new
-            {
-                status= true
-            });
-        }
-        public ActionResult ThemVaoGioHang(string maMonAn, int soLuong)
-        {         
-            
-            var GioHang = Session[gioHangSession];
-            if (GioHang != null) 
-            {
-                var list = (List<GioHangItem>)GioHang;
-                if (list.Exists(x => x.monAn.MA_MON_AN == maMonAn))
-                {
-                    foreach(var item in list)
-                    {
-                        
-                        if (item.monAn.MA_MON_AN == maMonAn)
-                        {
-                            item.sO_LUONG = item.sO_LUONG + soLuong;
-                            
-                           
-                        }   
-                        
-                    }    
-                }else
-                {
-                    var monAn = db.MENUs.Find(maMonAn);
-                    var item = new GioHangItem();
-                    item.monAn = monAn;
-                    item.sO_LUONG = soLuong;
-                    list.Add(item);
-                }                    
-            } 
             else
             {
-                var monAn = db.MENUs.Find(maMonAn);
-                var item = new GioHangItem();
-                item.monAn =  monAn;
-                item.sO_LUONG = soLuong;
-                var list = new List<GioHangItem>();
-                list.Add(item);
-                Session[gioHangSession] = list;
+                product.sO_LUONG++;
+                return Redirect(strURL);
             }
-            return RedirectToAction("index");
+        }
+        private int Tongsoluong()
+        {
+            int isumsl = 0;
+            List<GioHangItem> lstgiohang = Session["GioHang"] as List<GioHangItem>;
+            if (lstgiohang != null)
+            {
+                isumsl = lstgiohang.Sum(n => n.sO_LUONG);
+            }
+            return isumsl;
+        }
+        private double Tongtien()
+        {
+            double total = 0;
+            List<GioHangItem> lstgiohang = Session["GioHang"] as List<GioHangItem>;
+            if (lstgiohang != null)
+            {
+                total = lstgiohang.Sum(n => n.dthanhtien);
+            }
+            return total;
+        }
+        public ActionResult insertSP()
+        {
+            return RedirectToAction("Index", "Home");
+        }
+        public ActionResult GioHang()
+        {
+            List<GioHangItem> lstgiohang = Laygiohang();
+            if (lstgiohang.Count == 0)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            ViewBag.tongsoluong = Tongsoluong();
+            ViewBag.tongtien = Tongtien();
+            return View(lstgiohang);
+        }
+        public ActionResult XoaSP(string MA_MON_AN)
+        {
+            List<GioHangItem> lstgiohang = Laygiohang();
+            GioHangItem product = lstgiohang.SingleOrDefault(n => n.MA_MON_AN == MA_MON_AN);
+            if (product != null)
+            {
+                lstgiohang.RemoveAll(n => n.MA_MON_AN == MA_MON_AN);
+                return RedirectToAction("GioHang");
+            }
+            if (lstgiohang.Count==0)
+            {
+                return RedirectToAction("Index","Home");
+            }
+            return RedirectToAction("GioHang");
+        }
+        public ActionResult UpdateSP(string MA_MON_AN,FormCollection P)
+        {
+            List<GioHangItem> lstgiohang = Laygiohang();
+            GioHangItem product = lstgiohang.SingleOrDefault(n => n.MA_MON_AN == MA_MON_AN);
+            if (product != null)
+            {
+                product.sO_LUONG = int.Parse(P["Txtsl"].ToString());
+            }
+            return RedirectToAction("GioHang");
+        }
+        [HttpGet]
+        public ActionResult Dathang()
+        {
+            if(Session["TaiKhoan"] ==null || Session["TaiKhoan"].ToString() == "")
+            {
+                return RedirectToAction("DangNhap", "NguoiDung");
+            }
+            if (Session["GioHang"] == null)
+            {
+                return RedirectToAction("Index", "Home");
+            }
+            List<GioHangItem> lstgiohang = Laygiohang();
+            ViewBag.tongsoluong = Tongsoluong();
+            ViewBag.tongtien = Tongtien();
+            return View(lstgiohang);
+        }
+        public ActionResult Dathang(FormCollection collection)
+        {
+            DON_HANG dh = new DON_HANG();
+            KHACH_HANG kh = (KHACH_HANG)Session["TaiKhoan"];
+            DTAC_TAI_XE tx = new DTAC_TAI_XE();
+            List<GioHangItem> gh = Laygiohang();
+            dh.MA_KH = kh.MA_KH;
+            dh.MA_TX = tx.MA_TX;
+            dh.NGAY_LAP_HD = DateTime.Now;
+            var ngaygiao = string.Format("{0:MM/dd/yyyy}", collection["Ngaygiao"]);
+            dh.NGAY_LAP_HD = DateTime.Parse(ngaygiao);
+            db.DON_HANG.Add(dh);
+            db.SaveChanges();
+            foreach(var item in gh)
+            {
+                CT_DONHANG ctdh = new CT_DONHANG();
+                ctdh.MA_DH = dh.MA_DH;
+                ctdh.MA_MON_AN = item.MA_MON_AN;
+                ctdh.SL = item.sO_LUONG;
+                ctdh.GIABAN = (decimal)item.GIA_MON;
+                db.CT_DONHANG.Add(ctdh);
+            }
+            db.SaveChanges();
+            Session["GioHang"] = null;
+            return RedirectToAction("Xacnhandonhang", "GioHang");
+        }
+        public ActionResult Xacnhandonhang()
+        {
+            return View();
         }
 
     }

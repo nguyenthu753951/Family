@@ -1,57 +1,20 @@
 ﻿@model IEnumerable<controller.Models.GioHangItem>
-
-
-@foreach (var item in Model)
-{
-    <div id="cart" class="btn-group btn-block mtb_40">
-        <button type="button" class="btn" data-target="#cart-dropdown" data-toggle="collapse" aria-expanded="true"><span id="shippingcart">Giỏ Hàng</span><span id="cart-total">@Model.Count()</span> </button>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<a href="~/GioHang/GioHang" id="cart" class="btn-cart">
+    <i class="cart-icon far fa-shopping-cart"></i>
+    <div class="btn-cart-title">
+        <span id="shippingcart">Giỏ Hàng</span>
+        <br />
+        <span id="cart-total">@ViewBag.tongsoluong</span>
     </div>
-
-    <div id="cart-dropdown" class="cart-menu collapse">
-        <ul>
-            <li>
-                <table class="table table-striped">
-                    <tbody>
-
-                        <tr>
-                            <td class="text-center"><a href="#"><img src="@item.monAn.HINH_ANH"></a></td>
-                            <td class="text-left product-name">
-                                <a href="#">@item.monAn.TEN_MON</a> <span class="text-left price">@item.monAn.GIA_MON</span>
-                                <input class="cart-qty" name="product_quantity" min="1" value="1" type="number">
-                            </td>
-                            <td class="text-center"><a class="close-cart"><i class="fa fa-times-circle"></i></a></td>
-                        </tr>
-
-                    </tbody>
-                </table>
-            </li>
-            <li>
-                <table class="table">
-                    <tbody>
-                        <tr>
-                            <td class="text-right"><strong>Tổng Tiền Hàng</strong></td>
-                            <td class="text-right">@item.monAn.GIA_MON</td>
-                        </tr>
-
-                        @*<tr>
-                            <td class="text-right"><strong>Thuế (15%)</strong></td>
-                            <td class="text-right">3.000VNĐ</td>
-                        </tr>*@
-                        <tr>
-                            <td class="text-right"><strong>Tổng Thanh Toán</strong></td>
-                            <td class="text-right">@item.monAn.GIA_MON</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </li>
-            <li>
-                <form action="cart_page.html">
-                    <input class="btn pull-left mt_10" value="Xem Giỏ" type="submit">
-                </form>
-                <form action="checkout_page.html">
-                    <input class="btn pull-right mt_10" value="Thanh Toán" type="submit">
-                </form>
-            </li>
-        </ul>
-    </div>
-}
+</a>
+<style>
+    .btn-cart {
+        padding-top:40px;
+        display: flex;
+    }
+    .cart-icon{
+        padding:0 5px;
+        font-size:20px;
+    }
+</style>

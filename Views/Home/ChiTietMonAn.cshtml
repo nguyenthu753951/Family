@@ -8,7 +8,7 @@
 <div class="col-sm-8 col-lg-9 mtb_20">
     <div class="row mt_10 ">
         <div class="col-md-6">
-            <div><a class="thumbnails"> <img data-name="product_image" src="@Model.HINH_ANH" alt="" /></a></div>
+            <div><a class="thumbnails"> <img data-name="product_image"width="100%" src="@Model.HINH_ANH" alt="" /></a></div>
         </div>
         <div class="col-md-6 prodetail caption product-thumb">
             <h4 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">@Model.TEN_MON</a></h4>
@@ -29,10 +29,10 @@
                     </div>
                 </div>
                 <div class="qty mt_30 form-group2">
-                    <label>Số Lượng</label>
-                    <input name="product_quantity" min="1" value="1" type="number">
+                    <label>Số Lượng:</label>
+                    <label name="product_quantity" min="1" value="1" type="number">1</label>
                 </div>
-                <div class="btn btn-default"><a href="/GioHang/ThemVaoGioHang?maMonAn=@Model.MA_MON_AN&soLuong=1"><span>Thêm Vào Giỏ hàng</span></a></div>
+                <div class="btn btn-default" style="margin:15px;border-radius:5px;"><a href="@Url.Action("Themgiohang","GioHang",new {@MA_MON_AN=Model.MA_MON_AN,@strURL=Request.Url.ToString() })"><span>Thêm Vào Giỏ hàng</span></a></div>
             </div>
         </div>
     </div>

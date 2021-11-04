@@ -13,14 +13,10 @@ namespace controller.Controllers
     public class KHACH_HANGController : Controller
     {
         private DBContext db = new DBContext();
-
-        // GET: KHACH_HANG
         public ActionResult Index()
         {
             return View(db.KHACH_HANG.ToList());
         }
-
-        // GET: KHACH_HANG/Details/5
         public ActionResult Details(string id)
         {
             if (id == null)
@@ -34,16 +30,10 @@ namespace controller.Controllers
             }
             return View(kHACH_HANG);
         }
-
-        // GET: KHACH_HANG/Create
         public ActionResult Create()
         {
             return View();
         }
-
-        // POST: KHACH_HANG/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "MA_KH,TEN_KH,DIA_CHI_KH,SDT_KH")] KHACH_HANG kHACH_HANG,string id)

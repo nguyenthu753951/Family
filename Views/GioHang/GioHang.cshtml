@@ -1,0 +1,45 @@
+﻿@using controller.Models
+@model List<GioHangItem>
+@{
+    ViewBag.Title = "GioHang";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>GioHang</h2>
+<form enctype="multipart/form-data" method="post" action="#">
+    <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <td class="text-center">Hình ảnh</td>
+                    <td class="text-left">Tên Món</td>
+                    <td class="text-left">Số Lượng</td>
+                    <td class="text-right">Đơn Giá</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td class="text-left"><a href="product.html">@item.TEN_MON</a></td>
+                        <td style="width: 100px;"><a href="#"><img src="@item.HINH_ANH"></a></td>
+                        <td class="text-left">
+                            <input type="number" min="1" name="Txtsl" value="@item.sO_LUONG" />
+                        </td>
+                        <td class="text-right poins">@string.Format("{0:0,0}", item.dthanhtien) VND</td>
+                        <td>@Html.ActionLink("Xóa", "XoaSP", new { @MA_MON_AN = item.MA_MON_AN })</td>
+                        <td>@Html.ActionLink("Cập nhật", "UpdateSP", new { @MA_MON_AN = item.MA_MON_AN }, "txtsl")</td>
+                    </tr>
+
+                }
+            </tbody>
+        </table>
+        <div style="color:red;text-align:right;font-weight:800">
+            <label class="text-left">Tổng số món ăn:@ViewBag.tongsoluong</label>
+            <br />
+            <label class="text-left">Tổng thành tiền:@ViewBag.tongtien VND</label>
+        </div>
+    </div>
+</form>
+@Html.ActionLink("Tiếp tục mua sắm", "insertSP");
+@Html.ActionLink("Thanh toán", "Dathang");

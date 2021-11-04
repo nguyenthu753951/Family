@@ -19,7 +19,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="viewport" content="width=device-width">
     <!-- =====  CSS  ===== -->
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="./Assets/Customer/images/logowhite.jpg" type="image/gif" sizes="30*30">
     <link rel="stylesheet" type="text/css" href="~/Assets/Customer/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="~/Assets/Customer/css/bootstrap.css" />
@@ -65,16 +65,7 @@
                                     <a href="~/NguoiDung/dangky" target="_blank" rel="noopener noreferrer">Đăng Ký </a>
 
                                 </li>
-                                @*<li class="language dropdown">
-            <span class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">Ngôn Ngữ <span class="caret"></span> </span>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                <li><a href="#">English</a></li>
-                <li><a href="#">Tiếng Việt</a></li>
-                <li><a href="#">German</a></li>
-            </ul>
-        </li>*@
-                                @*<li class="currency dropdown">
-        </li>*@
+                               
                             </ul>
                         </div>
                     </div>
@@ -93,57 +84,10 @@
                         </div>
                         <div class="navbar-header col-xs-6 col-sm-4"> <a class="navbar-brand" href="/" ref="nofolow"> <img alt="Online Shop Rider" src="~/Assets/Customer/images/logo.jpg"> </a> </div>
                         <div class="col-xs-6 col-sm-4 shopcart">
-                            @{ Html.RenderAction("HeaderCart", "Home");}
-
-                            <div id="cart-dropdown" class="cart-menu collapse">
-                                <ul>
-                                    <li>
-                                        <table class="table table-striped">
-                                            <tbody>
-
-                                                <tr>
-                                                    <td class="text-center"><a href="#"><img src=""></a></td>
-                                                    <td class="text-left product-name">
-                                                        <a href="#"></a> <span class="text-left price"></span>
-                                                        <input class="cart-qty" name="product_quantity" min="1" value="1" type="number">
-                                                    </td>
-                                                    <td class="text-center"><a class="close-cart"><i class="fa fa-times-circle"></i></a></td>
-                                                </tr>
-
-                                            </tbody>
-                                        </table>
-                                    </li>
-                                    <li>
-                                        <table class="table">
-                                            <tbody>
-                                                <tr>
-                                                    <td class="text-right"><strong>Tổng Tiền Hàng</strong></td>
-                                                    <td class="text-right"></td>
-                                                </tr>
-
-                                                <!---->@*<tr>
-                                <td class="text-right"><strong>Thuế (15%)</strong></td>
-                                <td class="text-right">3.000VNĐ</td>
-                            </tr>*@-->
-                                                <tr>
-                                                    <td class="text-right"><strong>Tổng Thanh Toán</strong></td>
-                                                    <td class="text-right"></td>
-                                                </tr>
-                                            </tbody>
-                                        </table>
-                                    </li>
-                                    <li>
-                                        <form action="cart_page.html">
-                                            <input class="btn pull-left mt_10" value="Xem Giỏ" type="submit">
-                                        </form>
-                                        <form action="checkout_page.html">
-                                            <input class="btn pull-right mt_10" value="Thanh Toán" type="submit">
-                                        </form>
-                                    </li>
-                                </ul>
-                            </div>
-
+                            @{Html.RenderAction("HeaderCart", "Home");}
                         </div>
+                        
+                        
                     </div>
                     <nav class="navbar" style="width:1200px;">
                         <p>Menu</p>
@@ -151,65 +95,6 @@
                         <div class="collapse navbar-collapse js-navbar-collapse">
                             <ul id="menu" class="nav navbar-nav" style="display:flex;justify-content:center;align-items:center">
                                 <li> <a href="/Home">Trang Chủ</a></li>
-                                <!--<li> <a href="category_page.html">women</a></li>-->
-                                <!--<li> <a href="category_page.html">men</a></li>
-                            <li class="dropdown mega-dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Collection </a>
-                              <ul class="dropdown-menu mega-dropdown-menu row">
-                                <li class="col-md-3">
-                                  <ul>
-                                    <li class="dropdown-header">Women's</li>
-                                    <li><a href="#">Unique Features</a></li>
-                                    <li><a href="#">Image Responsive</a></li>
-                                    <li><a href="#">Auto Carousel</a></li>
-                                    <li><a href="#">Newsletter Form</a></li>
-                                    <li><a href="#">Four columns</a></li>
-                                    <li><a href="#">Four columns</a></li>
-                                    <li><a href="#">Good Typography</a></li>
-                                  </ul>
-                                </li>
-                                <li class="col-md-3">
-                                  <ul>
-                                    <li class="dropdown-header">Man's</li>
-                                    <li><a href="#">Unique Features</a></li>
-                                    <li><a href="#">Image Responsive</a></li>
-                                    <li><a href="#">Four columns</a></li>
-                                    <li><a href="#">Auto Carousel</a></li>
-                                    <li><a href="#">Newsletter Form</a></li>
-                                    <li><a href="#">Four columns</a></li>
-                                    <li><a href="#">Good Typography</a></li>
-                                  </ul>
-                                </li>
-                                <li class="col-md-3">
-                                  <ul>
-                                    <li class="dropdown-header">Children's</li>
-                                    <li><a href="#">Unique Features</a></li>
-                                    <li><a href="#">Four columns</a></li>
-                                    <li><a href="#">Image Responsive</a></li>
-                                    <li><a href="#">Auto Carousel</a></li>
-                                    <li><a href="#">Newsletter Form</a></li>
-                                    <li><a href="#">Four columns</a></li>
-                                    <li><a href="#">Good Typography</a></li>
-                                  </ul>
-                                </li>
-                                <li class="col-md-3">
-                                  <ul>
-                                    <li id="myCarousel" class="carousel slide" data-ride="carousel">
-                                      <div class="carousel-inner">
-                                        <div class="item active"> <a href="#"><img src="images/menu-banner1.jpg" class="img-responsive" alt="Banner1"></a></div>-->
-                                <!-- End Item -->
-                                <!--<div class="item"> <a href="#"><img src="images/menu-banner2.jpg" class="img-responsive" alt="Banner1"></a></div>-->
-                                <!-- End Item -->
-                                <!--<div class="item"> <a href="#"><img src="images/menu-banner3.jpg" class="img-responsive" alt="Banner1"></a></div>-->
-                                <!-- End Item -->
-                                <!--</div>-->
-                                <!-- End Carousel Inner -->
-                                <!--</li>-->
-                                <!-- /.carousel -->
-                                <!--</ul>
-                              </li>
-                            </ul>
-                            </li>-->
-
                                 <li> <a href="#monan">Món ăn</a></li>
                                 <li> <a href="#nuocuong">Nước uống</a></li>
                                 
