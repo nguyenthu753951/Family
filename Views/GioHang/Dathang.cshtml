@@ -40,10 +40,12 @@
     </div>
 </form>
 <h2>Thông tin Người đặt</h2>
-@{ 
+@{
     KHACH_HANG kh = (KHACH_HANG)Session["TaiKhoan"];
 }
 <table align="center">
+@using (Html.BeginForm())
+ {
     @Html.ValidationSummary(true)
     <tr style="height:40px">
         <td>Họ tên khách hàng:</td>
@@ -59,20 +61,22 @@
     </tr>
     <tr style="height:40px">
         <td>Ngày lập hóa đơn:</td>
-        <td style="font-weight:bold">@DateTime.Now.ToShortDateString()       
+        <td style="font-weight:bold">
+            @DateTime.Now.ToShortDateString()
         </td>
     </tr>
     <tr style="height:40px">
-        <td>Ngày giao hàng:</td>
-        <td style="font-weight:bold">
-            <input type="date" name="Ngaygiao" />
-        </td>
+    <td>Ngày giao hàng:</td>
+    <td style="font-weight:bold">
+        <input type="date" name="Ngaygiao" />
+    </td>    
     </tr>
     <tr style="height:40px">
         <td></td>
         <td>
-            @Html.ActionLink("Dathang","Giohang")
+            <input type="submit" value="Create" class="btn btn-default" />
         </td>
     </tr>
+  }
 </table>
 

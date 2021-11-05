@@ -116,14 +116,19 @@ namespace controller.Controllers
             ViewBag.tongtien = Tongtien();
             return View(lstgiohang);
         }
+        [HttpPost]
         public ActionResult Dathang(FormCollection collection)
         {
+            var tx1 = "TX1";
+            string madh;
+            Random rd = new Random();
+            madh = rd.Next(1, 1000).ToString();
             DON_HANG dh = new DON_HANG();
             KHACH_HANG kh = (KHACH_HANG)Session["TaiKhoan"];
-            DTAC_TAI_XE tx = new DTAC_TAI_XE();
             List<GioHangItem> gh = Laygiohang();
+            dh.MA_DH = madh;
             dh.MA_KH = kh.MA_KH;
-            dh.MA_TX = tx.MA_TX;
+            dh.MA_TX = tx1;
             dh.NGAY_LAP_HD = DateTime.Now;
             var ngaygiao = string.Format("{0:MM/dd/yyyy}", collection["Ngaygiao"]);
             dh.NGAY_LAP_HD = DateTime.Parse(ngaygiao);
