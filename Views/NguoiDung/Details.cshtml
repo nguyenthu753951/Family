@@ -1,0 +1,104 @@
+﻿@model controller.Models.KHACH_HANG
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div style="width:1200px">
+    <h4 style="text-align:center;font-size:20px;font-weight:700;padding:20px 0;">Thông tin khách hàng</h4>
+    <ul class="inf-user">
+        <li class="inf-item">
+            <h3 class="title-font">
+                @Html.DisplayNameFor(model => model.TEN_KH):
+            </h3>
+
+            <p class="title-font-content">
+                @Html.DisplayFor(model => model.TEN_KH)
+            </p>
+        </li>
+        <li class="inf-item">
+            <h3 class="title-font">
+                @Html.DisplayNameFor(model => model.DIA_CHI_KH):
+            </h3>
+
+            <p class="title-font-content">
+                @Html.DisplayFor(model => model.DIA_CHI_KH)
+            </p>
+        </li>
+        <li class="inf-item">
+            <h3 class="title-font">
+                @Html.DisplayNameFor(model => model.SDT_KH):
+            </h3>
+
+            <p class="title-font-content">
+                @Html.DisplayFor(model => model.SDT_KH)
+            </p>
+        </li>
+        <li class="inf-item">
+            <h3 class="title-font">
+                @Html.DisplayNameFor(model => model.EMAIL_KH):
+            </h3>
+
+            <p class="title-font-content">
+                @Html.DisplayFor(model => model.EMAIL_KH)
+            </p>
+        </li>
+    </ul>
+</div>
+<div class="btnfunction">
+    @Html.ActionLink("Sửa thông tin", "Edit", new { id = Model.MA_KH })
+    @Html.ActionLink("Xác nhận", "Index","Home")
+</div>
+<style>
+    .btnfunction {
+        text-align: center;
+        margin: 15px 0;
+        display: flex;
+        justify-content: center;
+    }
+        .btnfunction a:first-child {
+            padding: 7px;
+            background: #486EFF;
+            font-size: 13px;
+            color: #fff;
+            min-width: 90.4px;
+            border-radius: 5px;
+            margin-right:5px;
+        }
+        .btnfunction a:last-child {
+            padding: 7px;
+            background: #74684b;
+            font-size: 13px;
+            color: #fff;
+            min-width: 90.4px;
+            border-radius: 5px;
+        } 
+    .inf-user{
+        padding:0;
+        margin:0;
+        list-style:none;
+        display:flex;
+        flex-direction:column;
+        justify-content:center;
+        align-items:center;
+    }
+    .inf-item {
+        padding: 10px 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        min-width:500px;
+        align-items: center;
+    }
+    .title-font {
+        text-align: left;
+        min-width: 200px;
+        font-size: 20px;
+        font-weight: 600;
+    }
+    .title-font-content {
+        font-size: 20px;
+        font-style: italic;
+    }
+    
+</style>

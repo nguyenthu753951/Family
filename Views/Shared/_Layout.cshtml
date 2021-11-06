@@ -53,8 +53,9 @@
                                     <span class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">Tài Khoản<span class="caret"></span> </span>
                                     <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                                         <li><a href="~/NguoiDung/DangNhap">Đăng nhập</a></li>
-                                        <li><a href="/KHACH_HANG/Create">Thông tin cá nhân</a></li>
-
+                                        <li><a href="~/NguoiDung/Details">Thông tin cá nhân</a></li>
+                                        <li>@Html.ActionLink("Đăng xuất", "Dangxuat", "NguoiDung")</li>
+                                        @ViewBag.Thongbao
                                     </ul>
                                 </li>
                                 <li class="language dropdown">

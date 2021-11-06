@@ -19,10 +19,12 @@ namespace controller.Controllers
         }
         public ActionResult Details(string id)
         {
+            KHACH_HANG kh = (KHACH_HANG)Session["TaiKhoan"];
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
+            kh.MA_KH = id;
             KHACH_HANG kHACH_HANG = db.KHACH_HANG.Find(id);
             if (kHACH_HANG == null)
             {
@@ -48,8 +50,6 @@ namespace controller.Controllers
 
             return View(kHACH_HANG);
         }
-
-        // GET: KHACH_HANG/Edit/5
         public ActionResult Edit(string id)
         {
             if (id == null)
@@ -63,10 +63,6 @@ namespace controller.Controllers
             }
             return View(kHACH_HANG);
         }
-
-        // POST: KHACH_HANG/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to, for 
-        // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "MA_KH,TEN_KH,DIA_CHI_KH,SDT_KH")] KHACH_HANG kHACH_HANG)

@@ -1,7 +1,9 @@
 ﻿using controller.Models;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity;
 using System.Linq;
+using System.Net;
 using System.Web;
 using System.Web.Mvc;
 
@@ -99,5 +101,48 @@ namespace controller.Controllers
             }
             return View();
         }
+        public ActionResult Details()
+        {
+            if (Session["TaiKhoan"] == null || Session["TaiKhoan"].ToString() == "")
+            {
+                return RedirectToAction("DangNhap", "NguoiDung");
+            }
+            KHACH_HANG kh = (KHACH_HANG)Session["TaiKhoan"];
+            return View(kh);
+        }
+        public ActionResult Edit(string id)
+        {
+            KHACH_HANG kh = (KHACH_HANG)Session["TaiKhoan"];
+            return View(kh);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edit([Bind(Include = "MA_KH,TEN_KH,DIA_CHI_KH,SDT_KH,MATKHAU_KH,EMAIL_KH")] KHACH_HANG kh)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(kh).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Details");//(db.KHACH_HANG.Find(kHACH_HANG.MA_KH.ToString());
+            }
+            return View(kh);
+        }
+        
+
+        public ActionResult dangxuat()
+        {
+            KHACH_HANG kh = (KHACH_HANG)Session["TaiKhoan"];
+            if(Session["TaiKhoan"] != null)
+            {
+                Session["TaiKhoan"] = null;
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                return RedirectToAction("DangNhap","NguoiDung");
+            }
+
+        }
+        
     }
 }

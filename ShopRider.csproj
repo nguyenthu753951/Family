@@ -2621,17 +2621,14 @@
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\ChiTietMonAn.cshtml" />
-    <Content Include="Views\KHACH_HANG\Create.cshtml" />
-    <Content Include="Views\KHACH_HANG\Delete.cshtml" />
-    <Content Include="Views\KHACH_HANG\Edit.cshtml" />
-    <Content Include="Views\KHACH_HANG\Index.cshtml" />
-    <Content Include="Views\KHACH_HANG\Details.cshtml" />
     <Content Include="Views\Shared\HeaderCart.cshtml" />
     <Content Include="Views\GioHang\GioHang.cshtml" />
     <Content Include="Views\GioHang\Xacnhandonhang.cshtml" />
     <Content Include="Views\NguoiDung\dangky.cshtml" />
     <Content Include="Views\NguoiDung\DangNhap.cshtml" />
     <Content Include="Views\GioHang\Dathang.cshtml" />
+    <Content Include="Views\NguoiDung\Details.cshtml" />
+    <Content Include="Views\NguoiDung\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
