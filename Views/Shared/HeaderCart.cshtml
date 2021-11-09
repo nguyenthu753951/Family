@@ -1,20 +1,24 @@
-﻿@model IEnumerable<controller.Models.GioHangItem>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+﻿@using controller.Models
+@model List<GioHangItem>
 <a href="~/GioHang/GioHang" id="cart" class="btn-cart">
-    <i class="cart-icon far fa-shopping-cart"></i>
-    <div class="btn-cart-title">
-        <span id="shippingcart">Giỏ Hàng</span>
-        <br />
-        <span id="cart-total">@ViewBag.tongsoluong</span>
+    <i class="fas fa-shopping-cart" style="font-size:30px;margin-right:5px;"></i>
+    <div style="display:block">
+        <span id="shippingcart">Giỏ Hàng @ViewBag.tongsoluong</span>
+        <label id="cart-total"></label>
     </div>
 </a>
 <style>
     .btn-cart {
-        padding-top:40px;
+        padding-top: 40px;
         display: flex;
+        align-items:center;
+        position:absolute;
+        right:0;
+
     }
-    .cart-icon{
-        padding:0 5px;
-        font-size:20px;
+
+    .cart-icon {
+        padding: 0 5px;
+        font-size: 30px;
     }
 </style>

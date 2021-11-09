@@ -5,41 +5,59 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>GioHang</h2>
-<form enctype="multipart/form-data" method="post" action="#">
-    <div class="table-responsive">
-        <table class="table table-bordered">
-            <thead>
+<h2 class="text-center"style="padding:15px 0">Giỏ hàng của bạn</h2>
+        <table class="table table-bordered" style="width: 1200px;">
                 <tr>
+                    <td class="text-center">Tên món</td>
                     <td class="text-center">Hình ảnh</td>
-                    <td class="text-left">Tên Món</td>
-                    <td class="text-left">Số Lượng</td>
-                    <td class="text-right">Đơn Giá</td>
+                    <td class="text-center">Số Lượng</td>
+                    <td class="text-center">Đơn Giá</td>
                 </tr>
-            </thead>
-            <tbody>
                 @foreach (var item in Model)
                 {
-                    <tr>
-                        <td class="text-left"><a href="product.html">@item.TEN_MON</a></td>
-                        <td style="width: 100px;"><a href="#"><img src="@item.HINH_ANH"></a></td>
-                        <td class="text-left">
-                            <input type="number" min="1" name="Txtsl" value="@item.sO_LUONG" />
+                <tr class="text-center">
+                    @using (Html.BeginForm("UpdateSP", "GioHang", new { @MA_MON_AN = item.MA_MON_AN }))
+                    {
+                        <td >@item.TEN_MON</td>
+                        <td style="width: 120px;"><img src="@item.HINH_ANH"></td>
+                        <td >
+                            <input type="number" min="0" name="Txtsl" value="@item.sO_LUONG" />
                         </td>
-                        <td class="text-right poins">@string.Format("{0:0,0}", item.dthanhtien) VND</td>
+                        <td >@string.Format("{0:0,0}", item.dthanhtien) VND</td>
                         <td>@Html.ActionLink("Xóa", "XoaSP", new { @MA_MON_AN = item.MA_MON_AN })</td>
-                        <td>@Html.ActionLink("Cập nhật", "UpdateSP", new { @MA_MON_AN = item.MA_MON_AN }, "txtsl")</td>
-                    </tr>
-
+                        <td><input type="submit" value="Cập nhật" /></td>
+                    }
+                </tr>
                 }
-            </tbody>
         </table>
         <div style="color:red;text-align:right;font-weight:800">
             <label class="text-left">Tổng số món ăn:@ViewBag.tongsoluong</label>
             <br />
             <label class="text-left">Tổng thành tiền:@ViewBag.tongtien VND</label>
         </div>
-    </div>
-</form>
-@Html.ActionLink("Tiếp tục mua sắm", "insertSP");
-@Html.ActionLink("Thanh toán", "Dathang");
+        <div style="display:flex;align-items:center;margin-bottom:5px;">
+            <div class="btn-click">
+                @Html.ActionLink("Tiếp tục mua sắm", "insertSP")
+            </div>
+            <div class="btn-click">
+                @Html.ActionLink("Xóa tất cả giỏ hàng", "DeleteAllcart")
+            </div>
+            <div class="btn-click">
+                @Html.ActionLink("Thanh toán", "Dathang")
+            </div>
+        </div>
+        <style>
+            .btn-click{
+                background:#000;
+                border-radius:5px;
+                margin-right:5px;
+            }
+            .btn-click a{
+                padding:15px;
+                color:#fff;
+                display:block;
+            }
+                .btn-click:hover {
+                    background: #e40001;
+                }
+        </style>

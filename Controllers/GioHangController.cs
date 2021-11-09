@@ -100,6 +100,12 @@ namespace controller.Controllers
             }
             return RedirectToAction("GioHang");
         }
+        public ActionResult DeleteAllcart()
+        {
+            List<GioHangItem> lstgiohang = Laygiohang();
+            lstgiohang.Clear();
+            return RedirectToAction("Index", "Home");
+        }
         [HttpGet]
         public ActionResult Dathang()
         {
@@ -141,6 +147,8 @@ namespace controller.Controllers
                 ctdh.MA_MON_AN = item.MA_MON_AN;
                 ctdh.SL = item.sO_LUONG;
                 ctdh.GIABAN = (decimal)item.GIA_MON;
+                ctdh.TEN_MON = item.TEN_MON;
+                ctdh.HINH_ANH = item.HINH_ANH;
                 db.CT_DONHANG.Add(ctdh);
             }
             db.SaveChanges();

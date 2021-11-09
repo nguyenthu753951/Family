@@ -77,15 +77,17 @@ namespace controller.Controllers
         {
             var tendn = collection["TenDN"];
             var mk = collection["MatKhau"];
-            if (string.IsNullOrEmpty(tendn))
+            if (ModelState.IsValid)
+            { 
+                if (string.IsNullOrEmpty(tendn))
             {
                 ViewData["Loi1"] = "Phải nhập tên đăng nhập";
             }
-            else if (string.IsNullOrEmpty(mk))
+                if (string.IsNullOrEmpty(mk))
             {
                 ViewData["Loi2"] = "Cần nhập mật khẩu";
             }
-            else
+                else
             {
                 KHACH_HANG kh = db.KHACH_HANG.SingleOrDefault(n => n.MA_KH == tendn && n.MATKHAU_KH == mk);
                 if (kh != null)
@@ -98,6 +100,7 @@ namespace controller.Controllers
                 {
                     ViewBag.ThongBao = "Hình Như Tên Đăng Nhập Hoặc Mật Khẩu Không Đúng(bạn nên nhập lại)"; ;
                 }  
+            }
             }
             return View();
         }
@@ -123,7 +126,8 @@ namespace controller.Controllers
             {
                 db.Entry(kh).State = EntityState.Modified;
                 db.SaveChanges();
-                return RedirectToAction("Details");//(db.KHACH_HANG.Find(kHACH_HANG.MA_KH.ToString());
+                
+                return RedirectToAction("Details");
             }
             return View(kh);
         }
