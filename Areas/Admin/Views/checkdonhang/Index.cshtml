@@ -100,14 +100,18 @@
 
 </table>
 <script>
+
+    const agree = document.querySelector('.table');
+    var checkxns = document.querySelectorAll('.click__check');
+    var huys = document.querySelectorAll('.click__check1');
     
-                const clickxacnhan = document.querySelector('.checkxn');
-                const agree = document.querySelector('.table');
-                const check = document.querySelector('.click__check');
-                const check1 = document.querySelector('.click__check1');
-    check.onclick = function () {
-        alert("xác nhận đơn hàng thành công!!!");
-        check.classList.add("remove");
-        check1.classList.add("remove");
+    for (const checkxn of checkxns) {
+        for (const huy of huys) {
+            checkxn.addEventListener('click', function () {
+                checkxn.classList.add("remove");
+            }
+            )
+        }
+
     }
 </script>
