@@ -126,6 +126,7 @@ namespace controller.Controllers
         public ActionResult Dathang(FormCollection collection)
         {
             var tx1 = "TX1";
+            var PHIGH = 10000;
             string madh;
             Random rd = new Random();
             madh = rd.Next(1, 1000).ToString();
@@ -135,6 +136,7 @@ namespace controller.Controllers
             dh.MA_DH = madh;
             dh.MA_KH = kh.MA_KH;
             dh.MA_TX = tx1;
+            dh.PHI_GIAO_HANG = PHIGH;
             dh.NGAY_LAP_HD = DateTime.Now;
             var ngaygiao = string.Format("{0:MM/dd/yyyy}", collection["Ngaygiao"]);
             dh.NGAY_LAP_HD = DateTime.Parse(ngaygiao);
