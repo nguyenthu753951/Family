@@ -515,9 +515,9 @@
     <Compile Include="Areas\Admin\Code\SessionHelper.cs" />
     <Compile Include="Areas\Admin\Code\UserSessions.cs" />
     <Compile Include="Areas\Admin\Controllers\checkdonhangController.cs" />
-    <Compile Include="Areas\Admin\Controllers\CT_DONHANGController.cs" />
     <Compile Include="Areas\Admin\Controllers\DTAC_TAI_XEController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Admin\Controllers\KHACH_HANGController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
     <Compile Include="Areas\Admin\Controllers\NhanVienController.cs" />
     <Compile Include="Areas\Admin\Controllers\PhieuGiamGiaController.cs" />
@@ -2587,9 +2587,12 @@
       <DependentUpon>DOANONLINEDataSet.xsd</DependentUpon>
     </Content>
     <Content Include="Areas\Admin\Views\NhanVien\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\CT_DONHANG\Delete.cshtml" />
-    <Content Include="Areas\Admin\Views\CT_DONHANG\Details.cshtml" />
-    <Content Include="Areas\Admin\Views\CT_DONHANG\Index.cshtml" />
+    <Content Include="Areas\Admin\Views\checkdonhang\xacnhan.cshtml" />
+    <Content Include="Areas\Admin\Views\KHACH_HANG\Create.cshtml" />
+    <Content Include="Areas\Admin\Views\KHACH_HANG\Delete.cshtml" />
+    <Content Include="Areas\Admin\Views\KHACH_HANG\Details.cshtml" />
+    <Content Include="Areas\Admin\Views\KHACH_HANG\Edit.cshtml" />
+    <Content Include="Areas\Admin\Views\KHACH_HANG\Index.cshtml" />
     <None Include="DOANONLINEDataSet.xsd">
       <Generator>MSDataSetGenerator</Generator>
       <LastGenOutput>DOANONLINEDataSet.Designer.cs</LastGenOutput>

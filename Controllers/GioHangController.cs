@@ -138,6 +138,7 @@ namespace controller.Controllers
             dh.NGAY_LAP_HD = DateTime.Now;
             var ngaygiao = string.Format("{0:MM/dd/yyyy}", collection["Ngaygiao"]);
             dh.NGAY_LAP_HD = DateTime.Parse(ngaygiao);
+            dh.NGAY_HEN_GIAO= DateTime.Parse(ngaygiao);
             db.DON_HANG.Add(dh);
             db.SaveChanges();
             foreach(var item in gh)

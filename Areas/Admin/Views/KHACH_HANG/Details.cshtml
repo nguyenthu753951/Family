@@ -1,0 +1,59 @@
+﻿@model controller.Models.KHACH_HANG
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<h2 class="text-center">Thông tin khách hàng: @Html.DisplayFor(model => model.TEN_KH)</h2>
+<div class="text-center">
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TEN_KH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TEN_KH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DIA_CHI_KH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DIA_CHI_KH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SDT_KH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SDT_KH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MATKHAU_KH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MATKHAU_KH)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EMAIL_KH)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EMAIL_KH)
+        </dd>
+
+    </dl>
+<button>
+    @Html.ActionLink("Sửa thông tin", "Edit", new { id = Model.MA_KH })
+</button>
+<button>
+    @Html.ActionLink("Trở về", "Index")
+</button>
+</div>

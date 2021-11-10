@@ -5,6 +5,8 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Text.RegularExpressions;
+
 
 namespace controller.Areas.Admin.Controllers
 {
@@ -61,6 +63,12 @@ namespace controller.Areas.Admin.Controllers
             db.SaveChangesAsync();
             
             return RedirectToAction("Index");
+        }
+        public ActionResult Xacnhan(string id)
+        {
+            DON_HANG dON_HANG = db.DON_HANG.Find(id);
+            db.SaveChanges();
+            return RedirectToAction("Xacnhan");
         }
     }
 }

@@ -1,0 +1,63 @@
+﻿@model IEnumerable<controller.Models.DON_HANG>
+
+@{
+    ViewBag.Title = "xacnhan";
+    Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.DTAC_TAI_XE.TEN_TX)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KHACH_HANG.TEN_KH)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PHI_GIAO_HANG)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NGAY_LAP_HD)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NGAY_HEN_GIAO)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LOAI)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HINH_ANH)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.DTAC_TAI_XE.TEN_TX)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KHACH_HANG.TEN_KH)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PHI_GIAO_HANG)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NGAY_LAP_HD)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NGAY_HEN_GIAO)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LOAI)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HINH_ANH)
+        </td>
+        <td>
+            @Html.ActionLink("Details", "Details", new { id=item.MA_DH }) |
+        </td>
+    </tr>
+}
+
+</table>
