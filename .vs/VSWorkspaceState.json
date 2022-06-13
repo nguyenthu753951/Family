@@ -1,9 +1,14 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Assets",
+    "\\Assets\\Customer",
+    "\\Assets\\Customer\\css",
     "\\Views",
+    "\\Views\\Home",
+    "\\Views\\NguoiDung",
     "\\Views\\Shared"
   ],
-  "SelectedNode": "\\Views\\Shared\\_Layout.cshtml",
+  "SelectedNode": "\\Views\\Home\\Index.cshtml",
   "PreviewInSolutionExplorer": false
 }
