@@ -1,6 +1,7 @@
 ﻿using controller.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -153,8 +154,18 @@ namespace controller.Controllers
                 ctdh.TEN_MON = item.TEN_MON;
                 ctdh.HINH_ANH = item.HINH_ANH;
                 db.CT_DONHANG.Add(ctdh);
+                
             }
             db.SaveChanges();
+            string content = System.IO.File.ReadAllText(Server.MapPath("~/Assets/Customer/template/DonHang.html"));
+            var toEmail = ConfigurationManager.AppSettings["ToEmailAddress"].ToString();
+
+            /*content = content.Replace("{{TenMon}}", item.TEN_MON);
+            content = content.Replace("{{tongtien}}", ctdh.GIABAN.ToString());*/
+
+
+            new MailHelper().SendMail(kh.EMAIL_KH, "Đặt hàng thành công!", content);
+            new MailHelper().SendMail(toEmail, "Đặt hàng thành công!", content);
             Session["GioHang"] = null;
             return RedirectToAction("Xacnhandonhang", "GioHang");
         }

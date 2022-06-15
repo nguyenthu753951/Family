@@ -1,11 +1,13 @@
 ﻿using controller.Models;
 using System;
 using System.Collections.Generic;
+using System.Configuration;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace controller.Controllers
 {
@@ -54,6 +56,15 @@ namespace controller.Controllers
                 {
                     //kh.MATKHAU_KH=mk;
                     db.KHACH_HANG.Add(kh);
+                    string content = System.IO.File.ReadAllText(Server.MapPath("~/Assets/Customer/template/dkthanhcong.html"));
+                    var toEmail = ConfigurationManager.AppSettings["ToEmailAddress"].ToString();
+
+                    content = content.Replace("{{TenDN}}", kh.MA_KH);
+                    content = content.Replace("{{hoten}}", kh.TEN_KH);
+
+
+                    new MailHelper().SendMail(kh.EMAIL_KH, "Đăng ký Tài khoản thành công!", content);
+                    new MailHelper().SendMail(toEmail, "Đăng ký Tài khoản thành công!", content);
                     db.SaveChanges();
                     ViewBag.ThongBao = "Đăng ký thành công";
                     return RedirectToAction("DangNhap");
@@ -120,11 +131,14 @@ namespace controller.Controllers
         }
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "MA_KH,TEN_KH,DIA_CHI_KH,SDT_KH,MATKHAU_KH,EMAIL_KH")] KHACH_HANG kh)
+        public ActionResult Edit( KHACH_HANG kh)
         {
+            KHACH_HANG khss = (KHACH_HANG)Session["TaiKhoan"];
+
             if (ModelState.IsValid)
             {
                 db.Entry(kh).State = EntityState.Modified;
+                kh.MATKHAU_KH = khss.MATKHAU_KH;
                 db.SaveChanges();
                 
                 return RedirectToAction("Details");
@@ -147,6 +161,54 @@ namespace controller.Controllers
             }
 
         }
-        
+        public ActionResult Doimk()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Doimk(FormCollection collection)
+        {
+            KHACH_HANG kh = (KHACH_HANG)Session["TaiKhoan"];
+            var qmk = db.KHACH_HANG.SingleOrDefault(n => n.MA_KH == kh.MA_KH);
+            var mkcu = collection["mkcu"];
+            var mkmoi = collection["mkmoi"];
+            if (kh.MATKHAU_KH == mkcu)
+            {
+                qmk.MATKHAU_KH = mkmoi;
+                db.SaveChanges();
+                Session["TaiKhoan"] = null;
+                return RedirectToAction("Dangnhap", "Nguoidung");
+            }
+            else
+            {
+                ViewBag.ThongBao = "Mật khẩu không chính xác";
+            }
+            return View();
+        }
+        public ActionResult Quenmk()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Quenmk(FormCollection collection)
+        {
+            var Email = collection["QuenMail"];
+            string password = Membership.GeneratePassword(12, 1);
+            KHACH_HANG tHANHVIEN = db.KHACH_HANG.SingleOrDefault(n => n.EMAIL_KH == Email );
+            tHANHVIEN.MATKHAU_KH = password;
+            db.SaveChanges();
+            string content = System.IO.File.ReadAllText(Server.MapPath("~/Assets/Customer/template/QuenMk.html"));
+            var toEmail = ConfigurationManager.AppSettings["ToEmailAddress"].ToString();
+
+            content = content.Replace("{{tk}}", tHANHVIEN.MA_KH);
+
+            content = content.Replace("{{pass}}", password);
+
+
+            new MailHelper().SendMail(Email, "Đổi mật khẩu thành công!", content);
+            new MailHelper().SendMail(toEmail, "Đổi mật khẩu thành công!", content);
+            return RedirectToAction("/Dangnhap");
+        }
+
     }
 }

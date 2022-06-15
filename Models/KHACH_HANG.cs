@@ -35,7 +35,7 @@
         public string SDT_KH { get; set; }
 
 
-        [StringLength(10, MinimumLength = 6)]
+        [StringLength(20, MinimumLength = 6)]
         [Display(Name = "Mật Khẩu")]
         public string MATKHAU_KH { get; set; }
 
