@@ -51,28 +51,34 @@
                         <div class="col-xs-12 col-sm-8">
                             <ul class="header-top-right text-right">
                                 <li class="language dropdown">
-                                    <span class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">Tài Khoản<span class="caret"></span> </span>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                        <li><a href="~/NguoiDung/DangNhap">Đăng nhập</a></li>
-                                        <li><a href="~/NguoiDung/Details">Thông tin cá nhân</a></li>
-                                        <li><a href="~/NguoiDung/Doimk">Đổi mật khẩu</a></li>
-                                        <li><a href="~/NguoiDung/QuenMK">Quên mật khẩu</a></li>
+                                    @{
+                                        var session = (controller.Models.KHACH_HANG)Session["TaiKhoan"];
 
 
-                                        <li>@Html.ActionLink("Đăng xuất", "Dangxuat", "NguoiDung")</li>
-                                        @ViewBag.Thongbao
-                                    </ul>
-                                </li>
-                                <li class="language dropdown">
-                                    <a href="~/hotro.html" target="_blank" rel="noopener noreferrer">Hỗ Trợ </a>
-
-                                </li>
-                                <li class="language dropdown">
-                                    <a href="~/NguoiDung/dangky" target="_blank" rel="noopener noreferrer">Đăng Ký </a>
-
-                                </li>
-
-                            </ul>
+                                    }
+                                    @if (session == null)
+                                    {
+                                        <span class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">Tài Khoản<span class="caret"></span> </span>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                            <li><a href="~/NguoiDung/DangNhap">Đăng nhập</a></li>
+                                            <li><a href="~/NguoiDung/dangky">Đăng Ký</a></li>
+                                        </ul>
+                                    }
+                                    else
+                                    {
+                                        <span class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">@session.TEN_KH<span class="caret"></span> </span>
+                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                            <li><a href="~/NguoiDung/Details">Thông tin cá nhân</a></li>
+                                            <li><a href="~/NguoiDung/Doimk">Đổi mật khẩu</a></li>
+                                            <li><a href="~/NguoiDung/QuenMK">Quên mật khẩu</a></li>
+                                            <li>@Html.ActionLink("Đăng xuất", "Dangxuat", "NguoiDung")</li>
+                                            @ViewBag.Thongbao
+                                        </ul>
+                                    }
+                                    <li class="language dropdown">
+                                        <a href="~/hotro.html" target="_blank" rel="noopener noreferrer">Hỗ Trợ </a>
+                                    </li>
+                                </ul>
                         </div>
                     </div>
                 </div>
@@ -121,34 +127,9 @@
                     <div class="footer-top pb_60 mb_30">
                         <div class="col-xs-12 col-sm-6">
                             <div class="footer-logo"> <a href="index.html"> <img src="~/Assets/Customer/images/bia.jpg" alt="Online Shop Rider"> </a> </div>
-                            <!--<div class="footer-desc">Lorem ipsum doLorem ipsum dolor sit amet, consectetur adipisicagna.</div>-->
                         </div>
-                        <!-- =====  testimonial  ===== -->
-                        <!--<div class="col-xs-12 col-sm-6">
-                        <div class="Testimonial">
-                            <div class="client owl-carousel">
-                                <div class="item client-detail">
-                                    <div class="client-avatar"> <img alt="" src="images/user1.jpg"> </div>
-                                    <div class="client-title"><strong>joseph Lui</strong></div>
-                                    <div class="client-designation mb_10"> - php Developer</div>
-                                    <p><i class="fa fa-quote-left" aria-hidden="true"></i>Lorem ipsum dolor sit amet, volumus oporteat his at sea in Rem ipsum dolor sit amet, sea in odio ..</p>
-                                </div>
-                                <div class="item client-detail">
-                                    <div class="client-avatar"> <img alt="" src="images/user2.jpg"> </div>
-                                    <div class="client-title"><strong>joseph Lui</strong></div>
-                                    <div class="client-designation mb_10"> - php Developer</div>
-                                    <p><i class="fa fa-quote-left" aria-hidden="true"></i>Lorem ipsum dolor sit amet, volumus oporteat his at sea in Rem ipsum dolor sit amet, sea in odio ..</p>
-                                </div>
-                                <div class="item client-detail">
-                                    <div class="client-avatar"> <img alt="" src="images/user3.jpg"> </div>
-                                    <div class="client-title"><strong>joseph Lui</strong></div>
-                                    <div class="client-designation mb_10"> - php Developer</div>
-                                    <p><i class="fa fa-quote-left" aria-hidden="true"></i>Lorem ipsum dolor sit amet, volumus oporteat his at sea in Rem ipsum dolor sit amet, sea in odio ..</p>
-                                </div>
-                            </div>
-                        </div>-->
+                        
                     </div>
-                    <!-- =====  testimonial end ===== -->
                 </div>
             </div>
 
@@ -197,4 +178,13 @@
         @Scripts.Render("~/bundles/bootstrap")*@
     @RenderSection("scripts", required: false)
 </body>
+<style>
+    .header {
+        height: 339px;
+    }
+    .navbar{
+        padding:0;
+        display:block;
+    }
+</style>
 </html>

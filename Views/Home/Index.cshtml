@@ -12,27 +12,7 @@
 </div>
 <div class="container pd0">
     <!-- =====  SUB BANNER  STRAT ===== -->
-    <div class="row">
-        @foreach (var item in Model)
-        {
-            if (String.Equals(@item.LOAI, "AnNhieu"))
-            {
-                <div class="cms_banner mt_10">
-                    <div class="col-xs-4 mt_10">
-                        <div id="subbanner1" class="sub-hover">
-                            <div class="sub-img"><a href="/Home/ChiTietMonAn/@item.MA_MON_AN"><img src="@item.HINH_ANH" alt="Sub Banner1" class="img-responsive"></a></div>
-                            <div class="bannertext text-center">
-                                <button class="btn mb_10 cms_btn">Xem Món Ăn</button>
-                                <h2>@item.TEN_MON</h2>
-                                @*<p class="mt_10">Wide veriety of sizes,colors</p>*@
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            }
-        }
-    </div>
+    
 
     <!-- =====  SUB BANNER END  ===== -->
     <div class="row ">
@@ -178,6 +158,9 @@
 
     .pd0 {
         padding: 0;
+    }
+    .header{
+        height:340px;
     }
 </style>
 

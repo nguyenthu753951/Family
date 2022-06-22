@@ -4,79 +4,113 @@
     ViewBag.Title = "Dathang";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-
-<h2>Thông tin đặt hàng</h2>
-<form enctype="multipart/form-data" method="post" action="#">
-    <div class="table-responsive">
-        <table class="table table-bordered">
-            <thead>
-                <tr>
-                    <td class="text-center">Hình ảnh</td>
-                    <td class="text-left">Tên Món</td>
-                    <td class="text-left">Số Lượng</td>
-                    <td class="text-right">Đơn Giá</td>
-                </tr>
-            </thead>
-            <tbody>
-                @foreach (var item in Model)
-                {
+<div class="row">
+    <div class="col-6 col-sm-6">
+        <form enctype="multipart/form-data" method="post" action="#">
+            <div style="width:100%;text-align:center;">
+                <h4 style="text-align:center;font-size:20px;display:inline-block;font-weight:700;padding:20px 0;">Giỏ hàng của bạn</h4>
+            </div>
+            <div class="table-responsive">
+                <table class="table" style="width:600px;">
                     <tr>
-                        <td class="text-left"><a href="product.html">@item.TEN_MON</a></td>
-                        <td style="width: 100px;"><a href="#"><img src="@item.HINH_ANH"></a></td>
-                        <td class="text-left">
-                            <input type="number" min="1" name="Txtsl" value="@item.sO_LUONG" />
-                        </td>
-                        <td class="text-right poins">@string.Format("{0:0,0}", item.dthanhtien) VND</td>
+                        <th scope="col">Tên món</th>
+                        <th scope="col">Hình ảnh</th>
+                        <th scope="col">Số lượng</th>
+                        <th>Đơn giá</th>
+                        <th></th>
                     </tr>
-                    <tr>@Html.ActionLink("Trờ về Giỏ hàng", "GioHang", "GioHang")</tr>
-                }
-            </tbody>
-        </table>
-        <div style="color:red;text-align:right;font-weight:800">
-            <label class="text-left">Tổng số món ăn:@ViewBag.tongsoluong</label>
-            <br />
-            <label class="text-left">Tổng thành tiền:@ViewBag.tongtien VND</label>
-        </div>
-    </div>
-</form>
-<h2>Thông tin Người đặt</h2>
-@{
-    KHACH_HANG kh = (KHACH_HANG)Session["TaiKhoan"];
-}
-<table align="center">
-@using (Html.BeginForm())
- {
-    @Html.ValidationSummary(true)
-    <tr style="height:40px">
-        <td>Họ tên khách hàng:</td>
-        <td style="font-weight:bold">@kh.TEN_KH</td>
-    </tr>
-    <tr style="height:40px">
-        <td>Địa chỉ khách hàng:</td>
-        <td style="font-weight:bold">@kh.DIA_CHI_KH</td>
-    </tr>
-    <tr style="height:40px">
-        <td>Số điện thoại khách hàng:</td>
-        <td style="font-weight:bold">@kh.SDT_KH</td>
-    </tr>
-    <tr style="height:40px">
-        <td>Ngày lập hóa đơn:</td>
-        <td style="font-weight:bold">
-            @DateTime.Now.ToShortDateString()
-        </td>
-    </tr>
-    <tr style="height:40px">
-    <td>Ngày giao hàng:</td>
-    <td style="font-weight:bold">
-        <input type="date" name="Ngaygiao" />
-    </td>    
-    </tr>
-    <tr style="height:40px">
-        <td></td>
-        <td>
-            <input type="submit" value="Create" class="btn btn-default" />
-        </td>
-    </tr>
-  }
-</table>
+                    @foreach (var item in Model)
+                    {
+                        <tr class="text-center">
+                            @using (Html.BeginForm("UpdateSP", "GioHang", new { @MA_MON_AN = item.MA_MON_AN }))
+                            {
+                                <td>@item.TEN_MON</td>
+                                <td><img src="@item.HINH_ANH"></td>
+                                <td>
+                                    <input type="number" min="0" class="witch-100" name="Txtsl" value="@item.sO_LUONG" />
+                                    <button type="submit" class=" btupdate"><i class="fa-solid fa-arrows-rotate"></i></button>
+                                    @*<input type="submit" value="Cập nhật" />*@
+                                </td>
+                                <td>@string.Format("{0:0,0}", item.dthanhtien) VND</td>
+                                <td>@Html.ActionLink("Xóa", "XoaSP", new { @MA_MON_AN = item.MA_MON_AN })</td>
+                                <td></td>
+                            }
+                        </tr>
+                    }
 
+
+                </table>
+                <div style="color:red;text-align:right;font-weight:800">
+                    <label class="text-left">Tổng số món ăn:@ViewBag.tongsoluong</label>
+                    <br />
+                    <label class="text-left">Tổng thành tiền:@ViewBag.tongtien VND</label>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="col-6 col-sm-6">
+        <div style="width:100%;text-align:center;">
+            <h4 style="text-align:center;font-size:20px;display:inline-block;font-weight:700;padding:20px 0;">Thông Tin đặt hàng</h4>
+        </div>
+        @{
+            KHACH_HANG kh = (KHACH_HANG)Session["TaiKhoan"];
+        }
+        <table align="center">
+            @using (Html.BeginForm())
+            {
+                @Html.ValidationSummary(true)
+                <tr style="height:40px">
+                    <td>Họ tên khách hàng:</td>
+                    <td style="font-weight:bold">@kh.TEN_KH</td>
+                </tr>
+                <tr style="height:40px">
+                    <td>Địa chỉ khách hàng:</td>
+                    <td style="font-weight:bold">@kh.DIA_CHI_KH</td>
+                </tr>
+                <tr style="height:40px">
+                    <td>Số điện thoại khách hàng:</td>
+                    <td style="font-weight:bold">@kh.SDT_KH</td>
+                </tr>
+                <tr style="height:40px">
+                    <td>Ngày lập hóa đơn:</td>
+                    <td style="font-weight:bold">
+                        @DateTime.Now.ToShortDateString()
+                    </td>
+                </tr>
+                <tr style="height:40px">
+                    <td>Ngày giao hàng:</td>
+                    <td style="font-weight:bold">
+                        <input type="date" name="Ngaygiao" />
+                    </td>
+                </tr>
+                <tr style="height:40px">
+                    <td></td>
+                    <td>
+                        <input type="submit" value="Create" class="btn btn-default" />
+                    </td>
+                </tr>
+            }
+        </table>
+    </div>
+</div>
+
+
+<style>
+    .witch-100 {
+        width: 70px;
+    }
+
+    .btupdate {
+        background: none;
+        border: none;
+    }
+
+        .btupdate i {
+            padding: 5px;
+            font-size: 18px;
+            line-height: 100%;
+        }
+    tr th {
+        text-align: center;
+    }
+</style>

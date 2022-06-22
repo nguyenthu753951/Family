@@ -527,11 +527,6 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KHACH_HANGController.cs" />
     <Compile Include="Controllers\NguoiDungController.cs" />
-    <Compile Include="DOANONLINEDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DOANONLINEDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -2580,9 +2575,6 @@
     <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Content Include="DOANONLINEDataSet.xsc">
-      <DependentUpon>DOANONLINEDataSet.xsd</DependentUpon>
-    </Content>
     <Content Include="Areas\Admin\Views\NhanVien\Delete.cshtml" />
     <Content Include="Areas\Admin\Views\checkdonhang\xacnhan.cshtml" />
     <Content Include="Areas\Admin\Views\KHACH_HANG\Create.cshtml" />
@@ -2590,14 +2582,6 @@
     <Content Include="Areas\Admin\Views\KHACH_HANG\Details.cshtml" />
     <Content Include="Areas\Admin\Views\KHACH_HANG\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\KHACH_HANG\Index.cshtml" />
-    <None Include="DOANONLINEDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>DOANONLINEDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <Content Include="DOANONLINEDataSet.xss">
-      <DependentUpon>DOANONLINEDataSet.xsd</DependentUpon>
-    </Content>
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

@@ -76,6 +76,7 @@ namespace controller.Controllers
             ViewBag.tongtien = Tongtien();
             return View(lstgiohang);
         }
+        
         public ActionResult XoaSP(string MA_MON_AN)
         {
             List<GioHangItem> lstgiohang = Laygiohang();

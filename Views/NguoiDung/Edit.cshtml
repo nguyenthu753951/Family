@@ -7,52 +7,52 @@
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
-    
-<div class="form-horizontal">
-    <h4 style="text-align:center;font-size:20px;font-weight:700;padding:20px 0;">Thông tin khách hàng</h4>
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    @Html.HiddenFor(model => model.MA_KH)
 
-    <ul class="inf-user">
-        <li class="inf-item">
-            @Html.LabelFor(model => model.TEN_KH, htmlAttributes: new { @class = "title-font" })
-            <div class="inf-item-txtbox">
-                @Html.EditorFor(model => model.TEN_KH, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.TEN_KH, "", new { @class = "text-danger" })
-            </div>
-        </li>
+    <div class="form-horizontal" style="width:1200px">
+        <div style="width:1200px;text-align:center;">
+            <h4 style="text-align:center;font-size:20px;display:inline-block;font-weight:700;padding:20px 0;">Thông tin khách hàng</h4>
+        </div>
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.MA_KH)
 
-        <li class="inf-item">
-            @Html.LabelFor(model => model.SDT_KH, htmlAttributes: new { @class = "title-font" })
-            <div class="inf-item-txtbox">
-                @Html.EditorFor(model => model.SDT_KH, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.SDT_KH, "", new { @class = "text-danger" })
-            </div>
-        </li>
-    </ul>
-    <ul class="inf-user">
+        <ul class="inf-user">
+            <li class="inf-item">
+                @Html.LabelFor(model => model.TEN_KH, htmlAttributes: new { @class = "title-font" })
+                <div class="inf-item-txtbox">
+                    @Html.EditorFor(model => model.TEN_KH, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.TEN_KH, "", new { @class = "text-danger" })
+                </div>
+            </li>
 
-        <li class="inf-item">
-            @Html.LabelFor(model => model.DIA_CHI_KH, htmlAttributes: new { @class = "title-font" })
-            <div class="inf-item-txtbox">
-                @Html.EditorFor(model => model.DIA_CHI_KH, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.DIA_CHI_KH, "", new { @class = "text-danger" })
-            </div>
-        </li>
-        <li class="inf-item">
-            @Html.LabelFor(model => model.EMAIL_KH, htmlAttributes: new { @class = "title-font" })
-            <div class="inf-item-txtbox">
-                @Html.EditorFor(model => model.EMAIL_KH, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.EMAIL_KH, "", new { @class = "text-danger" })
-            </div>
-        </li>
+            <li class="inf-item">
+                @Html.LabelFor(model => model.SDT_KH, htmlAttributes: new { @class = "title-font" })
+                <div class="inf-item-txtbox">
+                    @Html.EditorFor(model => model.SDT_KH, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.SDT_KH, "", new { @class = "text-danger" })
+                </div>
+            </li>
+        </ul>
+        <ul class="inf-user">
+            <li class="inf-item">
+                @Html.LabelFor(model => model.EMAIL_KH, htmlAttributes: new { @class = "title-font" })
+                <div class="inf-item-txtbox">
+                    @Html.EditorFor(model => model.EMAIL_KH, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.EMAIL_KH, "", new { @class = "text-danger" })
+                </div>
+            </li>
+            <li class="inf-item">
+                @Html.LabelFor(model => model.DIA_CHI_KH, htmlAttributes: new { @class = "title-font" })
+                <div class="inf-item-txtbox">
+                    @Html.EditorFor(model => model.DIA_CHI_KH, new { htmlAttributes = new { @class = "form-control" } })
+                    @Html.ValidationMessageFor(model => model.DIA_CHI_KH, "", new { @class = "text-danger" })
+                </div>
+            </li>
+        </ul>
         
-
-    </ul>
-    <div class="btn-save">
+        <div class="btn-save">
             <input type="submit" value="Lưu Thông tin" class="btn btn-default" />
+        </div>
     </div>
-</div>
 }
 
 <div class="btnfunction">
@@ -72,36 +72,39 @@
         text-align: center;
     }
 
-    @*.inf-user{
-        display:flex;
-        justify-content:center;
-        padding:0;
-        align-items:center;
-    }*@
+    .inf-user {
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        align-items: center;
+    }
 
-    @*.inf-item {
+    .inf-item {
         padding: 10px;
         margin: 0;
         display: flex;
-        align-items:center;
-        min-height:80px;
-        min-width:362px;
+        align-items: center;
+        min-height: 80px;
+        min-width: 362px;
         list-style: none;
     }
-*@
+
     .inf-item-txtbox {
         width: 70%;
         overflow: hidden;
         border: 1px solid #000;
     }
+
     .title-font {
         text-align: left;
-        min-width:150px;
-        padding:5px;
+        min-width: 150px;
+        padding: 5px;
     }
+
     .btn-save {
         text-align: center;
     }
+
         .btn-save input {
             background: #486EFF;
             border-radius: 5px;
