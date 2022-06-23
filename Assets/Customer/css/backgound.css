@@ -1,0 +1,253 @@
+﻿#warp {
+    background: #281300 url(/Assets/Customer/images/imagelayout/bg-head.jpg) repeat-x;
+    padding-bottom: 20px;
+}
+
+.stickyNews {
+    background: url(/Assets/Customer/images/imagelayout/badge-new.png) no-repeat left top;
+}
+
+#freshCake {
+    background: url(/Assets/Customer/images/imagelayout/swirlborder.png) no-repeat bottom;
+}
+
+#chooseCake {
+    background: url(/Assets/Customer/images/imagelayout/swirlborder.png) no-repeat top;
+}
+
+a.prevButton {
+    background: url(/Assets/Customer/images/imagelayout/previous.png) no-repeat bottom center;
+}
+
+    a.prevButton:hover {
+        background: url(/Assets/Customer/images/imagelayout/previous.png) no-repeat top center;
+    }
+
+a.nextButton {
+    background: url(/Assets/Customer/images/imagelayout/next.png) no-repeat bottom center;
+}
+
+    a.nextButton:hover {
+        background: url(/Assets/Customer/images/imagelayout/next.png) no-repeat top center;
+    }
+
+.commentPost #submit {
+    background: url(/Assets/Customer/images/imagelayout/submit.png) no-repeat;
+}
+
+.comment-right {
+    background: url(/Assets/Customer/images/imagelayout/commenttail.png) no-repeat;
+}
+
+.totalComment {
+    background: url(/Assets/Customer/images/imagelayout/bg-comment.png) no-repeat;
+}
+
+.post blockquote {
+    background: url(/Assets/Customer/images/imagelayout/quote.png) no-repeat left top;
+}
+
+.commentPages a.commentPageActive {
+    background: url(/Assets/Customer/images/imagelayout/bg-commentPage.png) no-repeat 1px 5px;
+}
+
+#nextSubmit {
+    background: url(/Assets/Customer/images/imagelayout/submitnext.png) no-repeat;
+}
+
+#checkout {
+    background: url(/Assets/Customer/images/imagelayout/checkout.png) no-repeat;
+}
+
+.billInfo a.sameInfo {
+    background: url(/Assets/Customer/images/imagelayout/sameinfo.png) no-repeat;
+}
+
+.cancel {
+    background: url(/Assets/Customer/images/imagelayout/cancel.png) no-repeat;
+}
+
+.update {
+    background: url(/Assets/Customer/images/imagelayout/update.png) no-repeat;
+}
+
+.newAccountButton {
+    background: url(/Assets/Customer/images/imagelayout/newaccount.png) no-repeat;
+}
+
+.userLogin {
+    background: url(/Assets/Customer/images/imagelayout/login.png) no-repeat;
+}
+
+.addCart {
+    background: url(/Assets/Customer/images/imagelayout/addcart.png) no-repeat;
+}
+
+.viewOrder {
+    background: url(/Assets/Customer/images/imagelayout/vieworder.png) no-repeat;
+}
+
+.continueShop {
+    background: url(/Assets/Customer/images/imagelayout/continueshop.png) no-repeat;
+}
+
+.updateCart {
+    background: url(/Assets/Customer/images/imagelayout/updatecart.png) no-repeat;
+}
+
+.checkoutCart {
+    background: url(/Assets/Customer/images/imagelayout/checkoutcart.png) no-repeat;
+}
+
+.sumWarp ul li a {
+    background: #140900 url(/Assets/Customer/images/imagelayout/arrow2.png) no-repeat 8px 11px;
+}
+
+    .sumWarp ul li a:hover, .sumWarp ul li a.billActive {
+        background: #FF9900 url(/Assets/Customer/images/imagelayout/arrow2.png) no-repeat 8px 2px;
+        color: #140900;
+    }
+
+    .sumWarp ul li a.down {
+        background: #140900 url(/Assets/Customer/images/imagelayout/arrow3.png) no-repeat 8px 11px;
+    }
+
+        .sumWarp ul li a.down:hover {
+            background: #FF9900 url(/Assets/Customer/images/imagelayout/arrow3.png) no-repeat 8px 2px;
+            color: #140900;
+        }
+
+    .sumWarp ul li a.billDie {
+        background: #140900 url(/Assets/Customer/images/imagelayout/arrow4.png) no-repeat 8px 10px;
+        color: #5B2F0D;
+    }
+
+.popularCakes ul li, .recommended ul li, .specialOffer ul li, .fromBlog ul li, .corporateInfo ul li, .storeDelivery ul li, .categories ul li, .post ul li {
+    background: url(/Assets/Customer/images/imagelayout/arrow.gif) no-repeat 0 5px;
+    padding-left: 10px;
+}
+
+.orderPhone {
+    background: url(/Assets/Customer/images/imagelayout/orderphone.jpg) no-repeat left top;
+    height: 190px;
+}
+
+#footer {
+    background: #281300 url(/Assets/Customer/images/imagelayout/bg-footer.jpg) repeat-x bottom;
+}
+
+a.facebook {
+    background: url(/Assets/Customer/images/imagelayout/facebook.png) no-repeat top center;
+}
+
+    a.facebook:hover {
+        background: url(/Assets/Customer/images/imagelayout/facebook.png) no-repeat bottom center;
+    }
+
+a.twitter {
+    background: url(/Assets/Customer/images/imagelayout/twitter.png) no-repeat top center;
+}
+
+    a.twitter:hover {
+        background: url(/Assets/Customer/images/imagelayout/twitter.png) no-repeat bottom center;
+    }
+
+a.twitterSmall {
+    background: url(/Assets/Customer/images/imagelayout/twittersmall.png) no-repeat top center;
+}
+
+    a.twitterSmall:hover {
+        background: url(/Assets/Customer/images/imagelayout/twittersmall.png) no-repeat bottom center;
+    }
+
+a.feed {
+    background: url(/Assets/Customer/images/imagelayout/feed.png) no-repeat top center;
+}
+
+    a.feed:hover {
+        background: url(/Assets/Customer/images/imagelayout/feed.png) no-repeat bottom center;
+    }
+
+a.feedSmall {
+    background: url(/Assets/Customer/images/imagelayout/feedsmall.png) no-repeat top center;
+}
+
+    a.feedSmall:hover {
+        background: url(/Assets/Customer/images/imagelayout/feedsmall.png) no-repeat bottom center;
+    }
+
+a, .headLine h3, .orderPhone h4, .fromBlog h5, .footMenu p span, .footMenu p span a, .footMenu p a:hover, .dapurBlog h3, dl.subscriber dd span, dl.follower dd span, .categories h4, .freshOven h4, .fiveStar h4, .flickr h4, .shareThis p span, .commentPost label, #headright .login span.myAccount a, .billInfo form label, .setmyAccount form label, .setBillInfo form label, .newAccount form label, .loginPage form label, .setmyAccount h4, .setBillInfo h4, .newAccount h4, .loginPage h4, .youLike h3, .sideBarWarp h3, .sideBarWarp form label, .prodHeadline h3 {
+    color: #FF9900;
+}
+
+dl.subscriber dd, dl.follower dd {
+    color: #703D00;
+}
+
+.postInfo p {
+    color: #713E00;
+}
+
+body, a:hover, #headright h3.login a:hover, .aActive, a.bookMan:hover, .orderPhone h4 span, .footMenu p a, .totalComment a, #headright .login span.hiUser, #headright .login span.myAccount {
+    color: #fff;
+}
+
+#headright h3.login, #headright h3.login a, a.bookMan {
+    color: #FF6666;
+}
+
+.fromBlog h4, .corporateInfo h4, .storeDelivery h4, .socialNet h4, .lastTweet h4 {
+    color: #5E2B00;
+}
+
+.lastTweet p span, .comment-right small a {
+    color: #713D00;
+}
+
+#fresh {
+    background: #40210B;
+    border-top: 1px solid #5B2F0D;
+    border-bottom: 1px solid #5B2F0D;
+}
+
+#richContent {
+    background: #281300;
+}
+
+#richContent2 {
+    background: #1E0D00;
+    border-top: 1px solid #40210B;
+}
+
+.productsWarp ul li img, .post img, .banner250 img, .freshOven ul li a:hover, .flickr ul li a:hover, .productThumb ul li a:hover {
+    border: 1px solid #fff;
+}
+
+.freshOven ul li a, .flickr ul li a {
+    border: 1px solid #1E0D00;
+}
+
+.productThumb ul li a {
+    border: 1px solid #281300;
+}
+
+.commentPost fieldset, .billInfo form fieldset, .setmyAccount form fieldset, .setBillInfo form fieldset, .newAccount form fieldset, .loginPage form fieldset {
+    border: 1px solid #5B2F0D;
+    background: #40210B;
+}
+
+.post, #comments {
+    border-bottom: 1px dashed #4F2600;
+}
+
+.banner250, .categories, .freshOven, .fiveStar, .flickr, .commentText, .sumWarp {
+    background: #1E0D00;
+}
+
+    .categories h4, .freshOven h4, .flickr h4, .shareThis, .sideBarWarp {
+        background: #140900;
+    }
+
+.prodNav {
+    border-bottom: 1px solid #4F2600;
+}

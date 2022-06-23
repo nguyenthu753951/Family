@@ -1,6 +1,5 @@
 ﻿<!DOCTYPE html>
 <html>
-
 <head>
     <!-- =====  BASIC PAGE NEEDS  ===== -->
     <meta charset="utf-8">
@@ -19,6 +18,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta name="viewport" content="width=device-width">
     <!-- =====  CSS  ===== -->
+    <script src="~/Assets/Customer/js/layout.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="./Assets/Customer/images/logowhite.jpg" type="image/gif" sizes="30*30">
     <link rel="stylesheet" type="text/css" href="~/Assets/Customer/css/font-awesome.min.css" />
@@ -27,145 +27,105 @@
     <link rel="stylesheet" type="text/css" href="~/Assets/Customer/css/magnific-popup.css">
     <link rel="stylesheet" type="text/css" href="~/Assets/Customer/css/owl.carousel.css">
     <link rel="shortcut icon" href="images/favicon.png">
+    <link href="~/Assets/Customer/css/960.css" type="text/css" rel="stylesheet" />
     <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link href="~/Assets/Customer/css/backgound.css" rel="stylesheet" />
     <link rel="apple-touch-icon" sizes="72x72" href="~/Assets/Customer/images/apple-touch-icon-72x72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="~/Assets/Customer/images/apple-touch-icon-114x114.png">
 </head>
 
-
 <body>
     <!-- =====  LODER  ===== -->
-    <div class="loder"></div>
-    <div class="wrapper">
-
-        <!-- =====  HEADER START  ===== -->
-        <header id="header">
-            <div class="header-top">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-4">
-                            <div class="header-top-left">
-                                <div class="contact"><a href="#">Family 4</a> <span class="hidden-xs hidden-sm hidden-md">(029)883-8920</span></div>
-                            </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-8">
-                            <ul class="header-top-right text-right">
-                                <li class="language dropdown">
-                                    @{
-                                        var session = (controller.Models.KHACH_HANG)Session["TaiKhoan"];
-
-
-                                    }
-                                    @if (session == null)
-                                    {
-                                        <span class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">Tài Khoản<span class="caret"></span> </span>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                            <li><a href="~/NguoiDung/DangNhap">Đăng nhập</a></li>
-                                            <li><a href="~/NguoiDung/dangky">Đăng Ký</a></li>
-                                        </ul>
-                                    }
-                                    else
-                                    {
-                                        <span class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button">@session.TEN_KH<span class="caret"></span> </span>
-                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                            <li><a href="~/NguoiDung/Details">Thông tin cá nhân</a></li>
-                                            <li><a href="~/NguoiDung/Doimk">Đổi mật khẩu</a></li>
-                                            <li><a href="~/NguoiDung/QuenMK">Quên mật khẩu</a></li>
-                                            <li>@Html.ActionLink("Đăng xuất", "Dangxuat", "NguoiDung")</li>
-                                            @ViewBag.Thongbao
-                                        </ul>
-                                    }
-                                    <li class="language dropdown">
-                                        <a href="~/hotro.html" target="_blank" rel="noopener noreferrer">Hỗ Trợ </a>
-                                    </li>
-                                </ul>
-                        </div>
-                    </div>
+    <div id="warp">
+        <div id="main" class="container_16">
+            <div id="header" class="grid_16">
+                <div id="logo" class="grid_4 alpha">
+                    <h1><a href="index.html">Family 4</a></h1>
+                    <h2>Nhanh chóng - Đầy đủ dinh dưỡng</h2>
+                </div>
+                <div id="headright" class="grid_7 prefix_5 omega">
+                    <h3 class="login"><a href="login.html">Đăng ký</a> / <a href="login.html">Đăng nhập</a></h3>
+                    <p>Tổng tiền:  00.00 VNĐ</p>
+                    <p><span class="vChart"><a href="shoppingcart.html">Giỏ hàng</a></span> <span class="cOut"><a href="checkout.html">Thanh toán</a></span></p>
                 </div>
             </div>
-            <div class="header">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-4">
-                            <div class="main-search mt_40">
-                                <input id="search-input" name="search" value="" placeholder="Tìm Kiếm" class="form-control input-lg" autocomplete="off" type="text">
-                                <span class="input-group-btn">
-                                    <button type="button" class="btn btn-default btn-lg"><i class="fa fa-search"></i></button>
-                                </span>
-                            </div>
-                        </div>
-                        <div class="navbar-header col-xs-6 col-sm-4"> <a class="navbar-brand" href="/" ref="nofolow"> <img alt="Online Shop Family4" src="~/Assets/Customer/images/family4.png"> </a> </div>
-                        <div class="col-xs-6 col-sm-4 shopcart" style="position:relative">
-                            @{Html.RenderAction("HeaderCart", "Home");}
-                        </div>
-
-
-                    </div>
-                    <nav class="navbar" style="width:1200px;">
-                        <p>Menu</p>
-                        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".js-navbar-collapse"> <span class="i-bar"><i class="fa fa-bars"></i></span></button>
-                        <div class="collapse navbar-collapse js-navbar-collapse">
-                            <ul id="menu" class="nav navbar-nav" style="display:flex;justify-content:center;align-items:center">
-                                <li> <a href="/Home">Trang Chủ</a></li>
-                                <li> <a href="#monan">Món ăn</a></li>
-                                <li> <a href="#nuocuong">Nước uống</a></li>
-
-                            </ul>
-                        </div>
-
-                    </nav>
+            <div id="mainMenu" class="grid_16">
+                <ul>
+                    <li><a href="index.html" class="aActive">Trang chủ</a></li>
+                    <li><a href="#">Menu</a></li>
+                    <li><a href="#">Giới thiệu</a></li>
+                    <li><a href="#">Hỗ trợ</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                </ul>
+            </div>
+            <div id="stickySearch" class="grid_16">
+                <div class="stickyNews grid_12 alpha">
+                </div>
+                <div class="search grid_4 omega">
+                    <form action="#" method="get">
+                        <input type="text" value="Type your keyword" id="s" name="s" onfocus="if (this.value == 'Type your keyword') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Type your keyword';}" />
+                    </form>
                 </div>
             </div>
-        </header>
-
-        <div class="container body-content">
-            @RenderBody()
+            
         </div>
-        <div class="footer pt_60">
-            <div class="container">
-                <div class="row">
-                    <div class="footer-top pb_60 mb_30">
-                        <div class="col-xs-12 col-sm-6">
-                            <div class="footer-logo"> <a href="index.html"> <img src="~/Assets/Customer/images/bia.jpg" alt="Online Shop Rider"> </a> </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
+        <div class="clear"></div>
+    </div>
 
-        </div>
-        <div class="footer-bottom mt_60 ptb_20">
-            <div class="container">
-                <div class="row">
-                    <div class="col-sm-4">
-                        <div class="social_icon">
-                            <ul>
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="copyright-part text-center">2021 All Rights Reserved Online Shop Family 4</div>
-                    </div>
-                    <div class="col-sm-4">
-                        <div class="payment-icon text-right">
-                            <ul>
-                                <li><i class="fa fa-cc-paypal "></i></li>
-                                <li><i class="fa fa-cc-visa"></i></li>
-                                <li><i class="fa fa-cc-discover"></i></li>
-                                <li><i class="fa fa-cc-mastercard"></i></li>
-                                <li><i class="fa fa-cc-amex"></i></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+    <div class="container body-content">
+        @RenderBody()
+    </div>
+    
+    <div id="richContent2">
+        <div class="container_16">
+            <div class="fromBlog grid_4">
+                <h4>From the blog</h4>
+                <h5>New Recipes in Our Basket</h5>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. vivamus tempor justo sit amet metus cursus consequat. Nulla viverra, felis vel accumsan fermentum... <a href="#" class="bookMan">more &raquo;</a></p>
             </div>
+            <div class="corporateInfo grid_4">
+                <h4>Corporate Info</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Term &amp; Conditions</a></li>
+                    <li><a href="#">Franchise</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <div class="storeDelivery grid_4">
+                <h4>Store &amp; Delivery</h4>
+                <ul>
+                    <li><a href="#">Store Locator</a></li>
+                    <li><a href="#">Delivery Terms &amp; Pricing</a></li>
+                    <li><a href="#">Delivery Coverage</a></li>
+                    <li><a href="#">Gift Services</a></li>
+                    <li><a href="#">Track my order</a></li>
+                </ul>
+            </div>
+            <div class="socialNet grid_4">
+                <h4>Keep in touch</h4>
+                <ul>
+                    <li><a href="#" class="facebook">Facebook</a></li>
+                    <li><a href="#" class="twitter">Twitter</a></li>
+                    <li><a href="#" class="feed">Feed</a></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
         </div>
     </div>
+    <div id="footer">
+        <div class="container_16">
+            <div class="copyright grid_16">
+                <p class="left">Copyright &copy; 2010, Your Company Here, All Rights Reserved</p>
+                <p class="right"><a href="http://all-free-download.com/free-website-templates/">Free CSS Templates</a> by <a href="http://tokokoo.com/">Tokokoo</a> &amp; <a href="http://www.instantshift.com/">instantShift</a></p>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div align=center>This template  downloaded form <a href='http://all-free-download.com/free-website-templates/'>free website templates</a></div>
+
     <!-- =====  FOOTER END  ===== -->
     <a id="scrollup"></a>
     <script src="~/Assets/Customer/js/jQuery_v3.1.1.min.js"></script>
@@ -178,13 +138,6 @@
         @Scripts.Render("~/bundles/bootstrap")*@
     @RenderSection("scripts", required: false)
 </body>
-<style>
-    .header {
-        height: 339px;
-    }
-    .navbar{
-        padding:0;
-        display:block;
-    }
-</style>
+
 </html>
+

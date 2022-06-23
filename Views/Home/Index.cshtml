@@ -1,168 +1,75 @@
-﻿@model IEnumerable<controller.Models.MENU>
-@{
-    ViewBag.Title = "Trang chủ";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
-
-<!DOCTYPE html>
-<div class="container banner pd0">
-    <div class="main-banner owl-carousel" style="width:100%">
-        <div class="item"><a href="#"><img src="~/Assets/Customer/images/gg.jpg" alt="Main Banner" class="main_banner2.jpg" /></a></div>
-    </div>
-</div>
-<div class="container pd0">
-    <!-- =====  SUB BANNER  STRAT ===== -->
-    
-
-    <!-- =====  SUB BANNER END  ===== -->
-    <div class="row ">
-        <div class="col-sm-12 mtb_10">
-            <!-- =====  PRODUCT TAB  ===== -->
-            <div id="monan" class="mt_50">
-                <div class="heading-part mb_10 ">
-                    <h2 class="main_title">Món Ăn</h2>
-                </div>
-                <div class="tab-content clearfix box">
-                    <div class="tab-pane active" id="nArrivals">
-                        <div class="nArrivals owl-carousel">
-                            @foreach (var item in Model)
-                            {
-                                if (String.Equals(@item.LOAI, "MonAn"))
-                                {
-                                    <div class="product-grid">
-                                        <div class="item">
-                                            <div class="product-thumb">
-                                                <div class="image product-imageblock">
-                                                    <a href="/Home/ChiTietMonAn/@item.MA_MON_AN"> <img data-name="product_image" src="@item.HINH_ANH" class="img-responsive"> <img src="@item.HINH_ANH" class="img-responsive"> </a>
-                                                    <div class="button-group text-center">
-                                                        <div class="wishlist"><a href="#"><span>Danh Sách Mong Muốn</span></a></div>
-                                                        <div class="quickview"><a href="#"><span>Xem Nhanh</span></a></div>
-                                                        <div class="compare"><a href="#"><span>So Sánh</span></a></div>
-                                                    </div>
-                                                    <div class=" mt10 btn btn-default">
-                                                        <a href="@Url.Action("Themgiohang","GioHang",new {@MA_MON_AN=item.MA_MON_AN,@strURL=Request.Url.ToString() })">
-                                                            <span>Thêm Vào Giỏ Hàng</span>
-                                                        </a>
-                                                    </div>
-
-                                                </div>
-                                                <div class="caption product-detail text-center">
-                                                    <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                                                    <h6 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">@item.TEN_MON</a></h6>
-                                                    <span class="price">
-                                                        <span class="amount"><span class="currencySymbol"></span>@item.GIA_MON VNĐ</span>
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                }
-                            }
-
-                        </div>
-                    </div>
-                </div>
+﻿<div id="fresh">
+    <div class="container_16">
+        <div id="freshCake" class="grid_16">
+            <div class="grid_1 alpha"> <a class="prevButton">&laquo;</a></div>
+            <div class="headLine grid_14">
+                <h3>Món ăn</h3>
             </div>
-            <!-- =====  PRODUCT TAB  END ===== -->
-            <!-- =====  SUB BANNER  STRAT ===== -->
-            <!-- =====  SUB BANNER END  ===== -->
-            <!-- =====  PRODUCT TAB  ===== -->
-            <div id="nuocuong" class="mt_50">
-                <div class="heading-part mb_10 ">
-                    <h2 class="main_title">Nước Uống</h2>
-                </div>
-                <div class="tab-content clearfix box">
-                    <div class="tab-pane active" id="nArrivals">
-                        <div class="tab-pane" id="Featured">
-                            <div class="Featured owl-carousel">
-                                @foreach (var item in Model)
-                                {
-                                    if (String.Equals(@item.LOAI, "NuocUong"))
-                                    {
-                                        <div class="product-grid">
-                                            <div class="item">
-                                                <div class="product-thumb  mb_30">
-                                                    <div class="image product-imageblock">
-                                                        <a href="/Home/ChiTietMonAn/@item.MA_MON_AN"> <img data-name="product_image" src="@item.HINH_ANH" class="img-responsive"> <img src="@item.HINH_ANH" class="img-responsive"> </a>
-                                                        <div class="button-group text-center">
-                                                            <div class="wishlist"><a href="#"><span>Danh Sách Mong Muốn</span></a></div>
-                                                            <div class="quickview"><a href="#"><span>Xem Nhanh</span></a></div>
-                                                            <div class="compare"><a href="#"><span>So Sánh</span></a></div>
-                                                        </div>
-                                                        <div class="mt10 btn btn-default">
-                                                            <a href="@Url.Action("Themgiohang","GioHang",new {@MA_MON_AN=item.MA_MON_AN,@strURL=Request.Url.ToString() })"><span>Thêm Vào Giỏ Hàng</span></a>
-                                                        </div>
-
-                                                    </div>
-                                                    <div class="caption product-detail text-center">
-                                                        <div class="rating"> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span> <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span> </div>
-                                                        <h6 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">@item.TEN_MON</a></h6>
-                                                        <span class="price">
-                                                            <span class="amount"><span class="currencySymbol"></span>@item.GIA_MON VNĐ</span>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    }
-                                }
-
+            <div class="grid_1 omega"> <a class="nextButton">&raquo;</a></div>
+        </div>
+        <div class="newCakes">
+            <div class="scroller">
+                @foreach (var item in Model)
+                {
+                    if (String.Equals(@item.LOAI, "MonAn"))
+                    {
+                        <div class="newCake">
+                            <a href="/Home/ChiTietMonAn/@item.MA_MON_AN" class="grid_4"><img src="@item.HINH_ANH" alt="" width="220" height="260" /></a>
+                            <div class="descmonan">
+                                <span>@item.TEN_MON</span>
+                                <br />
+                                <span>Giá: @item.GIA_MON VNĐ</span>
+                                <br />
+                                <div class="">
+                                    <a href="@Url.Action("Themgiohang","GioHang",new {@MA_MON_AN=item.MA_MON_AN,@strURL=Request.Url.ToString() })"><span>Thêm Vào Giỏ Hàng</span></a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    }
+                }
                 </div>
-            </div>
-            <!-- =====  PRODUCT TAB  END ===== -->
-            <!-- =====  Blog ===== -->
-
         </div>
     </div>
-    <div id="brand_carouse" class="ptb_50 text-center">
-        <div class="type-01">
-            <div class="row">
-                <div class="col-sm-12">
-                </div>
+    <div class="clear"></div>
+</div>
+<div id="fresh">
+    <div class="container_16">
+        <div id="freshCake" class="grid_16">
+            <div class="grid_1 alpha"> <a class="prevButton">&laquo;</a></div>
+            <div class="headLine grid_14">
+                <h3>Đồ uống</h3>
+            </div>
+            <div class="grid_1 omega"> <a class="nextButton">&raquo;</a></div>
+        </div>
+        <div class="newCakes">
+            <div class="scroller">
+                @foreach (var item in Model)
+                            {
+                                if (String.Equals(@item.LOAI, "NuocUong"))
+                                {
+                                    <div class="newCake"><a href="/Home/ChiTietMonAn/@item.MA_MON_AN" class="grid_4"><img src="@item.HINH_ANH" alt="" width="220" height="260" /></a>
+                                                         <div class="descmonan">
+                                                             <span>@item.TEN_MON</span>
+                                                             <br />
+                                                             <span>Giá: @item.GIA_MON VNĐ</span>
+                                                             <br />
+                                                             <div class="">
+                                                                 <a href="@Url.Action("Themgiohang","GioHang",new {@MA_MON_AN=item.MA_MON_AN,@strURL=Request.Url.ToString() })"><span>Thêm Vào Giỏ Hàng</span></a>
+                                                             </div>
+                                                         </div>
+                                    </div>
+                    }
+                }
             </div>
         </div>
     </div>
-    <div class="newsletters mb_50">
-        <div class="row">
-            <div class="col-sm-6">
-                <div class="news-head pull-left">
-                    <h2>Đăng Ký Để Nhận Thông Báo</h2>
-                    <div class="new-desc">Hãy Là Người Đầu Tiên Biết Thêm Nhiều Thông Tin Mới Về Nhà Hàng Của Chúng tôi!</div>
-                </div>
-            </div>
-            <div class="col-sm-6">
-                <div class="news-form pull-right">
-                    <form onsubmit="return validatemail();" method="post">
-                        <div class="form-group required">
-                            <input name="email" id="email" placeholder="Nhập Email Của Bạn" class="form-control input-lg" required="" type="email">
-                            <button type="submit" class="btn btn-default btn-lg">Đăng Ký</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
+    <div class="clear"></div>
 </div>
 <style>
-    .mt10 {
-        margin: 10px 0;
-        border-radius: 5px;
-    }
-
-    .img-responsive {
-        min-height: 300px;
-    }
-
-    .pd0 {
-        padding: 0;
-    }
-    .header{
-        height:340px;
+    #fresh {
+        background: #40210B;
+        border-top: 1px solid #5B2F0D;
+        border-bottom: 1px solid #5B2F0D;
+        height:390px;
     }
 </style>
-
-
-

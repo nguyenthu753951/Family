@@ -7,8 +7,8 @@
 
 <div class="col-sm-8 col-lg-9 mtb_20">
     <div class="row mt_10 ">
-        <div class="col-md-6">
-            <div><a class="thumbnails"> <img data-name="product_image"width="100%" src="@Model.HINH_ANH" alt="" /></a></div>
+        <div class="col-md-6 descma">
+                    <img data-name="product_image" src="@Model.HINH_ANH" alt="" />
         </div>
         <div class="col-md-6 prodetail caption product-thumb">
             <h4 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">@Model.TEN_MON</a></h4>
@@ -37,3 +37,11 @@
         </div>
     </div>
 </div>
+<style>
+    .descma{
+        height:400px;
+    }
+    .descma img{
+        height:100%;
+    }
+</style>
