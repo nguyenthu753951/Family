@@ -38,5 +38,14 @@ namespace controller.Controllers
             }            
             return PartialView(list);
         }
+        public ActionResult Search()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Search(string searchMUSIC)
+        {
+            return RedirectToAction("Search", "Home", new { key = searchMUSIC });
+        }
     }
 }

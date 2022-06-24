@@ -67,7 +67,7 @@ namespace controller.Controllers
                     new MailHelper().SendMail(toEmail, "Đăng ký Tài khoản thành công!", content);
                     db.SaveChanges();
                     ViewBag.ThongBao = "Đăng ký thành công";
-                    return RedirectToAction("DangNhap");
+                    return RedirectToAction("DangKy");
                    
 
                 }

@@ -1,0 +1,80 @@
+﻿@using controller.Models
+@{
+    ViewBag.Title = "Search";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    string key = Request.QueryString["key"];
+    List<MENU> result = new List<MENU>();
+}
+<div id="fresh">
+    <div class="container_16">
+        @{
+            if (string.IsNullOrEmpty(key))
+            {
+                <h3>Vui lòng nhập từ khóa cần tìm</h3>
+            }
+            else
+            {
+                if (key == "" || key.Length < 3)
+                {
+                    <h3>Vui lòng nhập từ khóa cần tìm</h3>
+                }
+                else
+                {
+                    result = new MENU().searchByKey(key);
+                    <h2 style=" padding: 25px 0; color: red;">Kết quả tìm kiếm từ khóa "@key"</h2>
+                    <div class="newCakes">
+                        <div class="scroller">
+                            @foreach (var item in result)
+                            {
+                                if (String.Equals(@item.LOAI, "MonAn"))
+                                {
+                                    <div class="newCake">
+                                        <a href="/Home/ChiTietMonAn/@item.MA_MON_AN" class="grid_4"><img src="@item.HINH_ANH" alt="" width="220" height="260" /></a>
+                                        <div onclick="clickmenu(@item.MA_MON_AN)" class="descmonan">
+                                            <span>@item.TEN_MON</span>
+                                            <br />
+                                            <span>Giá: @item.GIA_MON VNĐ</span>
+                                            <br />
+                                            <div class="btncart">
+                                                <a href="@Url.Action("Themgiohang", "GioHang", new { @MA_MON_AN = item.MA_MON_AN, @strURL = Request.Url.ToString() })"><i class="fa-solid fa-cart-shopping"></i><span>Thêm Vào Giỏ Hàng</span></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            }
+                        </div>
+                    </div>
+                    }
+                }
+            }
+        </div>
+</div>
+<style>
+    #fresh {
+        background: #40210B;
+        border-top: 1px solid #5B2F0D;
+        border-bottom: 1px solid #5B2F0D;
+        height: 390px;
+        margin:50px 0;
+    }
+
+    .btncart {
+        background: #fec704;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+        .btncart a i {
+            margin: 0 5px;
+            color: #fff;
+            font-size: 15px;
+            font-weight: bold;
+        }
+</style>
+<script>
+    var descmonan = document.querySelectorAll(".newCake");
+    function clickmenu(id) {
+        window.location.replace("/Home/ChiTietMonAn/" + id);
+    }
+</script>
+

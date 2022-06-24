@@ -2680,12 +2680,13 @@
     <Content Include="Views\GioHang\GioHang.cshtml" />
     <Content Include="Views\GioHang\Xacnhandonhang.cshtml" />
     <Content Include="Views\NguoiDung\dangky.cshtml" />
-    <Content Include="Views\NguoiDung\DangNhap.cshtml" />
     <Content Include="Views\GioHang\Dathang.cshtml" />
     <Content Include="Views\NguoiDung\Details.cshtml" />
     <Content Include="Views\NguoiDung\Edit.cshtml" />
     <Content Include="Views\NguoiDung\Doimk.cshtml" />
     <Content Include="Views\NguoiDung\Quenmk.cshtml" />
+    <Content Include="Views\Home\Search.cshtml" />
+    <Content Include="Views\NguoiDung\DangNhap.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

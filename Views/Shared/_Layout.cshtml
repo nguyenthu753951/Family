@@ -43,15 +43,27 @@
                     <h1><a href="index.html">Family 4</a></h1>
                     <h2>Nhanh chóng - Đầy đủ dinh dưỡng</h2>
                 </div>
-                <div id="headright" class="grid_7 prefix_5 omega">
-                    <h3 class="login"><a href="login.html">Đăng ký</a> / <a href="login.html">Đăng nhập</a></h3>
+                @{
+                    var session = (controller.Models.KHACH_HANG)Session["TaiKhoan"];
+
+
+}
+            <div id="headright" class="grid_7 prefix_5 omega">
+                @if (session == null)
+                {
+                    <h3 class="login"><a href="~/NguoiDung/DangKy">Đăng ký</a> / <a href="~/NguoiDung/DangNhap">Đăng nhập</a></h3>
+                }
+                else
+                {
+                    <h3 class="login"><span class="hiUser">Hi,@session.TEN_KH |</span> <span class="myAccount"><a href="#">My Account</a></span> @Html.ActionLink("Đăng xuất", "Dangxuat", "NguoiDung")</h3>
                     <p>Tổng tiền:  00.00 VNĐ</p>
-                    <p><span class="vChart"><a href="shoppingcart.html">Giỏ hàng</a></span> <span class="cOut"><a href="checkout.html">Thanh toán</a></span></p>
-                </div>
+                }
+                <p><span class="vChart"><a href="/Giohang/GioHang"> <i class="fa-solid fa-cart-shopping"></i>Giỏ hàng</a></span> <span class="cOut"><a href="checkout.html">Thanh toán</a></span></p>
             </div>
+                </div>
             <div id="mainMenu" class="grid_16">
                 <ul>
-                    <li><a href="index.html" class="aActive">Trang chủ</a></li>
+                    <li><a href="/Home/Index" class="aActive">Trang chủ</a></li>
                     <li><a href="#">Menu</a></li>
                     <li><a href="#">Giới thiệu</a></li>
                     <li><a href="#">Hỗ trợ</a></li>
@@ -59,21 +71,23 @@
                 </ul>
             </div>
             <div id="stickySearch" class="grid_16">
-                <div class="stickyNews grid_12 alpha">
-                </div>
-                <div class="search grid_4 omega">
-                    <form action="#" method="get">
-                        <input type="text" value="Type your keyword" id="s" name="s" onfocus="if (this.value == 'Type your keyword') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Type your keyword';}" />
+                @*<div class="stickyNews grid_12 alpha">
+                </div>*@
+                    <form name="Search" action="/Home/Search" method="post">
+                        <input type="text" placeholder="Tìm kiếm Món ăn" name="searchMUSIC" />
+                        <button class="search" type="submit"><i class="fa fa-search"></i></button>
                     </form>
-                </div>
             </div>
             
         </div>
         <div class="clear"></div>
     </div>
 
-    <div class="container body-content">
-        @RenderBody()
+    <div class=" body-content">
+        <div class="flexmonan">
+            @RenderBody()
+
+        </div>
     </div>
     
     <div id="richContent2">
@@ -138,6 +152,25 @@
         @Scripts.Render("~/bundles/bootstrap")*@
     @RenderSection("scripts", required: false)
 </body>
-
+<style>
+    .body-content {
+        background: #40210B;
+        min-height:500px;
+        border-top: 1px solid #5B2F0D;
+        border-bottom: 1px solid #5B2F0D;
+    }
+    .flexmonan {
+        display: flex;
+        width: 1200px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 auto;
+    }
+    #headright h3,
+    #headright p {
+        width: 400px;
+    }
+</style>
 </html>
 

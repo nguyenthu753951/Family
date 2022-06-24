@@ -819,15 +819,24 @@ dl.follower {
 }
 	.newCake:hover .descmonan {
 		display: flex;
-		/*transform: translateY(0);*/
-		height:260px;
 		
 	}
 
+@keyframes growth {
+	from {
+		transform: translateY(-220px);
+		opacity:0;
+	}
+
+	to {
+		transform: translateY(0);
+		opacity: 80%;
+	}
+}
 .descmonan {
-	background-color: rgb(155 155 149);
+	background: rgba(0,0,0,0.5);
 	width: 220px;
-	height: 0;
+	height: 260px;
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -838,13 +847,10 @@ dl.follower {
 	margin-right: 10px;
 	flex-direction: column;
 	display: none;
-	transform: translateY(-260px);
-	transition: height 1s;
-
-	z-index: 1;
+	animation: growth linear 0.3s;
 }
 	.descmonan span {
-		color: #ca8900;
+		color: #fff;
 		font-size:15px;
 		font-weight:bold;
 	}

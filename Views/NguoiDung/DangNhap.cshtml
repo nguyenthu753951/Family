@@ -1,38 +1,40 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "DangNhap";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-@using (Html.BeginForm()) 
+@using (Html.BeginForm("DangNhap", "Nguoidung"))
 {
-<div class="form-horizontal" style="width:1200px">
-    <h4 class="text-center"style="padding:15px;font-size:20px">Đăng nhập</h4>
-    <h4 class="text-center"style="color:red">@ViewBag.Thongbao</h4>
+    <h4 class="text-center" style="padding:15px;font-size:20px">Đăng nhập</h4>
+    <h4 class="text-center" style="color:red">@ViewBag.Thongbao</h4>
     @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    <div class="form-group text-center">
-        <div class="col-md-10">
-            <label style="min-width:110px">Tên đăng nhập</label>
+    <fieldset class="w400">
+        <div>
+            <label for="email2">Tên đăng nhập:</label>
             @Html.TextBox("TenDN")
             <label style="color:red">
                 @ViewData["Loi1"]
             </label>
         </div>
-    </div>
-    <div class="form-group text-center">
-        <div class="col-md-10">
-            <label style="min-width:110px;text-align:left">Mật khẩu</label>
+        <br />
+        <div>
+            <label for="password2">Mật khẩu:</label>
             @Html.Password("MatKhau")
             <label style="color:red">
                 @ViewData["Loi2"]
             </label>
         </div>
-    </div>
-    <div style="display:flex; justify-content:center;align-items:center">
-        <a href="~/NguoiDung/dangky" target="_blank">Bạn chưa có tài khoản?</a>
-        <label></label>
-        <input type="submit" value="Đăng nhập" class="btn btn-default" />
-    </div>
-</div>
+        <br />
+        <div class="clear"></div>
+    </fieldset>
+    <a href="~/NguoiDung/QuenMk" target="_blank">Quên mật khẩu?</a>
+    <p>
+        <input type="submit" value="Login" tabindex="3" name="update" class="userLogin" />
+    </p>
+    <input type="hidden" value="30" />
 }
-
+<style>
+    .w400 div label {
+        width: 100px;
+    }
+</style>

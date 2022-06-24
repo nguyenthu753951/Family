@@ -15,13 +15,13 @@
                     {
                         <div class="newCake">
                             <a href="/Home/ChiTietMonAn/@item.MA_MON_AN" class="grid_4"><img src="@item.HINH_ANH" alt="" width="220" height="260" /></a>
-                            <div class="descmonan">
+                            <div onclick="clickmenu(@item.MA_MON_AN)" class="descmonan">
                                 <span>@item.TEN_MON</span>
                                 <br />
                                 <span>Giá: @item.GIA_MON VNĐ</span>
                                 <br />
-                                <div class="">
-                                    <a href="@Url.Action("Themgiohang","GioHang",new {@MA_MON_AN=item.MA_MON_AN,@strURL=Request.Url.ToString() })"><span>Thêm Vào Giỏ Hàng</span></a>
+                                <div class="btncart">
+                                    <a href="@Url.Action("Themgiohang","GioHang",new {@MA_MON_AN=item.MA_MON_AN,@strURL=Request.Url.ToString() })"><i class="fa-solid fa-cart-shopping"></i><span>Thêm Vào Giỏ Hàng</span></a>
                                 </div>
                             </div>
                         </div>
@@ -47,16 +47,18 @@
                             {
                                 if (String.Equals(@item.LOAI, "NuocUong"))
                                 {
-                                    <div class="newCake"><a href="/Home/ChiTietMonAn/@item.MA_MON_AN" class="grid_4"><img src="@item.HINH_ANH" alt="" width="220" height="260" /></a>
-                                                         <div class="descmonan">
-                                                             <span>@item.TEN_MON</span>
-                                                             <br />
-                                                             <span>Giá: @item.GIA_MON VNĐ</span>
-                                                             <br />
-                                                             <div class="">
-                                                                 <a href="@Url.Action("Themgiohang","GioHang",new {@MA_MON_AN=item.MA_MON_AN,@strURL=Request.Url.ToString() })"><span>Thêm Vào Giỏ Hàng</span></a>
-                                                             </div>
-                                                         </div>
+                                    <div class="newCake">
+                                        <a href="/Home/ChiTietMonAn/@item.MA_MON_AN" class="grid_4"><img src="@item.HINH_ANH" alt="" width="220" height="260" /></a>
+                                        <div onclick="clickmenu(@item.MA_MON_AN)" class="descmonan">
+                                            <span>@item.TEN_MON</span>
+                                            <br />
+                                            <span>Giá: @item.GIA_MON VNĐ</span>
+                                            <br />
+                                            <div class="btncart">
+
+                                                <a href="@Url.Action("Themgiohang","GioHang",new {@MA_MON_AN=item.MA_MON_AN,@strURL=Request.Url.ToString() })"><i class="fa-solid fa-cart-shopping"></i><span>Thêm Vào Giỏ Hàng</span></a>
+                                            </div>
+                                        </div>                 
                                     </div>
                     }
                 }
@@ -72,4 +74,22 @@
         border-bottom: 1px solid #5B2F0D;
         height:390px;
     }
+    .btncart {
+        background: #fec704;
+        border-radius:10px;
+        padding:10px;
+    }
+    .btncart a i{
+        margin:0 5px;
+        color:#fff;
+        font-size:15px;
+        font-weight:bold;
+    }
+    
 </style>
+<script>
+    var descmonan = document.querySelectorAll(".newCake");
+    function clickmenu(id) {
+        window.location.replace("/Home/ChiTietMonAn/" + id);
+    }
+</script>

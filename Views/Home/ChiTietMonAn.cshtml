@@ -4,44 +4,56 @@
     ViewBag.Title = "ChiTietMonAn";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
+<link href="~/Assets/Customer/css/960.css" rel="stylesheet" />
+<div class="prodNav grid_16">
+    <div class="breadcrumb grid_12 alpha"> <a href="#">Danh Mục</a> &raquo; <a href="#">@Model.LOAI</a> </div>
 
-<div class="col-sm-8 col-lg-9 mtb_20">
-    <div class="row mt_10 ">
-        <div class="col-md-6 descma">
-                    <img data-name="product_image" src="@Model.HINH_ANH" alt="" />
-        </div>
-        <div class="col-md-6 prodetail caption product-thumb">
-            <h4 data-name="product_name" class="product-name"><a href="#" title="Casual Shirt With Ruffle Hem">@Model.TEN_MON</a></h4>
-            <div class="rating">
-                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span>
-                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span>
-                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span>
-                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-1x"></i></span>
-                <span class="fa fa-stack"><i class="fa fa-star-o fa-stack-1x"></i><i class="fa fa-star fa-stack-x"></i></span>
-            </div>
-            <span class="price mb_20">
-                <span class="amount"><span class="currencySymbol"></span>@Model.GIA_MON VNĐ</span>
-            </span>
-            <!--<p class="product-desc mtb_30"> More room to move. With 80GB or 160GB of storage and up to 40 hours of battery life, the new iPod classic lets you enjoy up to 40,000 songs or up to 200 hours of video or any combination wherever you go. Cover Flow. Browse through your music collection by flipping..</p>-->
-            <div id="product">
-                <div class="form-group">
-                    <div class="row">
+</div>
+<div class="bodyContent grid_16">
+    <div class="blogPage grid_11 g11 alpha">
+        <div class="post">
+            <p><img src="@Model.HINH_ANH" alt="" /></p>
+          @*  <div class="user">
+                <ion-icon name="person-circle-outline"></ion-icon>
+                <div class="user_cmt">
+                    <div>
+                        <span class="name_user">@bl.THANHVIEN.HoTen</span>
+                        <span class="time_cmt">@bl.ngaycmt</span>
                     </div>
+                    <span class="cmt-main">@bl.comment1</span>
                 </div>
-                <div class="qty mt_30 form-group2">
-                    <label>Số Lượng:</label>
-                    <label name="product_quantity" min="1" value="1" type="number">1</label>
-                </div>
-                <div class="btn btn-default" style="margin:15px;border-radius:5px;"><a href="@Url.Action("Themgiohang","GioHang",new {@MA_MON_AN=Model.MA_MON_AN,@strURL="/Home/Index" })"><span>Thêm Vào Giỏ hàng</span></a></div>
-            </div>
+            </div>*@
+
         </div>
     </div>
+    <div class="sideBarProd grid_5 omega">
+        <div class="sideBarWarp">
+            <h3>@Model.TEN_MON</h3>
+            <h4>@Model.GIA_MON VND</h4>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. vivamus tempor justo sitouiet amet metus cursus consequat. Nullaiverra, felis vel accumsan fermentum, nisl enimuh.</p>
+            <input type="submit" value="Add to Cart" tabindex="2" name="submit" class="addCart button" />
+            <div class="clear"></div>
+        </div>
+        <div class="fiveStar">
+            <h4>Our Quality Guarantee</h4>
+            <p><img src="images/star.png" alt="" /> <img src="images/star.png" alt="" /> <img src="images/star.png" alt="" /> <img src="images/star.png" alt="" /> <img src="images/star.png" alt="" /></p>
+            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. vivamus tempor justo sit amet metus cursus consequat. Nulla viverra.</p>
+        </div>
+    </div>
+    
+    
 </div>
+<div class="clear"></div>
 <style>
-    .descma{
-        height:400px;
+    .sideBarWarp,
+    .fiveStar {
+        width: 280px;
     }
-    .descma img{
-        height:100%;
+     .g11 {
+        width: 640px;
+    }
+    .post p img{
+        width:75%;
+        height:75%;
     }
 </style>

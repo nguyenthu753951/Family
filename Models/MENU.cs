@@ -5,6 +5,7 @@
     using System.ComponentModel.DataAnnotations;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
+    using System.Linq;
 
     [Table("MENU")]
     public partial class MENU
@@ -34,5 +35,10 @@
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<CT_DONHANG> CT_DONHANG { get; set; }
+        public List<MENU> searchByKey(string key)
+        {
+            DBContext db = new DBContext();
+            return db.MENUs.SqlQuery("Select * from MENU where TEN_MON like N'%" + key + "%' or GIA_MON like N'%" + key + "%'").ToList();
+        }
     }
 }
