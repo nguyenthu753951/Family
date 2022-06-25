@@ -5,10 +5,10 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Quản lý thông tin tài xế</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Thêm mới", "Create")
 </p>
 <table class="table">
     <tr>
@@ -19,7 +19,7 @@
             Địa Chỉ Tài Xế
         </th>
         <th>
-            Biển Số XE
+            Biển Số Xe
         </th>
         <th></th>
     </tr>
@@ -36,9 +36,9 @@
             @Html.DisplayFor(modelItem => item.BIEN_SO_XE)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MA_TX }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MA_TX }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MA_TX })
+            @Html.ActionLink("Chỉnh sửa", "Edit", new { id=item.MA_TX }) |
+            @Html.ActionLink("Chi tiết", "Details", new { id=item.MA_TX }) |
+            @Html.ActionLink("Xóa", "Delete", new { id=item.MA_TX })
         </td>
     </tr>
 }

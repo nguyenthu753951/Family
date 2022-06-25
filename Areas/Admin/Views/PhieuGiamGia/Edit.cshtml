@@ -5,7 +5,7 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Edit</h2>
+<h2>Chỉnh sửa</h2>
 
 @using (Html.BeginForm())
 {
@@ -14,8 +14,18 @@
 <div class="form-horizontal">
     <h4>Phiếu Giảm Giá</h4>
     <hr />
-    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-    @Html.HiddenFor(model => model.SO_PGG)
+
+    <div class="mb-3">
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.SO_PGG)
+    </div>
+
+    @*<div class="form-group">
+        <div class="col-md-10">
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.SO_PGG)
+        </div>
+    </div>*@
 
     <div class="form-group">
         Số Phiếu Giảm Giá
@@ -43,12 +53,12 @@
 
     <div class="form-group">
         <div class="col-md-offset-2 col-md-10">
-            <input type="submit" value="Save" class="btn btn-default" />
+            <input type="submit" value="Lưu" class="btn btn-default" />
         </div>
     </div>
 </div>
-}
+    }
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
-</div>
+    <div>
+        @Html.ActionLink("Quay lại trang", "Index")
+    </div>

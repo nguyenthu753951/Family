@@ -5,11 +5,11 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h2>User</h2>
+<h2>Khách hàng</h2>
 
-<button>
+@*<button>
     @Html.ActionLink("+ADD NEW", "Create")
-</button>
+</button>*@
 <table class="table">
     <tr>
         <th>
@@ -47,9 +47,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.EMAIL_KH)
         </td>
-        <td>
+        @*<td>
             @Html.ActionLink("Sửa thông tin", "Edit", new { id=item.MA_KH }) 
-        </td>
+        </td>*@
         <td>
             @Html.ActionLink("Chi tiết", "Details", new { id = item.MA_KH }) 
         </td>

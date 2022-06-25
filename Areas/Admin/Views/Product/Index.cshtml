@@ -15,7 +15,7 @@
 <h2>Quản lý sản phẩm</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Thêm mới", "Create")
 </p>
 <table class="table">
     <tr>
@@ -50,9 +50,9 @@
             
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MA_MON_AN }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MA_MON_AN }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MA_MON_AN })
+            @Html.ActionLink("Chỉnh sửa", "Edit", new { id=item.MA_MON_AN }) |
+            @Html.ActionLink("Chi tiết", "Details", new { id=item.MA_MON_AN }) |
+            @Html.ActionLink("Xóa", "Delete", new { id=item.MA_MON_AN })
         </td>
     </tr>
 }

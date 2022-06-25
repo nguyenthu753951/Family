@@ -5,10 +5,10 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Thông tin chi tiết</h2>
 
 <p>
-    @Html.ActionLink("Create New", "Create")
+    @Html.ActionLink("Thêm mới", "Create")
 </p>
 <table class="table">
     <tr>
@@ -48,9 +48,9 @@
             @Html.DisplayFor(modelItem => item.NGAY_SINH)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.MA_NV }) |
-            @Html.ActionLink("Details", "Details", new { id=item.MA_NV }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.MA_NV })
+            @Html.ActionLink("Chỉnh sửa", "Edit", new { id=item.MA_NV }) |
+            @Html.ActionLink("Chi tiết", "Details", new { id=item.MA_NV }) |
+            @Html.ActionLink("Xoá", "Delete", new { id=item.MA_NV })
         </td>
     </tr>
 }

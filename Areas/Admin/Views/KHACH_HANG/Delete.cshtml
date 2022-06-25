@@ -8,7 +8,7 @@
 
 <h2>Thông tin khách hàng: @Html.DisplayFor(model => model.TEN_KH)</h2>
 
-<h3>Are you sure you want to delete this?</h3>
+<h3>Bạn có chắc muốn xóa điều này?</h3>
 <div>
     <hr />
     <dl class="dl-horizontal text-center">
@@ -59,9 +59,9 @@
         @Html.AntiForgeryToken()
 
         <div class="form-actions no-color text-center">
-            <input type="submit" value="Delete" class="btn btn-default" /> 
+            <input type="submit" value="Xóa" class="btn btn-default" /> 
             <button>
-                @Html.ActionLink("Back to List", "Index")
+                @Html.ActionLink("Quay lại trang", "Index")
             </button>
         </div>
     }
