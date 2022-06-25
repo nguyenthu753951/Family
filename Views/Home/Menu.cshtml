@@ -1,0 +1,75 @@
+﻿@using PagedList.Mvc;
+@using controller.Models;
+@model PagedList.IPagedList<controller.Models.MENU>
+@{
+    ViewBag.Title = "Menu";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div id="fresh">
+    <div class="container_16">
+        <div id="freshCake" class="grid_16">
+            <div class="grid_1 alpha"> <a class="prevButton">&laquo;</a></div>
+            <div class="headLine grid_14">
+                <h3>Món ăn</h3>
+            </div>
+            <div class="grid_1 omega"> <a class="nextButton">&raquo;</a></div>
+        </div>
+        <div class="newCakes">
+            <div class="scroller">
+                @foreach (var item in Model)
+                {
+                        <div class="newCake">
+                            <a href="/Home/ChiTietMonAn/@item.MA_MON_AN" class="grid_4"><img src="@item.HINH_ANH" alt="" width="220" height="260" /></a>
+                            <div onclick="clickmenu(@item.MA_MON_AN)" class="descmonan">
+                                <span>@item.TEN_MON</span>
+                                <br />
+                                <span>Giá: @item.GIA_MON VNĐ</span>
+                                <br />
+                                <div class="btncart">
+                                    <a href="@Url.Action("Themgiohang","GioHang",new {@MA_MON_AN=item.MA_MON_AN,@strURL=Request.Url.ToString() })"><i class="fa-solid fa-cart-shopping"></i><span>Thêm Vào Giỏ Hàng</span></a>
+                                </div>
+                            </div>
+                        </div>
+                }
+
+
+            </div>
+        </div>
+    </div>
+    <div class="Menu">
+        @Html.PagedListPager(Model, Page => Url.Action("/Menu", new { Page = Page }))
+    </div>
+</div>
+<style>
+    .Menu{
+        text-align:center;
+    }
+    #fresh {
+        background: #40210B;
+        border-top: 1px solid #5B2F0D;
+        border-bottom: 1px solid #5B2F0D;
+        height: 390px;
+    }
+
+    .btncart {
+        background: #fec704;
+        border-radius: 10px;
+        padding: 10px;
+    }
+
+        .btncart a i {
+            margin: 0 5px;
+            color: #fff;
+            font-size: 15px;
+            font-weight: bold;
+        }
+</style>
+<script>
+    var descmonan = document.querySelectorAll(".newCake");
+    function clickmenu(id) {
+        window.location.replace("/Home/ChiTietMonAn/" + id);
+    }
+</script>
+
+
+

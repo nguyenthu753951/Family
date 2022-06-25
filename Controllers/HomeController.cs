@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using PagedList;
+using PagedList.Mvc;
 
 namespace controller.Controllers
 {
@@ -17,6 +19,13 @@ namespace controller.Controllers
         public ActionResult Index()
         {
             return View(db.MENUs.ToList());
+        }
+        public ActionResult Menu(int ? page)
+        {
+            int pageSize = 4;
+            int pageNum = (page ?? 1);
+            var menu = db.MENUs.ToList();
+            return View(menu.ToPagedList(pageNum, pageSize));
         }
 
         public ActionResult ChiTietMonAn(string id)

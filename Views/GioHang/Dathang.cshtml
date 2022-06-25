@@ -4,7 +4,7 @@
     ViewBag.Title = "Dathang";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
-<div class="row">
+<div class="row w1200px">
     <div class="col-6 col-sm-6">
         <form enctype="multipart/form-data" method="post" action="#">
             <div style="width:100%;text-align:center;">
@@ -79,14 +79,14 @@
                 </tr>
                 <tr style="height:40px">
                     <td>Ngày giao hàng:</td>
-                    <td style="font-weight:bold">
+                    <td style="font-weight:bold; color:#000;">
                         <input type="date" name="Ngaygiao" />
                     </td>
                 </tr>
                 <tr style="height:40px">
                     <td></td>
                     <td>
-                        <input type="submit" value="Create" class="btn btn-default" />
+                        <input type="submit" value="Đặt hàng" class="btn btn-default" />
                     </td>
                 </tr>
             }
@@ -112,5 +112,9 @@
         }
     tr th {
         text-align: center;
+    }
+    .w1200px{
+        width:1200px;   
+        
     }
 </style>

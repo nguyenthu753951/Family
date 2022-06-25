@@ -19,7 +19,7 @@
     <meta name="viewport" content="width=device-width">
     <!-- =====  CSS  ===== -->
     <script src="~/Assets/Customer/js/layout.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" href="./Assets/Customer/images/logowhite.jpg" type="image/gif" sizes="30*30">
     <link rel="stylesheet" type="text/css" href="~/Assets/Customer/css/font-awesome.min.css" />
     <link rel="stylesheet" type="text/css" href="~/Assets/Customer/css/bootstrap.css" />
@@ -56,15 +56,15 @@
                 else
                 {
                     <h3 class="login"><span class="hiUser">Hi,@session.TEN_KH |</span> <span class="myAccount"><a href="#">My Account</a></span> @Html.ActionLink("Đăng xuất", "Dangxuat", "NguoiDung")</h3>
-                    <p>Tổng tiền:  00.00 VNĐ</p>
+                    <p>Tổng tiền: @ViewBag.tongtien VND</p>
                 }
-                <p><span class="vChart"><a href="/Giohang/GioHang"> <i class="fa-solid fa-cart-shopping"></i>Giỏ hàng</a></span> <span class="cOut"><a href="checkout.html">Thanh toán</a></span></p>
+                <p><span class="vChart"><a href="/Giohang/GioHang"> <i class="fa-solid fa-cart-shopping"></i>Giỏ hàng</a></span> <span class="cOut"><a href="/GioHang/DatHang">Thanh toán</a></span></p>
             </div>
                 </div>
             <div id="mainMenu" class="grid_16">
                 <ul>
                     <li><a href="/Home/Index" class="aActive">Trang chủ</a></li>
-                    <li><a href="#">Menu</a></li>
+                    <li><a href="/Home/Menu">Menu</a></li>
                     <li><a href="#">Giới thiệu</a></li>
                     <li><a href="#">Hỗ trợ</a></li>
                     <li><a href="#">Liên hệ</a></li>
@@ -75,7 +75,7 @@
                 </div>*@
                     <form name="Search" action="/Home/Search" method="post">
                         <input type="text" placeholder="Tìm kiếm Món ăn" name="searchMUSIC" />
-                        <button class="search" type="submit"><i class="fa fa-search"></i></button>
+                        <button class="find" type="submit"><i class="fa fa-search"></i></button>
                     </form>
             </div>
             
@@ -170,6 +170,14 @@
     #headright h3,
     #headright p {
         width: 400px;
+    }
+    .find{
+        color:#000;
+        font-size:15px;
+        
+    }
+    .find i{
+        padding:10px;
     }
 </style>
 </html>

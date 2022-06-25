@@ -2534,3 +2534,7 @@ D:\tailieu_2ab(3)\LapTrinhWeb\Family\obj\Debug\ShopRider.csproj.CoreCompileInput
 D:\tailieu_2ab(3)\LapTrinhWeb\Family\obj\Debug\ShopRider.csproj.CopyComplete
 D:\tailieu_2ab(3)\LapTrinhWeb\Family\obj\Debug\controller.dll
 D:\tailieu_2ab(3)\LapTrinhWeb\Family\obj\Debug\controller.pdb
+C:\Users\ADMIN\OneDrive\Máy tính\Family\bin\PagedList.dll
+C:\Users\ADMIN\OneDrive\Máy tính\Family\bin\PagedList.Mvc.dll
+C:\Users\ADMIN\OneDrive\Máy tính\Family\bin\PagedList.xml
+C:\Users\ADMIN\OneDrive\Máy tính\Family\bin\PagedList.Mvc.xml
