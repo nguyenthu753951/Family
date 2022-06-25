@@ -31,13 +31,9 @@
             <h3>@Model.TEN_MON</h3>
             <h4>@Model.GIA_MON VND</h4>
             <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. vivamus tempor justo sitouiet amet metus cursus consequat. Nullaiverra, felis vel accumsan fermentum, nisl enimuh.</p>
-            <input type="submit" value="Add to Cart" tabindex="2" name="submit" class="addCart button" />
+            <a href="@Url.Action("Themgiohang","GioHang",new {@MA_MON_AN=Model.MA_MON_AN,@strURL="/GioHang/GioHang" })"><i class="fa-solid fa-cart-shopping"></i><span>Thêm Vào Giỏ Hàng</span></a>
+
             <div class="clear"></div>
-        </div>
-        <div class="fiveStar">
-            <h4>Our Quality Guarantee</h4>
-            <p><img src="images/star.png" alt="" /> <img src="images/star.png" alt="" /> <img src="images/star.png" alt="" /> <img src="images/star.png" alt="" /> <img src="images/star.png" alt="" /></p>
-            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. vivamus tempor justo sit amet metus cursus consequat. Nulla viverra.</p>
         </div>
     </div>
     
