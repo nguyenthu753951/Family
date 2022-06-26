@@ -47,38 +47,38 @@
                     var session = (controller.Models.KHACH_HANG)Session["TaiKhoan"];
 
 
-}
-            <div id="headright" class="grid_7 prefix_5 omega">
-                @if (session == null)
-                {
-                    <h3 class="login"><a href="~/NguoiDung/DangKy">Đăng ký</a> / <a href="~/NguoiDung/DangNhap">Đăng nhập</a></h3>
                 }
-                else
-                {
-                    <h3 class="login"><span class="hiUser">Hi,@session.TEN_KH |</span> <span class="myAccount"><a href="#">My Account</a></span> @Html.ActionLink("Đăng xuất", "Dangxuat", "NguoiDung")</h3>
-                    <p>Tổng tiền: @ViewBag.tongtien VND</p>
-                }
-                <p><span class="vChart"><a href="/Giohang/GioHang"> <i class="fa-solid fa-cart-shopping"></i>Giỏ hàng</a></span> <span class="cOut"><a href="/GioHang/DatHang">Thanh toán</a></span></p>
-            </div>
+                <div id="headright" class="grid_7 prefix_5 omega">
+                    @if (session == null)
+                    {
+                        <h3 class="login"><a href="~/NguoiDung/DangKy">Đăng ký</a> / <a href="~/NguoiDung/DangNhap">Đăng nhập</a></h3>
+                    }
+                    else
+                    {
+                        <h3 class="login"><span class="hiUser">Hi,@session.TEN_KH |</span><span class="myAccount"><a href="/Nguoidung/DoiMk">Đổi Mật khẩu</a></span>  |<span class="myAccount"><a href="/Nguoidung/details">My Account</a></span> @Html.ActionLink("Đăng xuất", "Dangxuat", "NguoiDung")</h3>
+                        <p>Tổng tiền: @ViewBag.tongtien VND</p>
+                    }
+                    <p><span class="vChart"><a href="/Giohang/GioHang"> <i class="fa-solid fa-cart-shopping"></i>Giỏ hàng</a></span> <span class="cOut"><a href="/GioHang/DatHang">Thanh toán</a></span></p>
                 </div>
+            </div>
             <div id="mainMenu" class="grid_16">
                 <ul>
                     <li><a href="/Home/Index" class="aActive">Trang chủ</a></li>
                     <li><a href="/Home/Menu">Menu</a></li>
                     <li><a href="#">Giới thiệu</a></li>
-                    <li><a href="#">Hỗ trợ</a></li>
+                    <li><a href="~/hotro.html">Hỗ trợ</a></li>
                     <li><a href="#">Liên hệ</a></li>
                 </ul>
             </div>
             <div id="stickySearch" class="grid_16">
                 @*<div class="stickyNews grid_12 alpha">
-                </div>*@
-                    <form name="Search" action="/Home/Search" method="post">
-                        <input type="text" placeholder="Tìm kiếm Món ăn" name="searchMUSIC" />
-                        <button class="find" type="submit"><i class="fa fa-search"></i></button>
-                    </form>
+                    </div>*@
+                <form name="Search" action="/Home/Search" method="post">
+                    <input type="text" placeholder="Tìm kiếm Món ăn" name="searchMUSIC" />
+                    <button class="find" type="submit"><i class="fa fa-search"></i></button>
+                </form>
             </div>
-            
+
         </div>
         <div class="clear"></div>
     </div>
@@ -89,36 +89,34 @@
 
         </div>
     </div>
-    
+
     <div id="richContent2">
         <div class="container_16">
             <div class="fromBlog grid_4">
-                <h4>From the blog</h4>
-                <h5>New Recipes in Our Basket</h5>
-                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. vivamus tempor justo sit amet metus cursus consequat. Nulla viverra, felis vel accumsan fermentum... <a href="#" class="bookMan">more &raquo;</a></p>
+                <h4>Về chúng tôi</h4>
+                <h5>MUA SẮM VÀ BÁN HÀNG ONLINE ĐƠN GIẢN, NHANH CHÓNG VÀ AN TOÀN</h5>
+                <p>Nếu bạn đang tìm kiếm một trang web để đặt những món ăn, thức uống ngon đầy đủ chất dinh dưỡng thì Family 4 là một sự lựa chọn tuyệt vời dành cho bạn. Family 4 là một social E-commerce platform - nền tảng trang web Nhà hàng điện tử tích hợp. Điều này cho phép nhà hàng và khách hàng dễ dàng tương tác...<a href="#" class="bookMan">more &raquo;</a></p>
             </div>
             <div class="corporateInfo grid_4">
-                <h4>Corporate Info</h4>
+                <h4>Thông tin về Team</h4>
                 <ul>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Term &amp; Conditions</a></li>
-                    <li><a href="#">Franchise</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Nguyễn Thị Thu</a></li>
+                    <li><a href="#">Chánh Hồng Ngọc</a></li>
+                    <li><a href="#">Nguyễn Công Mạnh Tân</a></li>
+                    <li><a href="#">Đặng Thanh Quy</a></li>
                 </ul>
             </div>
             <div class="storeDelivery grid_4">
-                <h4>Store &amp; Delivery</h4>
+                <h4>Nhà Hàng &amp; Vận chuyển</h4>
                 <ul>
-                    <li><a href="#">Store Locator</a></li>
-                    <li><a href="#">Delivery Terms &amp; Pricing</a></li>
-                    <li><a href="#">Delivery Coverage</a></li>
-                    <li><a href="#">Gift Services</a></li>
-                    <li><a href="#">Track my order</a></li>
+                    <li><a href="#">Địa chỉ nhà hàng</a></li>
+                    <li><a href="#">Thông tin về vận chuyển</a></li>
+                    <li><a href="#">Khuyến mãi</a></li>
+                    <li><a href="#">Quà tặng thành viên</a></li>
                 </ul>
             </div>
             <div class="socialNet grid_4">
-                <h4>Keep in touch</h4>
+                <h4>Theo dõi tại đây</h4>
                 <ul>
                     <li><a href="#" class="facebook">Facebook</a></li>
                     <li><a href="#" class="twitter">Twitter</a></li>
@@ -131,14 +129,13 @@
     <div id="footer">
         <div class="container_16">
             <div class="copyright grid_16">
-                <p class="left">Copyright &copy; 2010, Your Company Here, All Rights Reserved</p>
-                <p class="right"><a href="http://all-free-download.com/free-website-templates/">Free CSS Templates</a> by <a href="http://tokokoo.com/">Tokokoo</a> &amp; <a href="http://www.instantshift.com/">instantShift</a></p>
+                <p class="left">Copyright &copy; 2022, Team Family 4</p>
                 <div class="clear"></div>
             </div>
             <div class="clear"></div>
         </div>
     </div>
-    <div align=center>This template  downloaded form <a href='http://all-free-download.com/free-website-templates/'>free website templates</a></div>
+    <div align=center><a href='http://all-free-download.com/free-website-templates/'></a></div>
 
     <!-- =====  FOOTER END  ===== -->
     <a id="scrollup"></a>
@@ -155,10 +152,11 @@
 <style>
     .body-content {
         background: #40210B;
-        min-height:500px;
+        min-height: 500px;
         border-top: 1px solid #5B2F0D;
         border-bottom: 1px solid #5B2F0D;
     }
+
     .flexmonan {
         display: flex;
         width: 1200px;
@@ -167,18 +165,20 @@
         flex-direction: column;
         margin: 0 auto;
     }
+
     #headright h3,
     #headright p {
         width: 400px;
     }
-    .find{
-        color:#000;
-        font-size:15px;
-        
+
+    .find {
+        color: #000;
+        font-size: 15px;
     }
-    .find i{
-        padding:10px;
-    }
+
+        .find i {
+            padding: 10px;
+        }
 </style>
 </html>
 
