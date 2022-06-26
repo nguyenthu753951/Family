@@ -2657,6 +2657,7 @@
     <Content Include="Areas\Admin\Views\KHACH_HANG\Details.cshtml" />
     <Content Include="Areas\Admin\Views\KHACH_HANG\Edit.cshtml" />
     <Content Include="Areas\Admin\Views\KHACH_HANG\Index.cshtml" />
+    <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
