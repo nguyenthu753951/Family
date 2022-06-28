@@ -2351,6 +2351,7 @@
     <Content Include="Assets\Customer\images\imagelayout\update.png" />
     <Content Include="Assets\Customer\images\imagelayout\updatecart.png" />
     <Content Include="Assets\Customer\images\imagelayout\vieworder.png" />
+    <Content Include="Assets\Customer\images\lauchuacay.jpg" />
     <Content Include="Assets\Customer\images\left1.jpg" />
     <Content Include="Assets\Customer\images\loder.gif" />
     <Content Include="Assets\Customer\images\logo.jpg" />
@@ -2425,6 +2426,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="GoogleMap.html" />
     <Content Include="hotro.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />

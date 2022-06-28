@@ -2848,3 +2848,7 @@ C:\thekewweb\Family\obj\Debug\ShopRider.csproj.AssemblyReference.cache
 C:\thekewweb\Family\obj\Debug\ShopRider.csproj.CoreCompileInputs.cache
 C:\thekewweb\Family\obj\Debug\controller.dll
 C:\thekewweb\Family\obj\Debug\controller.pdb
+D:\tailieu_2ab(3)\LapTrinhWeb\Family\bin\PagedList.dll
+D:\tailieu_2ab(3)\LapTrinhWeb\Family\bin\PagedList.Mvc.dll
+D:\tailieu_2ab(3)\LapTrinhWeb\Family\bin\PagedList.xml
+D:\tailieu_2ab(3)\LapTrinhWeb\Family\bin\PagedList.Mvc.xml
